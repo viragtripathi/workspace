@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <cluster xmlns="http://tibco.com/businessevents/configuration/5.3">
     <revision>
-        <version>11</version>
+        <version>1</version>
         <author>vtripath</author>
         <date>2016/09/17 03:52:12</date>
         <comment/>
