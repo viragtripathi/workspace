@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<event:SimpleEvent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:event="http:///com/tibco/cep/designtime/core/model/event" namespace="/Events/" folder="/Events/" name="FlightEventInbound" description="" GUID="878B3440-FE10-3384-7E8F-0C9DE1CE2EC9" ownerProjectName="SkyTeamBES" superEventPath="" payloadString="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&#xA;&lt;payload ref=&quot;pfx:Flight&quot;/>" ttlUnits="Seconds" channelURI="/Channels/InboundJMS" destinationName="flightEventInbound">
+  <properties name="FlightKey" ownerProjectName="SkyTeamBES" conceptTypePath="/Events/FlightEventInbound" ownerPath="/Events/FlightEventInbound"/>
+  <namespaceEntries prefix="xsd" namespace="http://www.w3.org/2001/XMLSchema"/>
+  <namespaceEntries prefix="pfx" namespace="http://www.schemas.skyteam.com/2016/09/enterprise/Flight"/>
+  <registryImportEntries location="SharedResources/Schemas/FlightSchema.xsd" namespace="http://www.schemas.skyteam.com/2016/09/enterprise/Flight"/>
+  <expiryAction folder="/Events/FlightEventInbound" name="FlightEvent_expiryAction" ownerProjectName="SkyTeamBES" actionText="" conditionText="">
+    <symbols>
+      <symbolList idName="flightevent" type="/Events/FlightEventInbound"/>
+    </symbols>
+  </expiryAction>
+</event:SimpleEvent>

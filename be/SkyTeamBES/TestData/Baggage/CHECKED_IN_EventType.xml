@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bg:Baggage xmlns:bg="http://www.schemas.skyteam.com/2016/09/enterprise/Baggage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.schemas.skyteam.com/2016/09/enterprise/Baggage BaggageSchema.xsd ">
+  <bg:EventType>CHECKED_IN</bg:EventType>
+  <bg:OriginalFlightKey>DL0001ATLDXB20160916</bg:OriginalFlightKey>
+  <bg:BagTagId>168616</bg:BagTagId>
+  <bg:AirlineCode>DL</bg:AirlineCode>
+  <bg:FlightNumber>0001</bg:FlightNumber>
+  <bg:RecordLocator>ZTJE26</bg:RecordLocator>
+  <bg:PassengerName>Tim Cook</bg:PassengerName>
+  <bg:OriginLocalDate>2006-09-16T12:00:00</bg:OriginLocalDate>
+  <bg:OriginStnCode>ATL</bg:OriginStnCode>
+  <bg:DestStnCode>DXB</bg:DestStnCode>
+  <bg:BagLocation>ATL</bg:BagLocation>
+</bg:Baggage>

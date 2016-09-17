@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<event:SimpleEvent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:event="http:///com/tibco/cep/designtime/core/model/event" namespace="/Events/ASChannel/" folder="/Events/ASChannel/" name="Baggage" description="" GUID="7EAC9CE9-A883-604F-52FF-DC361A34E6E6" ownerProjectName="SkyTeamBES" superEventPath="" ttlUnits="Seconds">
+  <properties name="EventType" ownerProjectName="SkyTeamBES" ownerPath="/Events/ASChannel/Baggage"/>
+  <properties name="OriginalFlightKey" ownerProjectName="SkyTeamBES" array="true" ownerPath="/Events/ASChannel/Baggage"/>
+  <properties name="BagTagId" ownerProjectName="SkyTeamBES" ownerPath="/Events/ASChannel/Baggage"/>
+  <properties name="AirlineCode" ownerProjectName="SkyTeamBES" ownerPath="/Events/ASChannel/Baggage"/>
+  <properties name="FlightNumber" ownerProjectName="SkyTeamBES" ownerPath="/Events/ASChannel/Baggage"/>
+  <properties name="RecordLocator" ownerProjectName="SkyTeamBES" ownerPath="/Events/ASChannel/Baggage"/>
+  <properties name="PassengerName" ownerProjectName="SkyTeamBES" ownerPath="/Events/ASChannel/Baggage"/>
+  <properties name="OriginLocalDate" ownerProjectName="SkyTeamBES" type="DateTime" ownerPath="/Events/ASChannel/Baggage"/>
+  <properties name="OriginStnCode" ownerProjectName="SkyTeamBES" ownerPath="/Events/ASChannel/Baggage"/>
+  <properties name="DestStnCode" ownerProjectName="SkyTeamBES" ownerPath="/Events/ASChannel/Baggage"/>
+  <properties name="BagLocation" ownerProjectName="SkyTeamBES" ownerPath="/Events/ASChannel/Baggage"/>
+  <expiryAction name="Baggage_expiryAction" ownerProjectName="SkyTeamBES" actionText="" conditionText="">
+    <symbols>
+      <symbolList idName="baggage" type="/Events/ASChannel/Baggage"/>
+    </symbols>
+  </expiryAction>
+</event:SimpleEvent>

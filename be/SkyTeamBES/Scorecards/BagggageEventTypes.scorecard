@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<element:Scorecard xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:element="http:///com/tibco/cep/designtime/core/model/element" namespace="/Scorecards/" folder="/Scorecards/" name="BagggageEventTypes" description="" GUID="DE0BB318-AE6B-9B69-0668-C5EC75EFA9FA" ownerProjectName="SkyTeamBES" scorecard="true">
+  <properties name="CHECKED_IN" ownerProjectName="SkyTeamBES" ownerPath="/Scorecards/BagggageEventTypes"/>
+  <properties name="SCREENED" ownerProjectName="SkyTeamBES" ownerPath="/Scorecards/BagggageEventTypes"/>
+  <properties name="SCREENING_FAILED" ownerProjectName="SkyTeamBES" ownerPath="/Scorecards/BagggageEventTypes"/>
+  <properties name="SORTED" ownerProjectName="SkyTeamBES" ownerPath="/Scorecards/BagggageEventTypes"/>
+  <properties name="LOADED" ownerProjectName="SkyTeamBES" ownerPath="/Scorecards/BagggageEventTypes"/>
+  <properties name="OFFLOADED" ownerProjectName="SkyTeamBES" ownerPath="/Scorecards/BagggageEventTypes"/>
+  <properties name="EXPECTED" ownerProjectName="SkyTeamBES" ownerPath="/Scorecards/BagggageEventTypes"/>
+  <properties name="REROUTED" ownerProjectName="SkyTeamBES" ownerPath="/Scorecards/BagggageEventTypes"/>
+</element:Scorecard>

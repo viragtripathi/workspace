@@ -1,0 +1,28 @@
+/**
+ * @description 
+ */
+String rulefunction RuleFunctions.Helper.ChangeDateFormat {
+	attribute {
+		validity = ACTION;
+	}
+	scope {
+		
+		String fltDate;
+	}
+	body {
+		String tempfltdate;
+		if (String.length(fltDate) == 10)
+		{
+    DateTime d = DateTime.parseString(fltDate, "yyyy-MM-dd");
+    //tempfltdate = DateTime.format(d, "yyyy-MM-dd");
+    System.debugOut("DateConvert: Converted date from " + fltDate + " to " + tempfltdate);
+}
+else
+{
+	tempfltdate = fltDate;
+    System.debugOut("DateConvert: no conversion required for " + fltDate);
+}
+return tempfltdate;
+		
+	}
+}

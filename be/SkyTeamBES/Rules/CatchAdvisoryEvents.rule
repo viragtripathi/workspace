@@ -1,0 +1,25 @@
+/**
+ * @description Catches advisory events thrown in the app behind the scenes
+ * @author vtripath-win7vm
+ */
+rule Rules.CatchAdvisoryEvents {
+	attribute {
+		priority = 5;
+		forwardChain = true;
+	}
+	declare {
+		
+		AdvisoryEvent ae;
+	}
+	when {
+		
+	}
+	then {
+		if (String.equals(ae@category, "Exception") || String.equals(ae@category, "Engine")) {
+			String logPrefix="Rules.CatchAdvisoryEvents";
+			String loglevel = "exception";
+			String msg = "AdvisoryEvent caught: " + ae@message + " | " + ae@type;
+			Log.log(Log.getLogger(logPrefix), loglevel, msg, null);
+		}
+	}
+}

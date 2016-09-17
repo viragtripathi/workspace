@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<element:Scorecard xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:element="http:///com/tibco/cep/designtime/core/model/element" namespace="/Scorecards/" folder="/Scorecards/" name="FlightEventTypes" description="" GUID="4ED4CE00-CB10-04B2-5A94-6EBFF96A3F79" ownerProjectName="SkyTeamBES" scorecard="true">
+  <properties name="SCHEDULED" ownerProjectName="SkyTeamBES" ownerPath="/Scorecards/FlightEventTypes"/>
+  <properties name="ONTIME" ownerProjectName="SkyTeamBES" ownerPath="/Scorecards/FlightEventTypes"/>
+  <properties name="BOARDING" ownerProjectName="SkyTeamBES" ownerPath="/Scorecards/FlightEventTypes"/>
+  <properties name="CLOSED" ownerProjectName="SkyTeamBES" ownerPath="/Scorecards/FlightEventTypes"/>
+  <properties name="INFLIGHT" ownerProjectName="SkyTeamBES" ownerPath="/Scorecards/FlightEventTypes"/>
+  <properties name="ARRIVED" ownerProjectName="SkyTeamBES" ownerPath="/Scorecards/FlightEventTypes"/>
+</element:Scorecard>

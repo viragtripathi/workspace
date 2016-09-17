@@ -1,0 +1,20 @@
+/**
+ * @description 
+ * @author vtripath-win7vm
+ */
+rule Rules.Flight.ProcessARRIVEDFlight {
+	attribute {
+		priority = 5;
+		forwardChain = true;
+	}
+	declare {
+		
+		Concepts.Flight flight;
+	}
+	when {
+		flight.EventType == Scorecards.FlightEventTypes.ARRIVED;
+	}
+	then {
+		System.debugOut("Flight ARRIVED event received");
+	}
+}

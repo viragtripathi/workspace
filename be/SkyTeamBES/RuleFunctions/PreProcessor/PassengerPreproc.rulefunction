@@ -1,0 +1,31 @@
+/**
+ * @description 
+ */
+void rulefunction RuleFunctions.PreProcessor.PassengerPreproc {
+	attribute {
+		validity = ACTION;
+	}
+	scope {
+		
+		Events.PassengerEventInbound pei;
+	}
+	body {
+		String logContext = "SkyTeamBES.RuleFunctions.PreProcessor.PassengerPreproc";
+		Object logger =  Log.getLogger(logContext);
+		Log.log(logger,"info", "Event received for " + pei.FlightKey);
+			
+		try {
+			
+			/*This concept is created for every flight as soon as event arrives. And it will be populated with 
+			flight details from EMS. */
+			Concepts.Passenger passenger = Instance.createInstance("xslt://{{/Concepts/Passenger}}<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<xsl:stylesheet xmlns:xsl=\"http://www.w3.org/1999/XSL/Transform\" xmlns:pnr=\"http://www.schemas.skyteam.com/2016/09/enterprise/Passenger\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" version=\"2.0\"><xsl:param name=\"pei\"/><xsl:template name=\"Function\" match=\"/\"><createObject><object><xsl:if test=\"$pei/payload/pnr:Passenger/pnr:EventType\"><EventType><xsl:value-of select=\"$pei/payload/pnr:Passenger/pnr:EventType\"/></EventType></xsl:if><xsl:if test=\"$pei/payload/pnr:Passenger/pnr:FlightKey\"><FlightKey><xsl:value-of select=\"$pei/payload/pnr:Passenger/pnr:FlightKey\"/></FlightKey></xsl:if><xsl:if test=\"$pei/payload/pnr:Passenger/pnr:AirlineCode\"><AirlineCode><xsl:value-of select=\"$pei/payload/pnr:Passenger/pnr:AirlineCode\"/></AirlineCode></xsl:if><xsl:for-each select=\"$pei/payload/pnr:Passenger/pnr:FlightSegments\"><FlightSegments><xsl:value-of select=\".\"/></FlightSegments></xsl:for-each><xsl:for-each select=\"$pei/payload/pnr:Passenger/pnr:BagTags\"><BagTags><xsl:value-of select=\".\"/></BagTags></xsl:for-each><xsl:if test=\"$pei/payload/pnr:Passenger/pnr:FlightNumber\"><FlightNumber><xsl:value-of select=\"$pei/payload/pnr:Passenger/pnr:FlightNumber\"/></FlightNumber></xsl:if><xsl:if test=\"$pei/payload/pnr:Passenger/pnr:RecordLocator\"><RecordLocator><xsl:value-of select=\"$pei/payload/pnr:Passenger/pnr:RecordLocator\"/></RecordLocator></xsl:if><xsl:if test=\"$pei/payload/pnr:Passenger/pnr:CutomerId\"><CutomerId><xsl:value-of select=\"$pei/payload/pnr:Passenger/pnr:CutomerId\"/></CutomerId></xsl:if><xsl:if test=\"$pei/payload/pnr:Passenger/pnr:BookingId\"><BookingId><xsl:value-of select=\"$pei/payload/pnr:Passenger/pnr:BookingId\"/></BookingId></xsl:if><xsl:if test=\"$pei/payload/pnr:Passenger/pnr:FirstName\"><FirstName><xsl:value-of select=\"$pei/payload/pnr:Passenger/pnr:FirstName\"/></FirstName></xsl:if><xsl:if test=\"$pei/payload/pnr:Passenger/pnr:LastName\"><LastName><xsl:value-of select=\"$pei/payload/pnr:Passenger/pnr:LastName\"/></LastName></xsl:if><xsl:if test=\"$pei/payload/pnr:Passenger/pnr:SeatNo\"><SeatNo><xsl:value-of select=\"$pei/payload/pnr:Passenger/pnr:SeatNo\"/></SeatNo></xsl:if><xsl:if test=\"$pei/payload/pnr:Passenger/pnr:FrequentFlyerStaus\"><FrequentFlyerStaus><xsl:value-of select=\"$pei/payload/pnr:Passenger/pnr:FrequentFlyerStaus\"/></FrequentFlyerStaus></xsl:if><OriginLocalDate><xsl:value-of select=\"xsd:dateTime($pei/payload/pnr:Passenger/pnr:OriginLocalDate)\"/></OriginLocalDate><xsl:if test=\"$pei/payload/pnr:Passenger/pnr:OriginStnCode\"><OriginStnCode><xsl:value-of select=\"$pei/payload/pnr:Passenger/pnr:OriginStnCode\"/></OriginStnCode></xsl:if><xsl:if test=\"$pei/payload/pnr:Passenger/pnr:DestStnCode\"><DestStnCode><xsl:value-of select=\"$pei/payload/pnr:Passenger/pnr:DestStnCode\"/></DestStnCode></xsl:if></object></createObject></xsl:template></xsl:stylesheet>");
+			Log.log(logger,"info", "Passenger Concept created for " + passenger.FlightKey);
+			Event.consumeEvent(pei);
+			Log.log(logger,"info", "Event consumed for " + pei.FlightKey);
+		}
+		catch (Exception ex) {
+			Log.log(logger, "error", "Exception occured while pre-processing flight events for: %s", pei.FlightKey);
+			System.debugOut(ex@stackTrace);
+		}
+	}
+}

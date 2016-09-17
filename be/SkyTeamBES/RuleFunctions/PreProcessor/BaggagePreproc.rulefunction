@@ -1,0 +1,31 @@
+/**
+ * @description 
+ */
+void rulefunction RuleFunctions.PreProcessor.BaggagePreproc {
+	attribute {
+		validity = ACTION;
+	}
+	scope {
+		
+		Events.BaggageEventInbound bei;
+	}
+	body {
+		String logContext = "SkyTeamBES.RuleFunctions.PreProcessor.BaggagePreproc";
+		Object logger =  Log.getLogger(logContext);
+		Log.log(logger,"info", "Event received for " + bei.OriginalFlightKey);
+			
+		try {
+			
+			/*This concept is created for every flight as soon as event arrives. And it will be populated with 
+			flight details from EMS. */
+			Concepts.Baggage baggage = Instance.createInstance("xslt://{{/Concepts/Baggage}}<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<xsl:stylesheet xmlns:xsl=\"http://www.w3.org/1999/XSL/Transform\" xmlns:bg=\"http://www.schemas.skyteam.com/2016/09/enterprise/Baggage\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" version=\"2.0\"><xsl:param name=\"bei\"/><xsl:template name=\"Function\" match=\"/\"><createObject><object><xsl:if test=\"$bei/payload/bg:Baggage/bg:EventType\"><EventType><xsl:value-of select=\"$bei/payload/bg:Baggage/bg:EventType\"/></EventType></xsl:if><xsl:for-each select=\"$bei/payload/bg:Baggage/bg:OriginalFlightKey\"><OriginalFlightKey><xsl:value-of select=\".\"/></OriginalFlightKey></xsl:for-each><xsl:if test=\"$bei/payload/bg:Baggage/bg:BagTagId\"><BagTagId><xsl:value-of select=\"$bei/payload/bg:Baggage/bg:BagTagId\"/></BagTagId></xsl:if><xsl:if test=\"$bei/payload/bg:Baggage/bg:AirlineCode\"><AirlineCode><xsl:value-of select=\"$bei/payload/bg:Baggage/bg:AirlineCode\"/></AirlineCode></xsl:if><xsl:if test=\"$bei/payload/bg:Baggage/bg:FlightNumber\"><FlightNumber><xsl:value-of select=\"$bei/payload/bg:Baggage/bg:FlightNumber\"/></FlightNumber></xsl:if><xsl:if test=\"$bei/payload/bg:Baggage/bg:RecordLocator\"><RecordLocator><xsl:value-of select=\"$bei/payload/bg:Baggage/bg:RecordLocator\"/></RecordLocator></xsl:if><xsl:if test=\"$bei/payload/bg:Baggage/bg:PassengerName\"><PassengerName><xsl:value-of select=\"$bei/payload/bg:Baggage/bg:PassengerName\"/></PassengerName></xsl:if><OriginLocalDate><xsl:value-of select=\"xsd:dateTime($bei/payload/bg:Baggage/bg:OriginLocalDate)\"/></OriginLocalDate><xsl:if test=\"$bei/payload/bg:Baggage/bg:OriginStnCode\"><OriginStnCode><xsl:value-of select=\"$bei/payload/bg:Baggage/bg:OriginStnCode\"/></OriginStnCode></xsl:if><xsl:if test=\"$bei/payload/bg:Baggage/bg:DestStnCode\"><DestStnCode><xsl:value-of select=\"$bei/payload/bg:Baggage/bg:DestStnCode\"/></DestStnCode></xsl:if><xsl:if test=\"$bei/payload/bg:Baggage/bg:BagLocation\"><BagLocation><xsl:value-of select=\"$bei/payload/bg:Baggage/bg:BagLocation\"/></BagLocation></xsl:if></object></createObject></xsl:template></xsl:stylesheet>");
+			Log.log(logger,"info", "Baggage Concept created for " + baggage.OriginalFlightKey);
+			Event.consumeEvent(bei);
+			Log.log(logger,"info", "Event consumed for " + bei.OriginalFlightKey);
+		}
+		catch (Exception ex) {
+			Log.log(logger, "error", "Exception occured while pre-processing flight events for: %s", bei.OriginalFlightKey);
+			System.debugOut(ex@stackTrace);
+		}		
+	}
+}

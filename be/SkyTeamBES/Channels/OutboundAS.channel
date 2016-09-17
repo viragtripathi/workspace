@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<channel:Channel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:channel="http:///com/tibco/cep/designtime/core/model/service/channel" xmlns:designtime="http:///com/tibco/cep/designtime/core/model/designtime_ontology.ecore" namespace="/Channels/" folder="/Channels/" name="OutboundAS" description="" GUID="CBD2E670-F42A-924B-B54F-FB42A6A413AE" ownerProjectName="SkyTeamBES">
+  <driver configMethod="REFERENCE" reference="/SharedResources/ASConnection.sharedascon" label="ACTIVESPACES" channel="/">
+    <destinations name="baggageOutbound" description="" GUID="FBE7DFF2-677C-F937-9284-DD3F6D9575D6" ownerProjectName="SkyTeamBES" eventURI="/Events/ASChannel/Baggage" serializerDeserializerClass="com.tibco.cep.driver.as.serializers.ActiveSpacesSerializer" driverConfig="//@driver">
+      <properties>
+        <properties xsi:type="designtime:SimpleProperty" name="SpaceName" value="Baggage"/>
+        <properties xsi:type="designtime:SimpleProperty" name="DistributionRole" value="LEECH"/>
+        <properties xsi:type="designtime:SimpleProperty" name="Filter" value=""/>
+        <properties xsi:type="designtime:SimpleProperty" name="ConsumptionMode" value="EntryBrowser"/>
+        <properties xsi:type="designtime:SimpleProperty" name="BrowserType" value="GET"/>
+        <properties xsi:type="designtime:SimpleProperty" name="DistributionScope" value="ALL"/>
+        <properties xsi:type="designtime:SimpleProperty" name="TimeScope" value="ALL"/>
+        <properties xsi:type="designtime:SimpleProperty" name="PutEvent" value="true"/>
+        <properties xsi:type="designtime:SimpleProperty" name="TakeEvent" value="false"/>
+        <properties xsi:type="designtime:SimpleProperty" name="ExpireEvent" value="false"/>
+        <properties xsi:type="designtime:SimpleProperty" name="Prefetch" value="-1"/>
+      </properties>
+    </destinations>
+    <destinations name="flightOutbound" description="" GUID="45F3B706-EEE6-A13B-59CA-38B58717C2AC" ownerProjectName="SkyTeamBES" eventURI="/Events/ASChannel/Flight" serializerDeserializerClass="com.tibco.cep.driver.as.serializers.ActiveSpacesSerializer" driverConfig="//@driver">
+      <properties>
+        <properties xsi:type="designtime:SimpleProperty" name="SpaceName" value="Flight"/>
+        <properties xsi:type="designtime:SimpleProperty" name="DistributionRole" value="LEECH"/>
+        <properties xsi:type="designtime:SimpleProperty" name="Filter" value=""/>
+        <properties xsi:type="designtime:SimpleProperty" name="ConsumptionMode" value="EntryBrowser"/>
+        <properties xsi:type="designtime:SimpleProperty" name="BrowserType" value="GET"/>
+        <properties xsi:type="designtime:SimpleProperty" name="DistributionScope" value="ALL"/>
+        <properties xsi:type="designtime:SimpleProperty" name="TimeScope" value="ALL"/>
+        <properties xsi:type="designtime:SimpleProperty" name="PutEvent" value="true"/>
+        <properties xsi:type="designtime:SimpleProperty" name="TakeEvent" value="false"/>
+        <properties xsi:type="designtime:SimpleProperty" name="ExpireEvent" value="false"/>
+        <properties xsi:type="designtime:SimpleProperty" name="Prefetch" value="-1"/>
+      </properties>
+    </destinations>
+    <driverType xsi:type="channel:DriverTypeInfo" driverTypeName="ActiveSpaces"/>
+  </driver>
+</channel:Channel>

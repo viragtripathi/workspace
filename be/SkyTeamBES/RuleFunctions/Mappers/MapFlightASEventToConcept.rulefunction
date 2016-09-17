@@ -1,0 +1,16 @@
+/**
+ * @description 
+ */
+Concepts.Flight rulefunction RuleFunctions.Mappers.MapFlightASEventToConcept {
+	attribute {
+		validity = ACTION;
+	}
+	scope {
+		
+		Events.ASChannel.Flight flight;
+	}
+	body {
+Concepts.Flight flightConcept = Instance.createInstance("xslt://{{/Concepts/Flight}}<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<xsl:stylesheet xmlns:xsl=\"http://www.w3.org/1999/XSL/Transform\" version=\"2.0\"><xsl:param name=\"flight\"/><xsl:template name=\"Function\" match=\"/\"><createObject><object><xsl:if test=\"$flight/EventType\"><EventType><xsl:value-of select=\"$flight/EventType\"/></EventType></xsl:if><xsl:if test=\"$flight/FlightKey\"><FlightKey><xsl:value-of select=\"$flight/FlightKey\"/></FlightKey></xsl:if><xsl:if test=\"$flight/FlightSegmentNumber\"><FlightSegmentNumber><xsl:value-of select=\"$flight/FlightSegmentNumber\"/></FlightSegmentNumber></xsl:if><xsl:if test=\"$flight/AirlineCode\"><AirlineCode><xsl:value-of select=\"$flight/AirlineCode\"/></AirlineCode></xsl:if><xsl:if test=\"$flight/FlightNumber\"><FlightNumber><xsl:value-of select=\"$flight/FlightNumber\"/></FlightNumber></xsl:if><xsl:if test=\"$flight/FlightDate\"><FlightDate><xsl:value-of select=\"$flight/FlightDate\"/></FlightDate></xsl:if><xsl:if test=\"$flight/OriginStnCode\"><OriginStnCode><xsl:value-of select=\"$flight/OriginStnCode\"/></OriginStnCode></xsl:if><xsl:if test=\"$flight/DestStnCode\"><DestStnCode><xsl:value-of select=\"$flight/DestStnCode\"/></DestStnCode></xsl:if><xsl:if test=\"$flight/SegmentStatus\"><SegmentStatus><xsl:value-of select=\"$flight/SegmentStatus\"/></SegmentStatus></xsl:if><xsl:if test=\"$flight/InternationalDomesticFlag\"><InternationalDomesticFlag><xsl:value-of select=\"$flight/InternationalDomesticFlag\"/></InternationalDomesticFlag></xsl:if><xsl:if test=\"$flight/EquipmentType\"><EquipmentType><xsl:value-of select=\"$flight/EquipmentType\"/></EquipmentType></xsl:if><xsl:if test=\"$flight/ScheduledDepartureTime\"><ScheduledDepartureTime><xsl:value-of select=\"$flight/ScheduledDepartureTime\"/></ScheduledDepartureTime></xsl:if><xsl:if test=\"$flight/ScheduledArrivalTime\"><ScheduledArrivalTime><xsl:value-of select=\"$flight/ScheduledArrivalTime\"/></ScheduledArrivalTime></xsl:if><xsl:if test=\"$flight/EstimatedDepartureTime\"><EstimatedDepartureTime><xsl:value-of select=\"$flight/EstimatedDepartureTime\"/></EstimatedDepartureTime></xsl:if><xsl:if test=\"$flight/EstimatedArrivalTime\"><EstimatedArrivalTime><xsl:value-of select=\"$flight/EstimatedArrivalTime\"/></EstimatedArrivalTime></xsl:if><xsl:if test=\"$flight/DepartureGate\"><DepartureGate><xsl:value-of select=\"$flight/DepartureGate\"/></DepartureGate></xsl:if><xsl:if test=\"$flight/ArrivalGate\"><ArrivalGate><xsl:value-of select=\"$flight/ArrivalGate\"/></ArrivalGate></xsl:if></object></createObject></xsl:template></xsl:stylesheet>");
+return flightConcept;
+	}
+}

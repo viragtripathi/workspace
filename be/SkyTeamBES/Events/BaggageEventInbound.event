@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<event:SimpleEvent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:event="http:///com/tibco/cep/designtime/core/model/event" namespace="/Events/" folder="/Events/" name="BaggageEventInbound" description="" GUID="92DA59C7-2F8E-63FD-280A-FDBC230F4081" ownerProjectName="SkyTeamBES" superEventPath="" payloadString="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&#xA;&lt;payload ref=&quot;pfx:Baggage&quot;/>" ttlUnits="Seconds" channelURI="/Channels/InboundJMS" destinationName="baggageEventInbound">
+  <properties name="OriginalFlightKey" ownerProjectName="SkyTeamBES" ownerPath="/Events/BaggageEventInbound"/>
+  <namespaceEntries prefix="xsd" namespace="http://www.w3.org/2001/XMLSchema"/>
+  <namespaceEntries prefix="pfx" namespace="http://www.schemas.skyteam.com/2016/09/enterprise/Baggage"/>
+  <registryImportEntries location="SharedResources/Schemas/BaggageSchema.xsd" namespace="http://www.schemas.skyteam.com/2016/09/enterprise/Baggage"/>
+  <expiryAction folder="/Events/BaggageEventInbound" name="BaggageEvent_expiryAction" ownerProjectName="SkyTeamBES" actionText="" conditionText="">
+    <symbols>
+      <symbolList idName="baggageevent" type="/Events/BaggageEventInbound"/>
+    </symbols>
+  </expiryAction>
+</event:SimpleEvent>

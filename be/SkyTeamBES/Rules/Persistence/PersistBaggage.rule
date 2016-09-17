@@ -1,0 +1,27 @@
+/**
+ * @description 
+ * @author vtripath-win7vm
+ */
+rule Rules.Persistence.PersistBaggage {
+	attribute {
+		priority = 9;
+		forwardChain = true;
+	}
+	declare {
+		
+		Concepts.Baggage baggage;
+	}
+	when {
+		
+	}
+	then {
+		String logContext = "SkyTeamBES.Rules.Persistence.PersistBaggageRule";
+		Object logger =  Log.getLogger(logContext);
+		Log.log(logger,"info", "Before persisting baggage " + baggage.OriginalFlightKey);
+		Events.ASChannel.Baggage baggageEvent = RuleFunctions.Mappers.MapBaggageConceptToBaggageEvent(baggage);
+		AS.putEvent("/Channels/OutboundAS/baggageOutbound",baggageEvent);
+		Log.log(logger,"info", "After persisting baggage " + baggage.OriginalFlightKey);
+		Event.consumeEvent(baggageEvent);
+	
+	}
+}

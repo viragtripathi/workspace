@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<element:Concept xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:element="http:///com/tibco/cep/designtime/core/model/element" namespace="/Concepts/" folder="/Concepts/" name="Flight" description="" GUID="DA12F817-D6E2-BCF6-DB6B-41EA7514DD66" ownerProjectName="SkyTeamBES" superConceptPath="" autoStartStateMachine="true">
+  <extendedProperties/>
+  <properties name="EventType" ownerProjectName="SkyTeamBES" ownerPath="/Concepts/Flight"/>
+  <properties name="FlightKey" ownerProjectName="SkyTeamBES" ownerPath="/Concepts/Flight"/>
+  <properties name="FlightSegmentNumber" ownerProjectName="SkyTeamBES" ownerPath="/Concepts/Flight"/>
+  <properties name="AirlineCode" ownerProjectName="SkyTeamBES" ownerPath="/Concepts/Flight"/>
+  <properties name="FlightNumber" ownerProjectName="SkyTeamBES" ownerPath="/Concepts/Flight"/>
+  <properties name="FlightDate" ownerProjectName="SkyTeamBES" type="DateTime" ownerPath="/Concepts/Flight"/>
+  <properties name="OriginStnCode" ownerProjectName="SkyTeamBES" ownerPath="/Concepts/Flight"/>
+  <properties name="DestStnCode" ownerProjectName="SkyTeamBES" ownerPath="/Concepts/Flight"/>
+  <properties name="SegmentStatus" ownerProjectName="SkyTeamBES" ownerPath="/Concepts/Flight"/>
+  <properties name="InternationalDomesticFlag" ownerProjectName="SkyTeamBES" type="boolean" ownerPath="/Concepts/Flight"/>
+  <properties name="EquipmentType" ownerProjectName="SkyTeamBES" ownerPath="/Concepts/Flight"/>
+  <properties name="ScheduledDepartureTime" ownerProjectName="SkyTeamBES" type="DateTime" ownerPath="/Concepts/Flight"/>
+  <properties name="ScheduledArrivalTime" ownerProjectName="SkyTeamBES" type="DateTime" ownerPath="/Concepts/Flight"/>
+  <properties name="EstimatedDepartureTime" ownerProjectName="SkyTeamBES" type="DateTime" ownerPath="/Concepts/Flight"/>
+  <properties name="EstimatedArrivalTime" ownerProjectName="SkyTeamBES" type="DateTime" ownerPath="/Concepts/Flight"/>
+  <properties name="DepartureGate" ownerProjectName="SkyTeamBES" ownerPath="/Concepts/Flight"/>
+  <properties name="ArrivalGate" ownerProjectName="SkyTeamBES" ownerPath="/Concepts/Flight"/>
+</element:Concept>

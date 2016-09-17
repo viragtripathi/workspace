@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<event:SimpleEvent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:event="http:///com/tibco/cep/designtime/core/model/event" namespace="/Events/ASChannel/" folder="/Events/ASChannel/" name="Flight" description="" GUID="7677147B-255B-B6B8-A24C-70EBE239163F" ownerProjectName="SkyTeamBES" superEventPath="" ttlUnits="Seconds">
+  <properties name="EventType" ownerProjectName="SkyTeamBES" conceptTypePath="/Events/ASChannel/Flight" ownerPath="/Events/ASChannel/Flight"/>
+  <properties name="FlightKey" ownerProjectName="SkyTeamBES" conceptTypePath="/Events/ASChannel/Flight" ownerPath="/Events/ASChannel/Flight"/>
+  <properties name="FlightSegmentNumber" ownerProjectName="SkyTeamBES" conceptTypePath="/Events/ASChannel/Flight" ownerPath="/Events/ASChannel/Flight"/>
+  <properties name="AirlineCode" ownerProjectName="SkyTeamBES" conceptTypePath="/Events/ASChannel/Flight" ownerPath="/Events/ASChannel/Flight"/>
+  <properties name="FlightNumber" ownerProjectName="SkyTeamBES" conceptTypePath="/Events/ASChannel/Flight" ownerPath="/Events/ASChannel/Flight"/>
+  <properties name="FlightDate" ownerProjectName="SkyTeamBES" type="DateTime" conceptTypePath="/Events/ASChannel/Flight" ownerPath="/Events/ASChannel/Flight"/>
+  <properties name="OriginStnCode" ownerProjectName="SkyTeamBES" conceptTypePath="/Events/ASChannel/Flight" ownerPath="/Events/ASChannel/Flight"/>
+  <properties name="DestStnCode" ownerProjectName="SkyTeamBES" conceptTypePath="/Events/ASChannel/Flight" ownerPath="/Events/ASChannel/Flight"/>
+  <properties name="SegmentStatus" ownerProjectName="SkyTeamBES" conceptTypePath="/Events/ASChannel/Flight" ownerPath="/Events/ASChannel/Flight"/>
+  <properties name="InternationalDomesticFlag" ownerProjectName="SkyTeamBES" type="boolean" conceptTypePath="/Events/ASChannel/Flight" ownerPath="/Events/ASChannel/Flight"/>
+  <properties name="EquipmentType" ownerProjectName="SkyTeamBES" conceptTypePath="/Events/ASChannel/Flight" ownerPath="/Events/ASChannel/Flight"/>
+  <properties name="ScheduledDepartureTime" ownerProjectName="SkyTeamBES" type="DateTime" conceptTypePath="/Events/ASChannel/Flight" ownerPath="/Events/ASChannel/Flight"/>
+  <properties name="ScheduledArrivalTime" ownerProjectName="SkyTeamBES" type="DateTime" conceptTypePath="/Events/ASChannel/Flight" ownerPath="/Events/ASChannel/Flight"/>
+  <properties name="EstimatedDepartureTime" ownerProjectName="SkyTeamBES" type="DateTime" conceptTypePath="/Events/ASChannel/Flight" ownerPath="/Events/ASChannel/Flight"/>
+  <properties name="EstimatedArrivalTime" ownerProjectName="SkyTeamBES" type="DateTime" conceptTypePath="/Events/ASChannel/Flight" ownerPath="/Events/ASChannel/Flight"/>
+  <properties name="DepartureGate" ownerProjectName="SkyTeamBES" conceptTypePath="/Events/ASChannel/Flight" ownerPath="/Events/ASChannel/Flight"/>
+  <properties name="ArrivalGate" ownerProjectName="SkyTeamBES" conceptTypePath="/Events/ASChannel/Flight" ownerPath="/Events/ASChannel/Flight"/>
+  <expiryAction folder="/Events/ASChannel/Flight" name="Baggage_expiryAction" ownerProjectName="SkyTeamBES" actionText="" conditionText="">
+    <symbols>
+      <symbolList idName="baggage" type="/Events/ASChannel/Flight"/>
+    </symbols>
+  </expiryAction>
+</event:SimpleEvent>

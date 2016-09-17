@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://www.schemas.skyteam.com/2016/09/enterprise/Baggage" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bg="http://www.schemas.skyteam.com/2016/09/enterprise/Baggage">
+
+	<xsd:complexType name="BaggageType">
+		<xsd:annotation>
+			<xsd:documentation>Baggage Events Details</xsd:documentation>
+		</xsd:annotation>		
+		<xsd:sequence>
+			<xsd:element name="EventType" type="xsd:string" />
+			<xsd:element name="OriginalFlightKey" type="xsd:string" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>An array of Flights (with leg info)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="BagTagId" type="xsd:string" />			
+			<xsd:element name="AirlineCode" type="xsd:string" />
+			<xsd:element name="FlightNumber" type="xsd:string" />
+			<xsd:element name="RecordLocator" type="xsd:string" />
+			<xsd:element name="PassengerName" type="xsd:string" />
+			<xsd:element name="OriginLocalDate" type="xsd:dateTime" />
+			<xsd:element name="OriginStnCode" type="xsd:string" />
+			<xsd:element name="DestStnCode" type="xsd:string" />
+			<xsd:element name="BagLocation" type="xsd:string" />			
+		</xsd:sequence>
+
+	</xsd:complexType>
+	
+
+	<xsd:element name="Baggage" type="bg:BaggageType"></xsd:element>
+</xsd:schema>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat/632c4635-4327-4fb4-a34f-c19e54a651f9" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ns.tibco.com/bw/palette/dataformat/632c4635-4327-4fb4-a34f-c19e54a651f9">
+  <xsd:element name="root" tibex:source="sr.index.dataFormatResource">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="EventType" type="xsd:string"/>
+        <xsd:element name="FlightSegmentNumber" type="xsd:string"/>
+        <xsd:element name="AirlineCode" type="xsd:string"/>
+        <xsd:element name="FlightNumber" type="xsd:string"/>
+        <xsd:element name="FlightDate" type="xsd:date"/>
+        <xsd:element name="OriginStnCode" type="xsd:string"/>
+        <xsd:element name="DestStnCode" type="xsd:string"/>
+        <xsd:element name="SegmentStatus" type="xsd:string"/>
+        <xsd:element name="InternationalDomesticFlag" type="xsd:boolean"/>
+        <xsd:element name="EquipmentType" type="xsd:string"/>
+        <xsd:element name="ScheduledDepartureTime" type="xsd:dateTime"/>
+        <xsd:element name="ScheduledArrivalTime" type="xsd:dateTime"/>
+        <xsd:element name="EstimatedDepartureTime" type="xsd:dateTime"/>
+        <xsd:element name="EstimatedArrivalTime" type="xsd:dateTime"/>
+        <xsd:element name="DepartureGate" type="xsd:string"/>
+        <xsd:element name="ArrivalGate" type="xsd:string"/>
+      </xsd:sequence>
+        </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

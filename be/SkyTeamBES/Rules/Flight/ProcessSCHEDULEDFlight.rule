@@ -1,0 +1,29 @@
+/**
+ * @description 
+ * @author vtripath-win7vm
+ */
+rule Rules.Flight.ProcessSCHEDULEDFlight {
+	attribute {
+		priority = 5;
+		forwardChain = true;
+	}
+	declare {
+		
+		Concepts.Flight flight;
+	}
+	when {
+		flight.EventType == Scorecards.FlightEventTypes.SCHEDULED;
+	}
+	then {
+		Object logger =  Log.getLogger("Rules.Flight.ProcessSCHEDULEDFlight");
+		Log.log(logger,"info", "Flight event received for EventType %s", Scorecards.FlightEventTypes.SCHEDULED);
+		//System.debugOut("Flight SCHEDULED event received");
+		
+		try {
+			//TODO
+		}
+		catch(Exception ex) {
+			Log.log(logger, "error", "Exception occured while processing SCHEDULED flight. %s", ex);			
+			}
+	}
+}

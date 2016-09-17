@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<element:Scorecard xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:element="http:///com/tibco/cep/designtime/core/model/element" namespace="/Scorecards/" folder="/Scorecards/" name="PassengerEventTypes" description="" GUID="BFAE6200-92FF-303E-0FDC-923EBB2EDEB2" ownerProjectName="SkyTeamBES" scorecard="true">
+  <properties name="CHECKED_IN" ownerProjectName="SkyTeamBES" ownerPath="/Scorecards/PassengerEventTypes"/>
+  <properties name="BOARDED" ownerProjectName="SkyTeamBES" ownerPath="/Scorecards/PassengerEventTypes"/>
+</element:Scorecard>

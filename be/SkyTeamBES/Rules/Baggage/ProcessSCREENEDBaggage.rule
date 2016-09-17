@@ -1,0 +1,21 @@
+/**
+ * @description 
+ * @author vtripath-win7vm
+ */
+rule Rules.Baggage.ProcessSCREENEDBaggage {
+	attribute {
+		priority = 5;
+		forwardChain = true;
+	}
+	declare {
+		
+		Concepts.Baggage baggage
+;
+	}
+	when {
+		baggage.EventType == Scorecards.BagggageEventTypes.SCREENED;
+	}
+	then {
+		System.debugOut("Baggage SCREENED event received");
+	}
+}

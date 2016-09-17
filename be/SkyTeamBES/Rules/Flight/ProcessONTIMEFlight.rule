@@ -1,0 +1,20 @@
+/**
+ * @description 
+ * @author vtripath-win7vm
+ */
+rule Rules.Flight.ProcessONTIMEFlight {
+	attribute {
+		priority = 5;
+		forwardChain = true;
+	}
+	declare {
+		
+		Concepts.Flight flight;
+	}
+	when {
+		flight.EventType == Scorecards.FlightEventTypes.ONTIME;
+	}
+	then {
+		System.debugOut("Flight ONTIME event received");
+	}
+}

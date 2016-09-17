@@ -1,0 +1,24 @@
+/**
+ * @description 
+ */
+void rulefunction RuleFunctions.Startup.Init {
+	attribute {
+		validity = ACTION;
+	}
+	scope {
+		
+	}
+	body {
+		Object logger =  Log.getLogger("RuleFunctions.Init.Startup");
+		Log.log(logger,"info", "Engine Startup");
+		
+		Scorecards.FlightEventTypes.SCHEDULED = "SCHEDULED";
+		Scorecards.FlightEventTypes.ONTIME = "ONTIME";
+		Scorecards.FlightEventTypes.BOARDING = "BOARDING";
+		Scorecards.FlightEventTypes.CLOSED = "CLOSED";
+		Scorecards.FlightEventTypes.INFLIGHT = "INFLIGHT";
+		Scorecards.FlightEventTypes.ARRIVED = "ARRIVED";
+		
+
+	}
+}

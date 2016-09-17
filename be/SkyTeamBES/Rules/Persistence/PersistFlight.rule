@@ -1,0 +1,26 @@
+/**
+ * @description 
+ * @author vtripath-win7vm
+ */
+rule Rules.Persistence.PersistFlight {
+	attribute {
+		priority = 9;
+		forwardChain = true;
+	}
+	declare {
+		
+		Concepts.Flight flight;
+	}
+	when {
+		
+	}
+	then {
+		String logContext = "SkyTeamBES.Rules.Persistence.PersistFlightRule";
+		Object logger =  Log.getLogger(logContext);
+		Log.log(logger,"info", "Before persisting flight " + flight.FlightKey);
+		Events.ASChannel.Flight flightEvent = RuleFunctions.Mappers.MapFlightConceptToFlightEvent(flight);
+		AS.putEvent("/Channels/OutboundAS/flightOutbound",flightEvent);
+		Log.log(logger,"info", "After persisting flight " + flight.FlightKey);
+		Event.consumeEvent(flightEvent);	
+	}
+}

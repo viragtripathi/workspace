@@ -1,0 +1,21 @@
+/**
+ * @description 
+ * @author vtripath-win7vm
+ */
+rule Rules.Baggage.ProcessREROUTEDBaggage {
+	attribute {
+		priority = 5;
+		forwardChain = true;
+	}
+	declare {
+		
+		Concepts.Baggage baggage
+;
+	}
+	when {
+		baggage.EventType == Scorecards.BagggageEventTypes.REROUTED;
+	}
+	then {
+		System.debugOut("Baggage REROUTED event received");
+	}
+}

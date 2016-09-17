@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://www.schemas.skyteam.com/2016/09/enterprise/Flight" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:fl="http://www.schemas.skyteam.com/2016/09/enterprise/Flight">
+
+	<xsd:complexType name="FlightType">
+		<xsd:annotation>
+			<xsd:documentation>Flight Events Details</xsd:documentation>
+		</xsd:annotation>		
+		<xsd:sequence>
+			<xsd:element name="EventType" type="xsd:string" />
+			<xsd:element name="FlightKey" type="xsd:string" />
+			<xsd:element name="FlightSegmentNumber" type="xsd:string" />
+			<xsd:element name="AirlineCode" type="xsd:string" />
+			<xsd:element name="FlightNumber" type="xsd:string" />
+			<xsd:element name="FlightDate" type="xsd:dateTime" />
+			<xsd:element name="OriginStnCode" type="xsd:string" />
+			<xsd:element name="DestStnCode" type="xsd:string" />			
+			<xsd:element name="SegmentStatus" type="xsd:string" />
+			<xsd:element name="InternationalDomesticFlag" type="xsd:boolean" />
+			<xsd:element name="EquipmentType" type="xsd:string" />
+			<xsd:element name="ScheduledDepartureTime" type="xsd:dateTime" />
+			<xsd:element name="ScheduledArrivalTime" type="xsd:dateTime" />
+			<xsd:element name="EstimatedDepartureTime" type="xsd:dateTime" />
+			<xsd:element name="EstimatedArrivalTime" type="xsd:dateTime" />
+			<xsd:element name="DepartureGate" type="xsd:string" />
+			<xsd:element name="ArrivalGate" type="xsd:string" />
+		</xsd:sequence>
+
+	</xsd:complexType>
+	
+
+	<xsd:element name="Flight" type="fl:FlightType"></xsd:element>
+</xsd:schema>

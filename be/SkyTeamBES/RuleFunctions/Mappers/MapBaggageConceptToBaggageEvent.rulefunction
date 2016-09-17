@@ -1,0 +1,16 @@
+/**
+ * @description 
+ */
+Events.ASChannel.Baggage rulefunction RuleFunctions.Mappers.MapBaggageConceptToBaggageEvent {
+	attribute {
+		validity = ACTION;
+	}
+	scope {
+		
+		Concepts.Baggage baggage;
+	}
+	body {
+		Events.ASChannel.Baggage baggageEvent = Event.createEvent("xslt://{{/Events/ASChannel/Baggage}}<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<xsl:stylesheet xmlns:xsl=\"http://www.w3.org/1999/XSL/Transform\" version=\"2.0\"><xsl:param name=\"baggage\"/><xsl:template name=\"Function\" match=\"/\"><createEvent><event><xsl:if test=\"$baggage/EventType\"><EventType><xsl:value-of select=\"$baggage/EventType\"/></EventType></xsl:if><xsl:if test=\"$baggage/OriginalFlightKey[1]\"><OriginalFlightKey><xsl:value-of select=\"$baggage/OriginalFlightKey[1]\"/></OriginalFlightKey></xsl:if><xsl:if test=\"$baggage/BagTagId\"><BagTagId><xsl:value-of select=\"$baggage/BagTagId\"/></BagTagId></xsl:if><xsl:if test=\"$baggage/AirlineCode\"><AirlineCode><xsl:value-of select=\"$baggage/AirlineCode\"/></AirlineCode></xsl:if><xsl:if test=\"$baggage/FlightNumber\"><FlightNumber><xsl:value-of select=\"$baggage/FlightNumber\"/></FlightNumber></xsl:if><xsl:if test=\"$baggage/RecordLocator\"><RecordLocator><xsl:value-of select=\"$baggage/RecordLocator\"/></RecordLocator></xsl:if><xsl:if test=\"$baggage/PassengerName\"><PassengerName><xsl:value-of select=\"$baggage/PassengerName\"/></PassengerName></xsl:if><xsl:if test=\"$baggage/OriginLocalDate\"><OriginLocalDate><xsl:value-of select=\"$baggage/OriginLocalDate\"/></OriginLocalDate></xsl:if><xsl:if test=\"$baggage/OriginStnCode\"><OriginStnCode><xsl:value-of select=\"$baggage/OriginStnCode\"/></OriginStnCode></xsl:if><xsl:if test=\"$baggage/DestStnCode\"><DestStnCode><xsl:value-of select=\"$baggage/DestStnCode\"/></DestStnCode></xsl:if><xsl:if test=\"$baggage/BagLocation\"><BagLocation><xsl:value-of select=\"$baggage/BagLocation\"/></BagLocation></xsl:if></event></createEvent></xsl:template></xsl:stylesheet>");
+		return baggageEvent;
+	}
+}

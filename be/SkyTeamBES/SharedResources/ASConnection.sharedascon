@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BWSharedResource>
+    <config>
+        <Description>Enterprise Baggage Data in-memory Store</Description>
+        <MetaspaceName>EnterpriseBagDataStoreMS</MetaspaceName>
+        <MemberName>EBDS_BEAS_01</MemberName>
+        <DiscoveryUrl>tcp://127.0.0.1:8001;127.0.0.1:8002</DiscoveryUrl>
+        <ListenUrl>tcp://127.0.0.1:8001-8050</ListenUrl>
+        <RemoteListenUrl/>
+        <EnableSecurity>false</EnableSecurity>
+        <SecurityRole>Requester</SecurityRole>
+        <PolicyFile/>
+        <TokenFile/>
+        <IdentityPassword>#!ny/1d7Xt7s2IGeR3ZVg6ig==</IdentityPassword>
+        <Credential>USERPWD</Credential>
+        <Domain/>
+        <UserName/>
+        <Password>#!iJuCG/2ayxA4o51lcd/NQw==</Password>
+        <KeyFile/>
+        <PrivateKey/>
+    </config>
+</BWSharedResource>

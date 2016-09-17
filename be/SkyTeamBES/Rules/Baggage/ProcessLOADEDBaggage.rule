@@ -1,0 +1,21 @@
+/**
+ * @description 
+ * @author vtripath-win7vm
+ */
+rule Rules.Baggage.ProcessLOADEDBaggage {
+	attribute {
+		priority = 5;
+		forwardChain = true;
+	}
+	declare {
+		
+		Concepts.Baggage baggage
+;
+	}
+	when {
+		baggage.EventType == Scorecards.BagggageEventTypes.LOADED;
+	}
+	then {
+		System.debugOut("Baggage LOADED event received");
+	}
+}

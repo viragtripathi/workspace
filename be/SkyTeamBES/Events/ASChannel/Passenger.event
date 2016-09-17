@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<event:SimpleEvent xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:event="http:///com/tibco/cep/designtime/core/model/event" namespace="/Events/ASChannel/" folder="/Events/ASChannel/" name="Passenger" description="" GUID="1519582D-78D5-4BFE-20F4-2390860BE29F" ownerProjectName="SkyTeamBES" superEventPath="" ttlUnits="Seconds">
+  <properties name="EventType" ownerProjectName="SkyTeamBES" ownerPath="/Events/ASChannel/Passenger"/>
+  <properties name="FlightKey" ownerProjectName="SkyTeamBES" ownerPath="/Events/ASChannel/Passenger"/>
+  <properties name="AirlineCode" ownerProjectName="SkyTeamBES" ownerPath="/Events/ASChannel/Passenger"/>
+  <properties name="FlightSegments" ownerProjectName="SkyTeamBES" array="true" ownerPath="/Events/ASChannel/Passenger"/>
+  <properties name="BagTags" ownerProjectName="SkyTeamBES" array="true" ownerPath="/Events/ASChannel/Passenger"/>
+  <properties name="FlightNumber" ownerProjectName="SkyTeamBES" ownerPath="/Events/ASChannel/Passenger"/>
+  <properties name="RecordLocator" ownerProjectName="SkyTeamBES" ownerPath="/Events/ASChannel/Passenger"/>
+  <properties name="CutomerId" ownerProjectName="SkyTeamBES" ownerPath="/Events/ASChannel/Passenger"/>
+  <properties name="BookingId" ownerProjectName="SkyTeamBES" ownerPath="/Events/ASChannel/Passenger"/>
+  <properties name="FirstName" ownerProjectName="SkyTeamBES" ownerPath="/Events/ASChannel/Passenger"/>
+  <properties name="LastName" ownerProjectName="SkyTeamBES" ownerPath="/Events/ASChannel/Passenger"/>
+  <properties name="SeatNo" ownerProjectName="SkyTeamBES" ownerPath="/Events/ASChannel/Passenger"/>
+  <properties name="FrequentFlyerStaus" ownerProjectName="SkyTeamBES" ownerPath="/Events/ASChannel/Passenger"/>
+  <properties name="OriginLocalDate" ownerProjectName="SkyTeamBES" type="DateTime" ownerPath="/Events/ASChannel/Passenger"/>
+  <properties name="OriginStnCode" ownerProjectName="SkyTeamBES" ownerPath="/Events/ASChannel/Passenger"/>
+  <properties name="DestStnCode" ownerProjectName="SkyTeamBES" ownerPath="/Events/ASChannel/Passenger"/>
+  <properties name="BagKey" ownerProjectName="SkyTeamBES" ownerPath="/Events/ASChannel/Passenger"/>
+  <expiryAction name="Passenger_expiryAction" ownerProjectName="SkyTeamBES" actionText="" conditionText="">
+    <symbols>
+      <symbolList idName="passenger" type="/Events/ASChannel/Passenger"/>
+    </symbols>
+  </expiryAction>
+</event:SimpleEvent>

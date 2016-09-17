@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://www.schemas.skyteam.com/2016/09/enterprise/Passenger" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:pnr="http://www.schemas.skyteam.com/2016/09/enterprise/Passenger">
+
+	<xsd:complexType name="PassengerType">
+		<xsd:annotation>
+			<xsd:documentation>Passenger Events Details</xsd:documentation>
+		</xsd:annotation>		
+		<xsd:sequence>
+			<xsd:element name="EventType" type="xsd:string" />
+			<xsd:element name="FlightKey" type="xsd:string" />
+			<xsd:element name="AirlineCode" type="xsd:string" />
+			<xsd:element name="FlightSegments" type="xsd:string" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>An array of Flights (with leg info)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="BagTags" type="xsd:string" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>An Array of BagTag information</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="FlightNumber" type="xsd:string" />
+			<xsd:element name="RecordLocator" type="xsd:string" />
+			<xsd:element name="CutomerId" type="xsd:string" />
+			<xsd:element name="BookingId" type="xsd:string" />
+			<xsd:element name="FirstName" type="xsd:string" />
+			<xsd:element name="LastName" type="xsd:string" />
+			<xsd:element name="SeatNo" type="xsd:string" />
+			<xsd:element name="FrequentFlyerStaus" type="xsd:string" />
+			<xsd:element name="OriginLocalDate" type="xsd:dateTime" />
+			<xsd:element name="OriginStnCode" type="xsd:string" />
+			<xsd:element name="DestStnCode" type="xsd:string" />
+		</xsd:sequence>
+
+	</xsd:complexType>
+	
+
+	<xsd:element name="Passenger" type="pnr:PassengerType"></xsd:element>
+</xsd:schema>
