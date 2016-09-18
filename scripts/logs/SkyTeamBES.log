@@ -1,0 +1,600 @@
+2016 Sep 17 16:43:08:826 GMT -4 SkyTeamBES Debug [main] - [runtime.service] TibrvMsgPayload is not available.
+2016 Sep 17 16:43:08:842 GMT -4 SkyTeamBES Warning [main] - [runtime.service] Could not load payload class:  com.tibco.cep.driver.tibrv.serializer.TibrvMsgPayload
+2016 Sep 17 16:43:08:967 GMT -4 SkyTeamBES Info [main] - [container.standalone] 
+****************************************************************************
+	TIBCO BusinessEvents 5.3.0.164 (2016-05-14)
+	Using arguments :-n SkyTeamBES -u default -c C:/Projects/SkyTeam/workspace/be/SkyTeamBES/Deployments/SkyTeamBES.cdd C:/Projects/SkyTeam/workspace/be/SkyTeamBES/Deployments/SkyTeamBES.ear 
+	Copyright(c) 2004-2016 TIBCO Software Inc. All rights reserved.
+	
+****************************************************************************
+
+2016 Sep 17 16:43:08:967 GMT -4 SkyTeamBES Info [main] - [container.standalone] TIBCO BusinessEvents 5.3.0.164 -n SkyTeamBES -u default -c C:/Projects/SkyTeam/workspace/be/SkyTeamBES/Deployments/SkyTeamBES.cdd C:/Projects/SkyTeam/workspace/be/SkyTeamBES/Deployments/SkyTeamBES.ear
+2016 Sep 17 16:43:09:060 GMT -4 SkyTeamBES Info [main] - [container.standalone] Versions currently running:
+2016 Sep 17 16:43:09:060 GMT -4 SkyTeamBES Info [main] - [container.standalone]  C:/tibco/be/5.3/lib/cep-base.jar : Version 5.3.0.164, 2016-05-14 - TIBCO BusinessEvents   
+2016 Sep 17 16:43:09:060 GMT -4 SkyTeamBES Info [main] - [container.standalone]  be-functions.jar                 : Version 5.3.0.164, 2016-05-14 - TIBCO BusinessEvents   
+2016 Sep 17 16:43:09:060 GMT -4 SkyTeamBES Info [main] - [container.standalone]  be-mm.jar                        : Version 5.3.0.164, 2016-05-14 - TIBCO BusinessEvents   
+2016 Sep 17 16:43:09:060 GMT -4 SkyTeamBES Info [main] - [container.standalone]  be-q.jar                         : Version 5.3.0.164, 2016-05-14 - TIBCO BusinessEvents   
+2016 Sep 17 16:43:09:060 GMT -4 SkyTeamBES Info [main] - [container.standalone]  be-studiofunctions.jar           : Version 5.3.0.164, 2016-05-14 - TIBCO BusinessEvents   
+2016 Sep 17 16:43:09:060 GMT -4 SkyTeamBES Info [main] - [container.standalone]  cep-analytics.jar                : Version 5.3.0.164, 2016-05-14 - TIBCO BusinessEvents   
+2016 Sep 17 16:43:09:060 GMT -4 SkyTeamBES Info [main] - [container.standalone]  cep-as-channel.jar               : Version 5.3.0.164, 2016-05-14 - TIBCO BusinessEvents   
+2016 Sep 17 16:43:09:060 GMT -4 SkyTeamBES Info [main] - [container.standalone]  cep-backingstore-bdb.jar         : Version 5.3.0.164, 2016-05-14 - TIBCO BusinessEvents   
+2016 Sep 17 16:43:09:060 GMT -4 SkyTeamBES Info [main] - [container.standalone]  cep-backingstore.jar             : Version 5.3.0.164, 2016-05-14 - TIBCO BusinessEvents   
+2016 Sep 17 16:43:09:060 GMT -4 SkyTeamBES Info [main] - [container.standalone]  cep-base.jar                     : Version 5.3.0.164, 2016-05-14 - TIBCO BusinessEvents   
+2016 Sep 17 16:43:09:076 GMT -4 SkyTeamBES Info [main] - [container.standalone]  cep-common.jar                   : Version 5.3.0.164, 2016-05-14 - TIBCO BusinessEvents   
+2016 Sep 17 16:43:09:076 GMT -4 SkyTeamBES Info [main] - [container.standalone]  cep-container.jar                : Version 5.3.0.164, 2016-05-14 - TIBCO BusinessEvents   
+2016 Sep 17 16:43:09:076 GMT -4 SkyTeamBES Info [main] - [container.standalone]  cep-datagrid-oracle.jar          : Version 5.3.0.164, 2016-05-14 - TIBCO BusinessEvents   
+2016 Sep 17 16:43:09:076 GMT -4 SkyTeamBES Info [main] - [container.standalone]  cep-datagrid-tibco.jar           : Version 5.3.0.164, 2016-05-14 - TIBCO BusinessEvents   
+2016 Sep 17 16:43:09:076 GMT -4 SkyTeamBES Info [main] - [container.standalone]  cep-drivers.jar                  : Version 5.3.0.164, 2016-05-14 - TIBCO BusinessEvents   
+2016 Sep 17 16:43:09:076 GMT -4 SkyTeamBES Info [main] - [container.standalone]  cep-ftl.jar                      : Version 5.3.0.164, 2016-05-14 - TIBCO BusinessEvents   
+2016 Sep 17 16:43:09:076 GMT -4 SkyTeamBES Info [main] - [container.standalone]  cep-hawk-channel.jar             : Version 5.3.0.164, 2016-05-14 - TIBCO BusinessEvents   
+2016 Sep 17 16:43:09:076 GMT -4 SkyTeamBES Info [main] - [container.standalone]  cep-interpreter.jar              : Version 5.3.0.164, 2016-05-14 - TIBCO BusinessEvents   
+2016 Sep 17 16:43:09:076 GMT -4 SkyTeamBES Info [main] - [container.standalone]  cep-kernel.jar                   : Version 5.3.0.164, 2016-05-14 - TIBCO BusinessEvents   
+2016 Sep 17 16:43:09:076 GMT -4 SkyTeamBES Info [main] - [container.standalone]  cep-loadbalancer.jar             : Version 5.3.0.164, 2016-05-14 - TIBCO BusinessEvents   
+2016 Sep 17 16:43:09:076 GMT -4 SkyTeamBES Info [main] - [container.standalone]  cep-migration.jar                : Version 5.3.0.164, 2016-05-14 - TIBCO BusinessEvents   
+2016 Sep 17 16:43:09:076 GMT -4 SkyTeamBES Info [main] - [container.standalone]  cep-modules.jar                  : Version 5.3.0.164, 2016-05-14 - TIBCO BusinessEvents   
+2016 Sep 17 16:43:09:076 GMT -4 SkyTeamBES Info [main] - [container.standalone]  cep-pattern.jar                  : Version 5.3.0.164, 2016-05-14 - TIBCO BusinessEvents   
+2016 Sep 17 16:43:09:076 GMT -4 SkyTeamBES Info [main] - [container.standalone]  cep-query.jar                    : Version 5.3.0.164, 2016-05-14 - TIBCO BusinessEvents   
+2016 Sep 17 16:43:09:076 GMT -4 SkyTeamBES Info [main] - [container.standalone]  cep-sb-channel.jar               : Version 5.3.0.164, 2016-05-14 - TIBCO BusinessEvents   
+2016 Sep 17 16:43:09:076 GMT -4 SkyTeamBES Info [main] - [container.standalone]  cep-security.jar                 : Version 5.3.0.164, 2016-05-14 - TIBCO BusinessEvents   
+2016 Sep 17 16:43:09:076 GMT -4 SkyTeamBES Info [main] - [container.standalone]  cep-ui-rt-common.jar             : Version 5.3.0.164, 2016-05-14 - TIBCO BusinessEvents   
+2016 Sep 17 16:43:09:139 GMT -4 SkyTeamBES Info [main] - [container.standalone] Class path report:
+    [file:\C:\tibco\be\5.3\lib\be-functions.jar]
+    [file:\C:\tibco\be\5.3\mm\lib\be-mm.jar]
+    [file:\C:\tibco\be\5.3\lib\cep-analytics.jar]
+    [file:\C:\tibco\be\5.3\lib\cep-as-channel.jar]
+    [file:\C:\tibco\be\5.3\lib\cep-base.jar]
+    [file:\C:\tibco\be\5.3\lib\cep-common.jar]
+    [file:\C:\tibco\be\5.3\lib\cep-container.jar]
+    [file:\C:\tibco\be\5.3\lib\cep-datagrid-oracle.jar]
+    [file:\C:\tibco\be\5.3\lib\cep-datagrid-tibco.jar]
+    [file:\C:\tibco\be\5.3\lib\cep-drivers.jar]
+    [file:\C:\tibco\be\5.3\lib\cep-ftl.jar]
+    [file:\C:\tibco\be\5.3\lib\cep-hawk-channel.jar]
+    [file:\C:\tibco\be\5.3\lib\cep-interpreter.jar]
+    [file:\C:\tibco\be\5.3\lib\cep-kernel.jar]
+    [file:\C:\tibco\be\5.3\lib\cep-loadbalancer.jar]
+    [file:\C:\tibco\be\5.3\lib\cep-migration.jar]
+    [file:\C:\tibco\be\5.3\lib\cep-modules.jar]
+    [file:\C:\tibco\be\5.3\lib\cep-pattern.jar]
+    [file:\C:\tibco\be\5.3\mm\lib\be-q.jar]
+    [file:\C:\tibco\be\5.3\lib\cep-sb-channel.jar]
+    [file:\C:\tibco\be\5.3\lib\cep-security.jar]
+2016 Sep 17 16:43:09:154 GMT -4 SkyTeamBES Info [main] - [runtime.session] Loading catalog functions.
+2016 Sep 17 16:43:09:154 GMT -4 SkyTeamBES Info [main] - [runtime.session] Loading the project from: C:/Projects/SkyTeam/workspace/be/SkyTeamBES/Deployments/SkyTeamBES.ear
+2016 Sep 17 16:43:09:264 GMT -4 SkyTeamBES Debug [Catalog-Functions-Loader] - [model.functions] Ignoring :file:/C:/tibco/be/5.3/mm/lib/be-mm.jar!/functions.catalog already loaded from a different location
+2016 Sep 17 16:43:15:290 GMT -4 SkyTeamBES Info [main] - [runtime.session] Loaded the project successfully
+2016 Sep 17 16:43:32:705 GMT -4 SkyTeamBES Info [Catalog-Functions-Loader] - [runtime.session] Loaded catalog functions.
+2016 Sep 17 16:43:32:705 GMT -4 SkyTeamBES Info [main] - [runtime.session] Project XPATH version:2.0
+2016 Sep 17 16:43:32:705 GMT -4 SkyTeamBES Info [main] - [runtime.session] Registering Ontology Classes...
+2016 Sep 17 16:43:32:721 GMT -4 SkyTeamBES Debug [main] - [runtime.service] Loaded classes: 
+	[new class be.gen.Concepts.Baggage]
+	[new class be.gen.Concepts.Flight]
+	[new class be.gen.Concepts.Passenger]
+	[new class be.gen.Events.ASChannel.Baggage]
+	[new class be.gen.Events.ASChannel.Flight]
+	[new class be.gen.Events.ASChannel.Passenger]
+	[new class be.gen.Events.BaggageEventInbound]
+	[new class be.gen.Events.FlightEventInbound]
+	[new class be.gen.Events.PassengerEventInbound]
+	[new class be.gen.OversizeStringConstants]
+	[new class be.gen.RuleFunctions.Helper.ChangeDateFormat]
+	[new class be.gen.RuleFunctions.Helper.StringChangeDateFormatString$]
+	[new class be.gen.RuleFunctions.Mappers.MapBaggageConceptToBaggageEvent]
+	[new class be.gen.RuleFunctions.Mappers.MapBaggageConceptToBaggageEvent$oversizeName]
+	[new class be.gen.RuleFunctions.Mappers.MapFlightASEventToConcept]
+	[new class be.gen.RuleFunctions.Mappers.MapFlightASEventToConcept$oversizeName]
+	[new class be.gen.RuleFunctions.Mappers.MapFlightConceptToFlightEvent]
+	[new class be.gen.RuleFunctions.Mappers.MapFlightConceptToFlightEvent$oversizeName]
+	[new class be.gen.RuleFunctions.PreProcessor.BaggagePreproc]
+	[new class be.gen.RuleFunctions.PreProcessor.FlightPreproc]
+	[new class be.gen.RuleFunctions.PreProcessor.PassengerPreproc]
+	[new class be.gen.RuleFunctions.PreProcessor.nullBaggagePreproc$9y002fEvents$9y002fBaggageEventInbound$]
+	[new class be.gen.RuleFunctions.PreProcessor.nullFlightPreproc$9y002fEvents$9y002fFlightEventInbound$]
+	[new class be.gen.RuleFunctions.PreProcessor.nullPassengerPreproc$9y002fEvents$9y002fPassengerEventInbound$]
+	[new class be.gen.RuleFunctions.Startup.Init]
+	[new class be.gen.RuleFunctions.Startup.nullInit$]
+	[new class be.gen.Rules.Baggage.ProcessCHECKED_INBaggage]
+	[new class be.gen.Rules.Baggage.ProcessCHECKED_INBaggage$ProcessCHECKED_INBaggage_a]
+	[new class be.gen.Rules.Baggage.ProcessCHECKED_INBaggage$ProcessCHECKED_INBaggage_eq_c1]
+	[new class be.gen.Rules.Baggage.ProcessEXPECTEDBaggage]
+	[new class be.gen.Rules.Baggage.ProcessEXPECTEDBaggage$ProcessEXPECTEDBaggage_a]
+	[new class be.gen.Rules.Baggage.ProcessEXPECTEDBaggage$ProcessEXPECTEDBaggage_eq_c1]
+	[new class be.gen.Rules.Baggage.ProcessLOADEDBaggage]
+	[new class be.gen.Rules.Baggage.ProcessLOADEDBaggage$ProcessLOADEDBaggage_a]
+	[new class be.gen.Rules.Baggage.ProcessLOADEDBaggage$ProcessLOADEDBaggage_eq_c1]
+	[new class be.gen.Rules.Baggage.ProcessOFFLOADEDBaggage]
+	[new class be.gen.Rules.Baggage.ProcessOFFLOADEDBaggage$ProcessOFFLOADEDBaggage_a]
+	[new class be.gen.Rules.Baggage.ProcessOFFLOADEDBaggage$ProcessOFFLOADEDBaggage_eq_c1]
+	[new class be.gen.Rules.Baggage.ProcessREROUTEDBaggage]
+	[new class be.gen.Rules.Baggage.ProcessREROUTEDBaggage$ProcessREROUTEDBaggage_a]
+	[new class be.gen.Rules.Baggage.ProcessREROUTEDBaggage$ProcessREROUTEDBaggage_eq_c1]
+	[new class be.gen.Rules.Baggage.ProcessSCREENEDBaggage]
+	[new class be.gen.Rules.Baggage.ProcessSCREENEDBaggage$ProcessSCREENEDBaggage_a]
+	[new class be.gen.Rules.Baggage.ProcessSCREENEDBaggage$ProcessSCREENEDBaggage_eq_c1]
+	[new class be.gen.Rules.Baggage.ProcessSCREENING_FAILEDBaggage]
+	[new class be.gen.Rules.Baggage.ProcessSCREENING_FAILEDBaggage$ProcessSCREENING_FAILEDBaggage_a]
+	[new class be.gen.Rules.Baggage.ProcessSCREENING_FAILEDBaggage$ProcessSCREENING_FAILEDBaggage_eq_c1]
+	[new class be.gen.Rules.Baggage.ProcessSORTEDBaggage]
+	[new class be.gen.Rules.Baggage.ProcessSORTEDBaggage$ProcessSORTEDBaggage_a]
+	[new class be.gen.Rules.Baggage.ProcessSORTEDBaggage$ProcessSORTEDBaggage_eq_c1]
+	[new class be.gen.Rules.CatchAdvisoryEvents]
+	[new class be.gen.Rules.CatchAdvisoryEvents$CatchAdvisoryEvents_a]
+	[new class be.gen.Rules.Cleanup.DeleteBaggage]
+	[new class be.gen.Rules.Cleanup.DeleteBaggage$DeleteBaggage_a]
+	[new class be.gen.Rules.Cleanup.DeleteFlight]
+	[new class be.gen.Rules.Cleanup.DeleteFlight$DeleteFlight_a]
+	[new class be.gen.Rules.Flight.ProcessARRIVEDFlight]
+	[new class be.gen.Rules.Flight.ProcessARRIVEDFlight$ProcessARRIVEDFlight_a]
+	[new class be.gen.Rules.Flight.ProcessARRIVEDFlight$ProcessARRIVEDFlight_eq_c1]
+	[new class be.gen.Rules.Flight.ProcessBOARDINGFlight]
+	[new class be.gen.Rules.Flight.ProcessBOARDINGFlight$ProcessBOARDINGFlight_a]
+	[new class be.gen.Rules.Flight.ProcessBOARDINGFlight$ProcessBOARDINGFlight_eq_c1]
+	[new class be.gen.Rules.Flight.ProcessCLOSEDFlight]
+	[new class be.gen.Rules.Flight.ProcessCLOSEDFlight$ProcessCLOSEDFlight_a]
+	[new class be.gen.Rules.Flight.ProcessCLOSEDFlight$ProcessCLOSEDFlight_eq_c1]
+	[new class be.gen.Rules.Flight.ProcessINFLIGHTFlight]
+	[new class be.gen.Rules.Flight.ProcessINFLIGHTFlight$ProcessINFLIGHTFlight_a]
+	[new class be.gen.Rules.Flight.ProcessINFLIGHTFlight$ProcessINFLIGHTFlight_eq_c1]
+	[new class be.gen.Rules.Flight.ProcessONTIMEFlight]
+	[new class be.gen.Rules.Flight.ProcessONTIMEFlight$ProcessONTIMEFlight_a]
+	[new class be.gen.Rules.Flight.ProcessONTIMEFlight$ProcessONTIMEFlight_eq_c1]
+	[new class be.gen.Rules.Flight.ProcessSCHEDULEDFlight]
+	[new class be.gen.Rules.Flight.ProcessSCHEDULEDFlight$ProcessSCHEDULEDFlight_a]
+	[new class be.gen.Rules.Flight.ProcessSCHEDULEDFlight$ProcessSCHEDULEDFlight_eq_c1]
+	[new class be.gen.Rules.Persistence.PersistBaggage]
+	[new class be.gen.Rules.Persistence.PersistBaggage$PersistBaggage_a]
+	[new class be.gen.Rules.Persistence.PersistFlight]
+	[new class be.gen.Rules.Persistence.PersistFlight$PersistFlight_a]
+	[new class be.gen.Scorecards.BagggageEventTypes]
+	[new class be.gen.Scorecards.FlightEventTypes]
+	[new class be.gen.Scorecards.PassengerEventTypes]
+
+2016 Sep 17 16:43:32:752 GMT -4 SkyTeamBES Debug [main] - [runtime.service] Deployed RuleFunction: void RuleFunctions.PreProcessor.PassengerPreproc(be.gen.Events.PassengerEventInbound pei)
+2016 Sep 17 16:43:32:783 GMT -4 SkyTeamBES Debug [main] - [runtime.service] Deployed Concept: 
+[be.gen.Concepts.Flight
+	numProperties = 17;
+	 EventType Id(0);
+	 FlightKey Id(1);
+	 FlightSegmentNumber Id(2);
+	 AirlineCode Id(3);
+	 FlightNumber Id(4);
+	 FlightDate Id(5);
+	 OriginStnCode Id(6);
+	 DestStnCode Id(7);
+	 SegmentStatus Id(8);
+	 InternationalDomesticFlag Id(9);
+	 EquipmentType Id(10);
+	 ScheduledDepartureTime Id(11);
+	 ScheduledArrivalTime Id(12);
+	 EstimatedDepartureTime Id(13);
+	 EstimatedArrivalTime Id(14);
+	 DepartureGate Id(15);
+	 ArrivalGate Id(16);
+]
+
+2016 Sep 17 16:43:32:799 GMT -4 SkyTeamBES Debug [main] - [runtime.service] Deployed Concept: 
+[be.gen.Scorecards.BagggageEventTypes
+	numProperties = 8;
+	 CHECKED_IN Id(0);
+	 SCREENED Id(1);
+	 SCREENING_FAILED Id(2);
+	 SORTED Id(3);
+	 LOADED Id(4);
+	 OFFLOADED Id(5);
+	 EXPECTED Id(6);
+	 REROUTED Id(7);
+]
+
+2016 Sep 17 16:43:32:799 GMT -4 SkyTeamBES Debug [main] - [runtime.service] Deployed RuleFunction: void RuleFunctions.PreProcessor.FlightPreproc(be.gen.Events.FlightEventInbound fei)
+2016 Sep 17 16:43:32:799 GMT -4 SkyTeamBES Debug [main] - [runtime.service] Deployed RuleFunction: java.lang.String RuleFunctions.Helper.ChangeDateFormat(java.lang.String fltDate)
+2016 Sep 17 16:43:32:846 GMT -4 SkyTeamBES Debug [main] - [runtime.service] Deployed Concept: 
+[be.gen.Concepts.Baggage
+	numProperties = 11;
+	 EventType Id(0);
+	 OriginalFlightKey Id(1);
+	 BagTagId Id(2);
+	 AirlineCode Id(3);
+	 FlightNumber Id(4);
+	 RecordLocator Id(5);
+	 PassengerName Id(6);
+	 OriginLocalDate Id(7);
+	 OriginStnCode Id(8);
+	 DestStnCode Id(9);
+	 BagLocation Id(10);
+]
+
+2016 Sep 17 16:43:32:846 GMT -4 SkyTeamBES Debug [main] - [runtime.service] Deployed RuleFunction: void RuleFunctions.Startup.Init()
+2016 Sep 17 16:43:32:862 GMT -4 SkyTeamBES Debug [main] - [runtime.service] Deployed RuleFunction: be.gen.Events.ASChannel.Flight RuleFunctions.Mappers.MapFlightConceptToFlightEvent(be.gen.Concepts.Flight flight)
+2016 Sep 17 16:43:32:862 GMT -4 SkyTeamBES Debug [main] - [runtime.service] Deployed RuleFunction: void RuleFunctions.PreProcessor.BaggagePreproc(be.gen.Events.BaggageEventInbound bei)
+2016 Sep 17 16:43:32:877 GMT -4 SkyTeamBES Debug [main] - [runtime.service] Deployed RuleFunction: be.gen.Concepts.Flight RuleFunctions.Mappers.MapFlightASEventToConcept(be.gen.Events.ASChannel.Flight flight)
+2016 Sep 17 16:43:32:877 GMT -4 SkyTeamBES Debug [main] - [runtime.service] Deployed Concept: 
+[be.gen.Scorecards.PassengerEventTypes
+	numProperties = 2;
+	 CHECKED_IN Id(0);
+	 BOARDED Id(1);
+]
+
+2016 Sep 17 16:43:32:877 GMT -4 SkyTeamBES Debug [main] - [runtime.service] Deployed Concept: 
+[be.gen.Scorecards.FlightEventTypes
+	numProperties = 6;
+	 SCHEDULED Id(0);
+	 ONTIME Id(1);
+	 BOARDING Id(2);
+	 CLOSED Id(3);
+	 INFLIGHT Id(4);
+	 ARRIVED Id(5);
+]
+
+2016 Sep 17 16:43:32:893 GMT -4 SkyTeamBES Debug [main] - [runtime.service] Deployed Concept: 
+[be.gen.Concepts.Passenger
+	numProperties = 17;
+	 EventType Id(0);
+	 FlightKey Id(1);
+	 AirlineCode Id(2);
+	 FlightSegments Id(3);
+	 BagTags Id(4);
+	 FlightNumber Id(5);
+	 RecordLocator Id(6);
+	 CutomerId Id(7);
+	 BookingId Id(8);
+	 FirstName Id(9);
+	 LastName Id(10);
+	 SeatNo Id(11);
+	 FrequentFlyerStaus Id(12);
+	 OriginLocalDate Id(13);
+	 OriginStnCode Id(14);
+	 DestStnCode Id(15);
+	 BagKey Id(16);
+]
+
+2016 Sep 17 16:43:32:893 GMT -4 SkyTeamBES Debug [main] - [runtime.service] Deployed RuleFunction: be.gen.Events.ASChannel.Baggage RuleFunctions.Mappers.MapBaggageConceptToBaggageEvent(be.gen.Concepts.Baggage baggage)
+2016 Sep 17 16:43:32:908 GMT -4 SkyTeamBES Info [main] - [runtime.session] Registered Ontology Classes
+2016 Sep 17 16:43:33:018 GMT -4 SkyTeamBES Info [main] - [runtime.session] Loaded BE Jar catalog functions
+2016 Sep 17 16:43:33:018 GMT -4 SkyTeamBES Info [main] - [runtime.session] Starting BE engine in PRIMARY mode
+2016 Sep 17 16:43:33:033 GMT -4 SkyTeamBES Info [main] - [runtime.channel] Initialized Channel Manager
+2016 Sep 17 16:43:33:049 GMT -4 SkyTeamBES Info [main] - [driver.as] AS Destination baggageOutbound - SpaceName: Baggage
+2016 Sep 17 16:43:33:049 GMT -4 SkyTeamBES Info [main] - [driver.as] AS Destination baggageOutbound - DistributionRole: LEECH BrowserType: GET
+2016 Sep 17 16:43:33:065 GMT -4 SkyTeamBES Info [main] - [driver.as] AS Destination flightOutbound - SpaceName: Flight
+2016 Sep 17 16:43:33:065 GMT -4 SkyTeamBES Info [main] - [driver.as] AS Destination flightOutbound - DistributionRole: LEECH BrowserType: GET
+2016 Sep 17 16:43:33:065 GMT -4 SkyTeamBES Debug [main] - [runtime.channel] Available destination URI:
+2016 Sep 17 16:43:33:065 GMT -4 SkyTeamBES Debug [main] - [runtime.channel] Destination URI = /Channels/OutboundAS/flightOutbound
+2016 Sep 17 16:43:33:065 GMT -4 SkyTeamBES Debug [main] - [runtime.channel] Destination URI = /Channels/OutboundAS/baggageOutbound
+2016 Sep 17 16:43:33:299 GMT -4 SkyTeamBES Debug [main] - [runtime.channel] Available destination URI:
+2016 Sep 17 16:43:33:299 GMT -4 SkyTeamBES Debug [main] - [runtime.channel] Destination URI = /Channels/InboundJMS/baggageEventInbound
+2016 Sep 17 16:43:33:299 GMT -4 SkyTeamBES Debug [main] - [runtime.channel] Destination URI = /Channels/InboundJMS/flightEventInbound
+2016 Sep 17 16:43:33:299 GMT -4 SkyTeamBES Debug [main] - [runtime.channel] Destination URI = /Channels/InboundJMS/passengerEventInbound
+2016 Sep 17 16:43:33:299 GMT -4 SkyTeamBES Info [main] - [runtime.session] EAR generated with:
+2016 Sep 17 16:43:33:299 GMT -4 SkyTeamBES Info [main] - [runtime.session]  C:/tibco/be/5.3/lib/be-functions.jar        : Version 5.3.0.164, 2016-05-14 - 
+2016 Sep 17 16:43:33:299 GMT -4 SkyTeamBES Info [main] - [runtime.session]  C:/tibco/be/5.3/lib/be-studiofunctions.jar  : Version 5.3.0.164, 2016-05-14 - 
+2016 Sep 17 16:43:33:299 GMT -4 SkyTeamBES Info [main] - [runtime.session]  C:/tibco/be/5.3/lib/cep-analytics.jar       : Version 5.3.0.164, 2016-05-14 - 
+2016 Sep 17 16:43:33:299 GMT -4 SkyTeamBES Info [main] - [runtime.session]  C:/tibco/be/5.3/lib/cep-as-channel.jar      : Version 5.3.0.164, 2016-05-14 - 
+2016 Sep 17 16:43:33:299 GMT -4 SkyTeamBES Info [main] - [runtime.session]  C:/tibco/be/5.3/lib/cep-backingstore.jar    : Version 5.3.0.164, 2016-05-14 - 
+2016 Sep 17 16:43:33:299 GMT -4 SkyTeamBES Info [main] - [runtime.session]  C:/tibco/be/5.3/lib/cep-base.jar            : Version 5.3.0.164, 2016-05-14 - 
+2016 Sep 17 16:43:33:299 GMT -4 SkyTeamBES Info [main] - [runtime.session]  C:/tibco/be/5.3/lib/cep-common.jar          : Version 5.3.0.164, 2016-05-14 - 
+2016 Sep 17 16:43:33:299 GMT -4 SkyTeamBES Info [main] - [runtime.session]  C:/tibco/be/5.3/lib/cep-container.jar       : Version 5.3.0.164, 2016-05-14 - 
+2016 Sep 17 16:43:33:299 GMT -4 SkyTeamBES Info [main] - [runtime.session]  C:/tibco/be/5.3/lib/cep-datagrid-oracle.jar : Version 5.3.0.164, 2016-05-14 - 
+2016 Sep 17 16:43:33:299 GMT -4 SkyTeamBES Info [main] - [runtime.session]  C:/tibco/be/5.3/lib/cep-datagrid-tibco.jar  : Version 5.3.0.164, 2016-05-14 - 
+2016 Sep 17 16:43:33:299 GMT -4 SkyTeamBES Info [main] - [runtime.session]  C:/tibco/be/5.3/lib/cep-drivers.jar         : Version 5.3.0.164, 2016-05-14 - 
+2016 Sep 17 16:43:33:299 GMT -4 SkyTeamBES Info [main] - [runtime.session]  C:/tibco/be/5.3/lib/cep-ftl.jar             : Version 5.3.0.164, 2016-05-14 - 
+2016 Sep 17 16:43:33:299 GMT -4 SkyTeamBES Info [main] - [runtime.session]  C:/tibco/be/5.3/lib/cep-hawk-channel.jar    : Version 5.3.0.164, 2016-05-14 - 
+2016 Sep 17 16:43:33:299 GMT -4 SkyTeamBES Info [main] - [runtime.session]  C:/tibco/be/5.3/lib/cep-interpreter.jar     : Version 5.3.0.164, 2016-05-14 - 
+2016 Sep 17 16:43:33:299 GMT -4 SkyTeamBES Info [main] - [runtime.session]  C:/tibco/be/5.3/lib/cep-kernel.jar          : Version 5.3.0.164, 2016-05-14 - 
+2016 Sep 17 16:43:33:299 GMT -4 SkyTeamBES Info [main] - [runtime.session]  C:/tibco/be/5.3/lib/cep-loadbalancer.jar    : Version 5.3.0.164, 2016-05-14 - 
+2016 Sep 17 16:43:33:299 GMT -4 SkyTeamBES Info [main] - [runtime.session]  C:/tibco/be/5.3/lib/cep-pattern.jar         : Version 5.3.0.164, 2016-05-14 - 
+2016 Sep 17 16:43:33:299 GMT -4 SkyTeamBES Info [main] - [runtime.session]  C:/tibco/be/5.3/lib/cep-query.jar           : Version 5.3.0.164, 2016-05-14 - 
+2016 Sep 17 16:43:33:315 GMT -4 SkyTeamBES Info [main] - [runtime.session]  C:/tibco/be/5.3/lib/cep-sb-channel.jar      : Version 5.3.0.164, 2016-05-14 - 
+2016 Sep 17 16:43:33:315 GMT -4 SkyTeamBES Info [main] - [runtime.session]  C:/tibco/be/5.3/lib/cep-security.jar        : Version 5.3.0.164, 2016-05-14 - 
+2016 Sep 17 16:43:33:315 GMT -4 SkyTeamBES Info [main] - [runtime.session]  C:/tibco/be/5.3/mm/lib/be-q.jar             : Version 5.3.0.164, 2016-05-14 - 
+2016 Sep 17 16:43:33:330 GMT -4 SkyTeamBES Info [main] - [runtime.session] [inference-class] Using ObjectManager type :com.tibco.cep.runtime.service.om.impl.mem.InMemoryObjectManager@269222ae Concurrent : false 
+2016 Sep 17 16:43:33:346 GMT -4 SkyTeamBES Info [main] - [runtime.scheduler] [inference-class] Initialized thread pool [$default.be.mt$] with max [10] threads and max [1024] job queue size.
+2016 Sep 17 16:43:33:393 GMT -4 SkyTeamBES Debug [main] - [kernel.core] [inference-class] Rule loaded: /Rules/Flight/ProcessSCHEDULEDFlight
+2016 Sep 17 16:43:33:393 GMT -4 SkyTeamBES Debug [main] - [kernel.core] [inference-class] Rule loaded: /Rules/Baggage/ProcessLOADEDBaggage
+2016 Sep 17 16:43:33:408 GMT -4 SkyTeamBES Debug [main] - [kernel.core] [inference-class] Rule loaded: /Rules/Baggage/ProcessREROUTEDBaggage
+2016 Sep 17 16:43:33:408 GMT -4 SkyTeamBES Debug [main] - [kernel.core] [inference-class] Rule loaded: /Rules/Persistence/PersistBaggage
+2016 Sep 17 16:43:33:408 GMT -4 SkyTeamBES Debug [main] - [kernel.core] [inference-class] Rule loaded: /Rules/CatchAdvisoryEvents
+2016 Sep 17 16:43:33:408 GMT -4 SkyTeamBES Debug [main] - [kernel.core] [inference-class] Rule loaded: /Rules/Persistence/PersistFlight
+2016 Sep 17 16:43:33:408 GMT -4 SkyTeamBES Debug [main] - [kernel.core] [inference-class] Rule loaded: /Rules/Baggage/ProcessSCREENEDBaggage
+2016 Sep 17 16:43:33:408 GMT -4 SkyTeamBES Debug [main] - [kernel.core] [inference-class] Rule loaded: /Rules/Baggage/ProcessSORTEDBaggage
+2016 Sep 17 16:43:33:408 GMT -4 SkyTeamBES Debug [main] - [kernel.core] [inference-class] Rule loaded: /Rules/Baggage/ProcessCHECKED_INBaggage
+2016 Sep 17 16:43:33:408 GMT -4 SkyTeamBES Debug [main] - [kernel.core] [inference-class] Rule loaded: /Rules/Flight/ProcessINFLIGHTFlight
+2016 Sep 17 16:43:33:408 GMT -4 SkyTeamBES Debug [main] - [kernel.core] [inference-class] Rule loaded: /Rules/Baggage/ProcessSCREENING_FAILEDBaggage
+2016 Sep 17 16:43:33:408 GMT -4 SkyTeamBES Debug [main] - [kernel.core] [inference-class] Rule loaded: /Rules/Flight/ProcessBOARDINGFlight
+2016 Sep 17 16:43:33:408 GMT -4 SkyTeamBES Debug [main] - [kernel.core] [inference-class] Rule loaded: /Rules/Flight/ProcessONTIMEFlight
+2016 Sep 17 16:43:33:408 GMT -4 SkyTeamBES Debug [main] - [kernel.core] [inference-class] Rule loaded: /Rules/Baggage/ProcessEXPECTEDBaggage
+2016 Sep 17 16:43:33:408 GMT -4 SkyTeamBES Debug [main] - [kernel.core] [inference-class] Rule loaded: /Rules/Flight/ProcessCLOSEDFlight
+2016 Sep 17 16:43:33:408 GMT -4 SkyTeamBES Debug [main] - [kernel.core] [inference-class] Rule loaded: /Rules/Cleanup/DeleteFlight
+2016 Sep 17 16:43:33:408 GMT -4 SkyTeamBES Debug [main] - [kernel.core] [inference-class] Rule loaded: /Rules/Baggage/ProcessOFFLOADEDBaggage
+2016 Sep 17 16:43:33:408 GMT -4 SkyTeamBES Debug [main] - [kernel.core] [inference-class] Rule loaded: /Rules/Flight/ProcessARRIVEDFlight
+2016 Sep 17 16:43:33:408 GMT -4 SkyTeamBES Debug [main] - [kernel.core] [inference-class] Rule loaded: /Rules/Cleanup/DeleteBaggage
+2016 Sep 17 16:43:33:455 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered 8 rule functions
+2016 Sep 17 16:43:33:502 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered 1188 catalog functions out of 1188.
+2016 Sep 17 16:43:33:549 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered 12 entities
+2016 Sep 17 16:43:33:565 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event property Passenger.EventType
+2016 Sep 17 16:43:33:565 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event property Passenger.FlightKey
+2016 Sep 17 16:43:33:565 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event property Passenger.AirlineCode
+2016 Sep 17 16:43:33:565 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event property Passenger.FlightSegments
+2016 Sep 17 16:43:33:565 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event property Passenger.BagTags
+2016 Sep 17 16:43:33:565 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event property Passenger.FlightNumber
+2016 Sep 17 16:43:33:565 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event property Passenger.RecordLocator
+2016 Sep 17 16:43:33:565 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event property Passenger.CutomerId
+2016 Sep 17 16:43:33:565 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event property Passenger.BookingId
+2016 Sep 17 16:43:33:565 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event property Passenger.FirstName
+2016 Sep 17 16:43:33:565 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event property Passenger.LastName
+2016 Sep 17 16:43:33:565 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event property Passenger.SeatNo
+2016 Sep 17 16:43:33:565 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event property Passenger.FrequentFlyerStaus
+2016 Sep 17 16:43:33:565 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event property Passenger.OriginLocalDate
+2016 Sep 17 16:43:33:565 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event property Passenger.OriginStnCode
+2016 Sep 17 16:43:33:565 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event property Passenger.DestStnCode
+2016 Sep 17 16:43:33:565 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event property Passenger.BagKey
+2016 Sep 17 16:43:33:580 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event attribute Passenger@id
+2016 Sep 17 16:43:33:580 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event attribute Passenger@ttl
+2016 Sep 17 16:43:33:580 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event attribute Passenger@extId
+2016 Sep 17 16:43:33:580 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event attribute Passenger@payload
+2016 Sep 17 16:43:33:580 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept property Passenger.EventType
+2016 Sep 17 16:43:33:580 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept property Passenger.FlightKey
+2016 Sep 17 16:43:33:580 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept property Passenger.AirlineCode
+2016 Sep 17 16:43:33:580 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept property Passenger.FlightSegments
+2016 Sep 17 16:43:33:580 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept property Passenger.BagTags
+2016 Sep 17 16:43:33:580 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept property Passenger.FlightNumber
+2016 Sep 17 16:43:33:580 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept property Passenger.RecordLocator
+2016 Sep 17 16:43:33:580 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept property Passenger.CutomerId
+2016 Sep 17 16:43:33:580 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept property Passenger.BookingId
+2016 Sep 17 16:43:33:580 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept property Passenger.FirstName
+2016 Sep 17 16:43:33:580 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept property Passenger.LastName
+2016 Sep 17 16:43:33:580 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept property Passenger.SeatNo
+2016 Sep 17 16:43:33:580 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept property Passenger.FrequentFlyerStaus
+2016 Sep 17 16:43:33:580 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept property Passenger.OriginLocalDate
+2016 Sep 17 16:43:33:580 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept property Passenger.OriginStnCode
+2016 Sep 17 16:43:33:580 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept property Passenger.DestStnCode
+2016 Sep 17 16:43:33:580 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept property Passenger.BagKey
+2016 Sep 17 16:43:33:596 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept attribute Passenger@id
+2016 Sep 17 16:43:33:596 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept attribute Passenger@extId
+2016 Sep 17 16:43:33:596 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event property Flight.EventType
+2016 Sep 17 16:43:33:596 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event property Flight.FlightKey
+2016 Sep 17 16:43:33:596 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event property Flight.FlightSegmentNumber
+2016 Sep 17 16:43:33:596 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event property Flight.AirlineCode
+2016 Sep 17 16:43:33:596 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event property Flight.FlightNumber
+2016 Sep 17 16:43:33:596 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event property Flight.FlightDate
+2016 Sep 17 16:43:33:596 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event property Flight.OriginStnCode
+2016 Sep 17 16:43:33:596 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event property Flight.DestStnCode
+2016 Sep 17 16:43:33:596 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event property Flight.SegmentStatus
+2016 Sep 17 16:43:33:596 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event property Flight.InternationalDomesticFlag
+2016 Sep 17 16:43:33:596 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event property Flight.EquipmentType
+2016 Sep 17 16:43:33:596 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event property Flight.ScheduledDepartureTime
+2016 Sep 17 16:43:33:596 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event property Flight.ScheduledArrivalTime
+2016 Sep 17 16:43:33:596 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event property Flight.EstimatedDepartureTime
+2016 Sep 17 16:43:33:596 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event property Flight.EstimatedArrivalTime
+2016 Sep 17 16:43:33:596 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event property Flight.DepartureGate
+2016 Sep 17 16:43:33:596 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event property Flight.ArrivalGate
+2016 Sep 17 16:43:33:596 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event attribute Flight@id
+2016 Sep 17 16:43:33:596 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event attribute Flight@ttl
+2016 Sep 17 16:43:33:596 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event attribute Flight@extId
+2016 Sep 17 16:43:33:596 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event attribute Flight@payload
+2016 Sep 17 16:43:33:596 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept property Flight.EventType
+2016 Sep 17 16:43:33:596 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept property Flight.FlightKey
+2016 Sep 17 16:43:33:596 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept property Flight.FlightSegmentNumber
+2016 Sep 17 16:43:33:596 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept property Flight.AirlineCode
+2016 Sep 17 16:43:33:596 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept property Flight.FlightNumber
+2016 Sep 17 16:43:33:596 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept property Flight.FlightDate
+2016 Sep 17 16:43:33:596 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept property Flight.OriginStnCode
+2016 Sep 17 16:43:33:596 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept property Flight.DestStnCode
+2016 Sep 17 16:43:33:596 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept property Flight.SegmentStatus
+2016 Sep 17 16:43:33:612 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept property Flight.InternationalDomesticFlag
+2016 Sep 17 16:43:33:612 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept property Flight.EquipmentType
+2016 Sep 17 16:43:33:612 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept property Flight.ScheduledDepartureTime
+2016 Sep 17 16:43:33:612 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept property Flight.ScheduledArrivalTime
+2016 Sep 17 16:43:33:612 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept property Flight.EstimatedDepartureTime
+2016 Sep 17 16:43:33:612 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept property Flight.EstimatedArrivalTime
+2016 Sep 17 16:43:33:612 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept property Flight.DepartureGate
+2016 Sep 17 16:43:33:612 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept property Flight.ArrivalGate
+2016 Sep 17 16:43:33:612 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept attribute Flight@id
+2016 Sep 17 16:43:33:612 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept attribute Flight@extId
+2016 Sep 17 16:43:33:612 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept property FlightEventTypes.SCHEDULED
+2016 Sep 17 16:43:33:612 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept property FlightEventTypes.ONTIME
+2016 Sep 17 16:43:33:612 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept property FlightEventTypes.BOARDING
+2016 Sep 17 16:43:33:612 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept property FlightEventTypes.CLOSED
+2016 Sep 17 16:43:33:612 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept property FlightEventTypes.INFLIGHT
+2016 Sep 17 16:43:33:612 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept property FlightEventTypes.ARRIVED
+2016 Sep 17 16:43:33:612 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept attribute FlightEventTypes@id
+2016 Sep 17 16:43:33:612 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept attribute FlightEventTypes@extId
+2016 Sep 17 16:43:33:612 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event property FlightEventInbound.FlightKey
+2016 Sep 17 16:43:33:612 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event attribute FlightEventInbound@id
+2016 Sep 17 16:43:33:612 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event attribute FlightEventInbound@ttl
+2016 Sep 17 16:43:33:612 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event attribute FlightEventInbound@extId
+2016 Sep 17 16:43:33:612 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event attribute FlightEventInbound@payload
+2016 Sep 17 16:43:33:612 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept property BagggageEventTypes.CHECKED_IN
+2016 Sep 17 16:43:33:612 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept property BagggageEventTypes.SCREENED
+2016 Sep 17 16:43:33:612 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept property BagggageEventTypes.SCREENING_FAILED
+2016 Sep 17 16:43:33:612 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept property BagggageEventTypes.SORTED
+2016 Sep 17 16:43:33:612 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept property BagggageEventTypes.LOADED
+2016 Sep 17 16:43:33:612 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept property BagggageEventTypes.OFFLOADED
+2016 Sep 17 16:43:33:612 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept property BagggageEventTypes.EXPECTED
+2016 Sep 17 16:43:33:612 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept property BagggageEventTypes.REROUTED
+2016 Sep 17 16:43:33:612 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept attribute BagggageEventTypes@id
+2016 Sep 17 16:43:33:612 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept attribute BagggageEventTypes@extId
+2016 Sep 17 16:43:33:627 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event property PassengerEventInbound.FlightKey
+2016 Sep 17 16:43:33:627 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event attribute PassengerEventInbound@id
+2016 Sep 17 16:43:33:627 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event attribute PassengerEventInbound@ttl
+2016 Sep 17 16:43:33:627 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event attribute PassengerEventInbound@extId
+2016 Sep 17 16:43:33:627 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event attribute PassengerEventInbound@payload
+2016 Sep 17 16:43:33:627 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event property BaggageEventInbound.OriginalFlightKey
+2016 Sep 17 16:43:33:627 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event attribute BaggageEventInbound@id
+2016 Sep 17 16:43:33:627 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event attribute BaggageEventInbound@ttl
+2016 Sep 17 16:43:33:627 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event attribute BaggageEventInbound@extId
+2016 Sep 17 16:43:33:627 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event attribute BaggageEventInbound@payload
+2016 Sep 17 16:43:33:627 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept property PassengerEventTypes.CHECKED_IN
+2016 Sep 17 16:43:33:627 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept property PassengerEventTypes.BOARDED
+2016 Sep 17 16:43:33:627 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept attribute PassengerEventTypes@id
+2016 Sep 17 16:43:33:627 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept attribute PassengerEventTypes@extId
+2016 Sep 17 16:43:33:627 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept property Baggage.EventType
+2016 Sep 17 16:43:33:627 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept property Baggage.OriginalFlightKey
+2016 Sep 17 16:43:33:627 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept property Baggage.BagTagId
+2016 Sep 17 16:43:33:627 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept property Baggage.AirlineCode
+2016 Sep 17 16:43:33:627 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept property Baggage.FlightNumber
+2016 Sep 17 16:43:33:627 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept property Baggage.RecordLocator
+2016 Sep 17 16:43:33:627 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept property Baggage.PassengerName
+2016 Sep 17 16:43:33:627 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept property Baggage.OriginLocalDate
+2016 Sep 17 16:43:33:627 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept property Baggage.OriginStnCode
+2016 Sep 17 16:43:33:627 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept property Baggage.DestStnCode
+2016 Sep 17 16:43:33:627 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept property Baggage.BagLocation
+2016 Sep 17 16:43:33:627 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept attribute Baggage@id
+2016 Sep 17 16:43:33:627 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered concept attribute Baggage@extId
+2016 Sep 17 16:43:33:627 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event property Baggage.EventType
+2016 Sep 17 16:43:33:627 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event property Baggage.OriginalFlightKey
+2016 Sep 17 16:43:33:627 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event property Baggage.BagTagId
+2016 Sep 17 16:43:33:627 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event property Baggage.AirlineCode
+2016 Sep 17 16:43:33:627 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event property Baggage.FlightNumber
+2016 Sep 17 16:43:33:627 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event property Baggage.RecordLocator
+2016 Sep 17 16:43:33:627 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event property Baggage.PassengerName
+2016 Sep 17 16:43:33:627 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event property Baggage.OriginLocalDate
+2016 Sep 17 16:43:33:627 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event property Baggage.OriginStnCode
+2016 Sep 17 16:43:33:643 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event property Baggage.DestStnCode
+2016 Sep 17 16:43:33:643 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event property Baggage.BagLocation
+2016 Sep 17 16:43:33:643 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event attribute Baggage@id
+2016 Sep 17 16:43:33:643 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event attribute Baggage@ttl
+2016 Sep 17 16:43:33:643 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event attribute Baggage@extId
+2016 Sep 17 16:43:33:643 GMT -4 SkyTeamBES Debug [main] - [query.model] [inference-class] Registered event attribute Baggage@payload
+2016 Sep 17 16:43:33:658 GMT -4 SkyTeamBES Debug [main] - [kernel.core] [inference-class] Rule deployed: /Rules/Persistence/PersistBaggage
+2016 Sep 17 16:43:33:658 GMT -4 SkyTeamBES Debug [main] - [kernel.core] [inference-class] Rule deployed: /Rules/Baggage/ProcessCHECKED_INBaggage
+2016 Sep 17 16:43:33:658 GMT -4 SkyTeamBES Debug [main] - [kernel.core] [inference-class] Rule deployed: /Rules/Baggage/ProcessREROUTEDBaggage
+2016 Sep 17 16:43:33:658 GMT -4 SkyTeamBES Debug [main] - [kernel.core] [inference-class] Rule deployed: /Rules/Flight/ProcessBOARDINGFlight
+2016 Sep 17 16:43:33:658 GMT -4 SkyTeamBES Debug [main] - [kernel.core] [inference-class] Rule deployed: /Rules/Cleanup/DeleteFlight
+2016 Sep 17 16:43:33:658 GMT -4 SkyTeamBES Debug [main] - [kernel.core] [inference-class] Rule deployed: /Rules/CatchAdvisoryEvents
+2016 Sep 17 16:43:33:658 GMT -4 SkyTeamBES Debug [main] - [kernel.core] [inference-class] Rule deployed: /Rules/Flight/ProcessONTIMEFlight
+2016 Sep 17 16:43:33:658 GMT -4 SkyTeamBES Debug [main] - [kernel.core] [inference-class] Rule deployed: /Rules/Flight/ProcessCLOSEDFlight
+2016 Sep 17 16:43:33:658 GMT -4 SkyTeamBES Debug [main] - [kernel.core] [inference-class] Rule deployed: /Rules/Flight/ProcessARRIVEDFlight
+2016 Sep 17 16:43:33:658 GMT -4 SkyTeamBES Debug [main] - [kernel.core] [inference-class] Rule deployed: /Rules/Baggage/ProcessOFFLOADEDBaggage
+2016 Sep 17 16:43:33:658 GMT -4 SkyTeamBES Debug [main] - [kernel.core] [inference-class] Rule deployed: /Rules/Baggage/ProcessSCREENEDBaggage
+2016 Sep 17 16:43:33:658 GMT -4 SkyTeamBES Debug [main] - [kernel.core] [inference-class] Rule deployed: /Rules/Flight/ProcessSCHEDULEDFlight
+2016 Sep 17 16:43:33:658 GMT -4 SkyTeamBES Debug [main] - [kernel.core] [inference-class] Rule deployed: /Rules/Baggage/ProcessSORTEDBaggage
+2016 Sep 17 16:43:33:658 GMT -4 SkyTeamBES Debug [main] - [kernel.core] [inference-class] Rule deployed: /Rules/Baggage/ProcessEXPECTEDBaggage
+2016 Sep 17 16:43:33:658 GMT -4 SkyTeamBES Debug [main] - [kernel.core] [inference-class] Rule deployed: /Rules/Flight/ProcessINFLIGHTFlight
+2016 Sep 17 16:43:33:674 GMT -4 SkyTeamBES Debug [main] - [kernel.core] [inference-class] Rule deployed: /Rules/Baggage/ProcessSCREENING_FAILEDBaggage
+2016 Sep 17 16:43:33:674 GMT -4 SkyTeamBES Debug [main] - [kernel.core] [inference-class] Rule deployed: /Rules/Baggage/ProcessLOADEDBaggage
+2016 Sep 17 16:43:33:674 GMT -4 SkyTeamBES Debug [main] - [kernel.core] [inference-class] Rule deployed: /Rules/Persistence/PersistFlight
+2016 Sep 17 16:43:33:674 GMT -4 SkyTeamBES Debug [main] - [kernel.core] [inference-class] Rule deployed: /Rules/Cleanup/DeleteBaggage
+2016 Sep 17 16:43:33:674 GMT -4 SkyTeamBES Debug [main] - [modules.db] DB Concepts disabled, connection pool not started.
+2016 Sep 17 16:43:33:690 GMT -4 SkyTeamBES Info [main] - [runtime.service] Registering all BE-Agent level Group MBeans for BE-Agent with ID: 0
+2016 Sep 17 16:43:33:690 GMT -4 SkyTeamBES Info [main] - [runtime.service] All BE-Agent level Group MBeans SUCCESSFULLY registered for BE-Agent with ID: 0
+2016 Sep 17 16:43:33:705 GMT -4 SkyTeamBES Info [main] - [runtime.session] Hot Deployment Request, Loading Classes From File System
+2016 Sep 17 16:43:33:705 GMT -4 SkyTeamBES Info [main] - [driver.as] AS Channel [OutboundAS] connecting to metaspace: EnterpriseBagDataStoreMS
+2016 Sep 17 16:43:37:877 GMT -4 SkyTeamBES Info [main] - [driver.as] flightOutbound connecting to space 'Flight'
+2016 Sep 17 16:43:37:909 GMT -4 SkyTeamBES Info [main] - [driver.as] flightOutbound successfully connected to Space 'Flight'
+2016 Sep 17 16:43:37:909 GMT -4 SkyTeamBES Info [main] - [driver.as] baggageOutbound connecting to space 'Baggage'
+2016 Sep 17 16:43:37:924 GMT -4 SkyTeamBES Info [main] - [driver.as] baggageOutbound successfully connected to Space 'Baggage'
+2016 Sep 17 16:43:37:924 GMT -4 SkyTeamBES Info [main] - [driver.jms] Connecting JMS Channel [/Channels/InboundJMS] Properties [serverURL=tcp://localhost:7222 user=admin clientID=BE-SkyTeamBES-SkyTeamBES-/Channels/InboundJMS] [Thread: main] [State: Initialized]
+2016 Sep 17 16:43:37:987 GMT -4 SkyTeamBES Info [main] - [driver.jms] clientId already exists: ClientID = BE-SkyTeamBES-SkyTeamBES-/Channels/InboundJMS. Setting new ClientID = BE-SkyTeamBES-SkyTeamBES-/Channels/InboundJMS-1
+2016 Sep 17 16:43:38:002 GMT -4 SkyTeamBES Debug [main] - [runtime.session] inference-class binding input channel /Channels/InboundJMS/flightEventInbound to destination /Channels/InboundJMS
+2016 Sep 17 16:43:38:002 GMT -4 SkyTeamBES Debug [main] - [runtime.session] inference-class binding input channel /Channels/InboundJMS/passengerEventInbound to destination /Channels/InboundJMS
+2016 Sep 17 16:43:38:002 GMT -4 SkyTeamBES Debug [main] - [runtime.session] inference-class binding input channel /Channels/InboundJMS/baggageEventInbound to destination /Channels/InboundJMS
+2016 Sep 17 16:43:38:002 GMT -4 SkyTeamBES Info [main] - [driver.as] ******** ASChannel:start[/Channels/OutboundAS:4] ********
+2016 Sep 17 16:43:38:002 GMT -4 SkyTeamBES Info [main] - [driver.as] flightOutbound starting Space 'Flight'
+2016 Sep 17 16:43:38:018 GMT -4 SkyTeamBES Info [main] - [driver.as] flightOutbound started Space 'Flight' mode=4 start-mode=4
+2016 Sep 17 16:43:38:018 GMT -4 SkyTeamBES Info [main] - [driver.as] baggageOutbound starting Space 'Baggage'
+2016 Sep 17 16:43:38:018 GMT -4 SkyTeamBES Info [main] - [driver.as] baggageOutbound started Space 'Baggage' mode=4 start-mode=4
+2016 Sep 17 16:43:38:018 GMT -4 SkyTeamBES Info [main] - [driver.jms] Destination [/Channels/InboundJMS/baggageEventInbound] Properties [Selector= AckMode=23 Queue=true IncludeEventType=ALWAYS Name=skyteam.baggage.init DeliveryMode=2 Priority=4 TTL=0 Serializer=com.tibco.cep.driver.jms.serializer.TextMessageSerializer]
+2016 Sep 17 16:43:38:018 GMT -4 SkyTeamBES Info [main] - [driver.jms] Destination [/Channels/InboundJMS/flightEventInbound] Properties [Selector= AckMode=23 Queue=true IncludeEventType=ALWAYS Name=skyteam.flight.init DeliveryMode=2 Priority=4 TTL=0 Serializer=com.tibco.cep.driver.jms.serializer.TextMessageSerializer]
+2016 Sep 17 16:43:38:018 GMT -4 SkyTeamBES Info [main] - [driver.jms] Destination [/Channels/InboundJMS/passengerEventInbound] Properties [Selector= AckMode=23 Queue=true IncludeEventType=ALWAYS Name=skyteam.passenger.init DeliveryMode=2 Priority=4 TTL=0 Serializer=com.tibco.cep.driver.jms.serializer.TextMessageSerializer]
+2016 Sep 17 16:43:38:018 GMT -4 SkyTeamBES Info [main] - [driver.jms] Started Channel [/Channels/InboundJMS]
+2016 Sep 17 16:43:38:034 GMT -4 SkyTeamBES Debug [main] - [runtime.scheduler] [inference-class] Resuming threadpool [%clusterName%:4084@vtripath-win7vm:session-inference-class:700171836:AsyncWorkerService:$default.be.mt$]
+2016 Sep 17 16:43:38:034 GMT -4 SkyTeamBES Debug [main] - [runtime.scheduler] [inference-class] Resumed threadpool [%clusterName%:4084@vtripath-win7vm:session-inference-class:700171836:AsyncWorkerService:$default.be.mt$]
+2016 Sep 17 16:43:38:034 GMT -4 SkyTeamBES Info [main] - [RuleFunctions.Init.Startup] [inference-class] Engine Startup
+2016 Sep 17 16:43:38:034 GMT -4 SkyTeamBES Debug [main] - [kernel.core] [inference-class] RTC Operations: [Object=be.gen.Scorecards.FlightEventTypes@id=2@extId=/Scorecards/FlightEventTypes&v=0, RtcOps=11]
+2016 Sep 17 16:43:38:034 GMT -4 SkyTeamBES Debug [main] - [kernel.core] [inference-class] Rule Agenda >>> [Rule=be.gen.Rules.CatchAdvisoryEvents Objects=AdvisoryEvent@id=3];
+2016 Sep 17 16:43:38:034 GMT -4 SkyTeamBES Debug [main] - [Rules.CatchAdvisoryEvents] [inference-class] AdvisoryEvent caught: Engine SkyTeamBES activated | engine.primary.activated
+2016 Sep 17 16:43:38:049 GMT -4 SkyTeamBES Debug [main] - [kernel.core] [inference-class] RTC Operations: [Object=AdvisoryEvent@id=3, RtcOps=101]
+2016 Sep 17 16:43:38:049 GMT -4 SkyTeamBES Info [main] - [driver.as] Resume the destination: /Channels/OutboundAS/flightOutbound
+2016 Sep 17 16:43:38:049 GMT -4 SkyTeamBES Info [main] - [driver.as] Resume the destination: /Channels/OutboundAS/baggageOutbound
+2016 Sep 17 16:43:38:049 GMT -4 SkyTeamBES Info [main] - [studio.core] Hot Deployment enabled, using Java Instrumentation: sun.instrument.InstrumentationImpl
+2016 Sep 17 16:43:38:049 GMT -4 SkyTeamBES Info [main] - [studio.core] Started Hot Deployer
+2016 Sep 17 16:43:38:049 GMT -4 SkyTeamBES Info [main] - [runtime.service] Registering all BE-Engine level Group MBeans...
+2016 Sep 17 16:43:38:049 GMT -4 SkyTeamBES Info [main] - [runtime.service] All BE-Engine level Group MBeans SUCCESSFULLY registered
+2016 Sep 17 16:43:38:049 GMT -4 SkyTeamBES None [main] - [runtime.session] BE Engine SkyTeamBES started
+2016 Sep 17 16:43:38:206 GMT -4 SkyTeamBES Debug [/Channels/InboundJMS/passengerEventInbound-1] - [driver.jms] Starting JMS receiver in active mode for com.tibco.cep.runtime.session.impl.RuleSessionImpl@29bbc63c
+2016 Sep 17 16:43:38:206 GMT -4 SkyTeamBES Debug [/Channels/InboundJMS/flightEventInbound-1] - [driver.jms] Starting JMS receiver in active mode for com.tibco.cep.runtime.session.impl.RuleSessionImpl@29bbc63c
+2016 Sep 17 16:43:38:206 GMT -4 SkyTeamBES Debug [/Channels/InboundJMS/baggageEventInbound-1] - [driver.jms] Starting JMS receiver in active mode for com.tibco.cep.runtime.session.impl.RuleSessionImpl@29bbc63c
+2016 Sep 17 16:43:38:206 GMT -4 SkyTeamBES Info [/Channels/InboundJMS/passengerEventInbound-1] - [driver.jms] Destination [/Channels/InboundJMS/passengerEventInbound] listener ACTIVE for RuleSession [inference-class] {2}
+2016 Sep 17 16:43:38:206 GMT -4 SkyTeamBES Info [/Channels/InboundJMS/flightEventInbound-1] - [driver.jms] Destination [/Channels/InboundJMS/flightEventInbound] listener ACTIVE for RuleSession [inference-class] {2}
+2016 Sep 17 16:43:38:206 GMT -4 SkyTeamBES Info [/Channels/InboundJMS/baggageEventInbound-1] - [driver.jms] Destination [/Channels/InboundJMS/baggageEventInbound] listener ACTIVE for RuleSession [inference-class] {2}
+2016 Sep 17 16:45:15:318 GMT -4 SkyTeamBES Debug [/Channels/InboundJMS/baggageEventInbound-1] - [driver.jms] inference-class - Received JMS msg TextMessage={ Header={ JMSMessageID={ID:EMS-SERVER.1D1057D8045B5B:6314} JMSDestination={Queue[skyteam.baggage.init]} JMSReplyTo={null} JMSDeliveryMode={NON_PERSISTENT} JMSRedelivered={false} JMSCorrelationID={} JMSType={} JMSTimestamp={Sat Sep 17 16:45:15 EDT 2016} JMSDeliveryTime={Sat Sep 17 16:45:15 EDT 2016} JMSExpiration={0} JMSPriority={4} } Properties={ JMSXDeliveryCount={Integer:1} OriginalFlightKey={String:DL0001ATLDXB20160916} } Text={<?xml version="1.0" encoding="UTF-8"?>
+<bg:Baggage xmlns:bg="http://www.schemas.skyteam.com/2016/09/enterprise/Baggage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.schemas.skyteam.com/2016/09/enterprise/Baggage BaggageSchema.xsd ">
+  <bg:EventType>LOADED</bg:EventType>
+  <bg:OriginalFlightKey>DL0001ATLDXB20160916</bg:OriginalFlightKey>
+  <bg:BagTagId>168616</bg:BagTagId>
+  <bg:AirlineCode>DL</bg:AirlineCode>
+  <bg:FlightNumber>0001</bg:FlightNumber>
+  <bg:RecordLocator>ZTJE26</bg:RecordLocator>
+  <bg:PassengerName>Tim Cook</bg:PassengerName>
+  <bg:OriginLocalDate>2006-09-16T12:00:00</bg:OriginLocalDate>
+  <bg:OriginStnCode>ATL</bg:OriginStnCode>
+  <bg:DestStnCode>DXB</bg:DestStnCode>
+  <bg:BagLocation>ATL</bg:BagLocation>
+</bg:Baggage>} }
+2016 Sep 17 16:45:15:334 GMT -4 SkyTeamBES Info [$default.be.mt$.Thread.1] - [SkyTeamBES.RuleFunctions.PreProcessor.BaggagePreproc] [inference-class] Event received for DL0001ATLDXB20160916
+2016 Sep 17 16:45:16:224 GMT -4 SkyTeamBES Info [$default.be.mt$.Thread.1] - [SkyTeamBES.RuleFunctions.PreProcessor.BaggagePreproc] [inference-class] Baggage Concept created for com.tibco.cep.runtime.model.element.impl.property.simple.PropertyArrayStringSimple@409d985a
+2016 Sep 17 16:45:16:224 GMT -4 SkyTeamBES Info [$default.be.mt$.Thread.1] - [SkyTeamBES.RuleFunctions.PreProcessor.BaggagePreproc] [inference-class] Event consumed for DL0001ATLDXB20160916
+2016 Sep 17 16:45:16:224 GMT -4 SkyTeamBES Debug [$default.be.mt$.Thread.1] - [kernel.core] [inference-class] Rule Agenda >>> [Rule=be.gen.Rules.Persistence.PersistBaggage Objects=be.gen.Concepts.Baggage@id=5&v=0] [Rule=be.gen.Rules.Cleanup.DeleteBaggage Objects=be.gen.Concepts.Baggage@id=5&v=0];
+2016 Sep 17 16:45:16:224 GMT -4 SkyTeamBES Info [$default.be.mt$.Thread.1] - [SkyTeamBES.Rules.Persistence.PersistBaggageRule] [inference-class] Before persisting baggage com.tibco.cep.runtime.model.element.impl.property.simple.PropertyArrayStringSimple@409d985a
+2016 Sep 17 16:45:16:302 GMT -4 SkyTeamBES Info [$default.be.mt$.Thread.1] - [SkyTeamBES.Rules.Persistence.PersistBaggageRule] [inference-class] After persisting baggage com.tibco.cep.runtime.model.element.impl.property.simple.PropertyArrayStringSimple@409d985a
+2016 Sep 17 16:45:16:318 GMT -4 SkyTeamBES Debug [$default.be.mt$.Thread.1] - [kernel.core] [inference-class] Rule Agenda >>> [Rule=be.gen.Rules.Cleanup.DeleteBaggage Objects=be.gen.Concepts.Baggage@id=5&v=0];
+2016 Sep 17 16:45:16:318 GMT -4 SkyTeamBES Debug [$default.be.mt$.Thread.1] - [kernel.core] [inference-class] RTC Operations: [Object=be.gen.Concepts.Baggage@id=5&v=0, RtcOps=101]
+2016 Sep 17 16:46:36:721 GMT -4 SkyTeamBES Debug [/Channels/InboundJMS/flightEventInbound-1] - [driver.jms] inference-class - Received JMS msg TextMessage={ Header={ JMSMessageID={ID:EMS-SERVER.1D1057D8045B64:6324} JMSDestination={Queue[skyteam.flight.init]} JMSReplyTo={null} JMSDeliveryMode={NON_PERSISTENT} JMSRedelivered={false} JMSCorrelationID={} JMSType={} JMSTimestamp={Sat Sep 17 16:46:36 EDT 2016} JMSDeliveryTime={Sat Sep 17 16:46:36 EDT 2016} JMSExpiration={0} JMSPriority={4} } Properties={ JMSXDeliveryCount={Integer:1} FlightKey={String:DL0001ATLDXB20160916} } Text={<?xml version="1.0" encoding="UTF-8"?>
+<fl:Flight xmlns:fl="http://www.schemas.skyteam.com/2016/09/enterprise/Flight" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.schemas.skyteam.com/2016/09/enterprise/Flight FlightSchema.xsd ">
+  <fl:EventType>SCHEDULED</fl:EventType>
+  <fl:FlightKey>DL0001ATLDXB20160916</fl:FlightKey>
+  <fl:FlightSegmentNumber>1</fl:FlightSegmentNumber>
+  <fl:AirlineCode>DL</fl:AirlineCode>
+  <fl:FlightNumber>0001</fl:FlightNumber>
+  <fl:FlightDate>2001-12-31T12:00:00</fl:FlightDate>
+  <fl:OriginStnCode>ATL</fl:OriginStnCode>
+  <fl:DestStnCode>DXB</fl:DestStnCode>
+  <fl:SegmentStatus>Scheduled</fl:SegmentStatus>
+  <fl:InternationalDomesticFlag>true</fl:InternationalDomesticFlag>
+  <fl:EquipmentType>777</fl:EquipmentType>
+  <fl:ScheduledDepartureTime>2001-12-31T12:00:00</fl:ScheduledDepartureTime>
+  <fl:ScheduledArrivalTime>2001-12-31T12:00:00</fl:ScheduledArrivalTime>
+  <fl:EstimatedDepartureTime>2001-12-31T12:00:00</fl:EstimatedDepartureTime>
+  <fl:EstimatedArrivalTime>2001-12-31T12:00:00</fl:EstimatedArrivalTime>
+  <fl:DepartureGate>E16</fl:DepartureGate>
+  <fl:ArrivalGate>D12</fl:ArrivalGate>
+</fl:Flight>} }
+2016 Sep 17 16:46:36:721 GMT -4 SkyTeamBES Info [$default.be.mt$.Thread.3] - [SkyTeamBES.RuleFunctions.PreProcessor.FlightPreproc] [inference-class] Event received for DL0001ATLDXB20160916
+2016 Sep 17 16:46:36:783 GMT -4 SkyTeamBES Info [$default.be.mt$.Thread.3] - [SkyTeamBES.RuleFunctions.PreProcessor.FlightPreproc] [inference-class] Flight Concept created for DL0001ATLDXB20160916
+2016 Sep 17 16:46:36:783 GMT -4 SkyTeamBES Info [$default.be.mt$.Thread.3] - [SkyTeamBES.RuleFunctions.PreProcessor.FlightPreproc] [inference-class] Event consumed for DL0001ATLDXB20160916
+2016 Sep 17 16:46:36:783 GMT -4 SkyTeamBES Debug [$default.be.mt$.Thread.3] - [kernel.core] [inference-class] Rule Agenda >>> [Rule=be.gen.Rules.Flight.ProcessSCHEDULEDFlight Objects=be.gen.Concepts.Flight@id=9&v=0, be.gen.Scorecards.FlightEventTypes@id=2@extId=/Scorecards/FlightEventTypes&v=0] [Rule=be.gen.Rules.Persistence.PersistFlight Objects=be.gen.Concepts.Flight@id=9&v=0] [Rule=be.gen.Rules.Cleanup.DeleteFlight Objects=be.gen.Concepts.Flight@id=9&v=0];
+2016 Sep 17 16:46:36:783 GMT -4 SkyTeamBES Info [$default.be.mt$.Thread.3] - [Rules.Flight.ProcessSCHEDULEDFlight] [inference-class] Flight event received for EventType SCHEDULED
+2016 Sep 17 16:46:36:783 GMT -4 SkyTeamBES Debug [$default.be.mt$.Thread.3] - [kernel.core] [inference-class] Rule Agenda >>> [Rule=be.gen.Rules.Persistence.PersistFlight Objects=be.gen.Concepts.Flight@id=9&v=0] [Rule=be.gen.Rules.Cleanup.DeleteFlight Objects=be.gen.Concepts.Flight@id=9&v=0];
+2016 Sep 17 16:46:36:783 GMT -4 SkyTeamBES Info [$default.be.mt$.Thread.3] - [SkyTeamBES.Rules.Persistence.PersistFlightRule] [inference-class] Before persisting flight DL0001ATLDXB20160916
+2016 Sep 17 16:46:36:814 GMT -4 SkyTeamBES Info [$default.be.mt$.Thread.3] - [SkyTeamBES.Rules.Persistence.PersistFlightRule] [inference-class] After persisting flight DL0001ATLDXB20160916
+2016 Sep 17 16:46:36:814 GMT -4 SkyTeamBES Debug [$default.be.mt$.Thread.3] - [kernel.core] [inference-class] Rule Agenda >>> [Rule=be.gen.Rules.Cleanup.DeleteFlight Objects=be.gen.Concepts.Flight@id=9&v=0];
+2016 Sep 17 16:46:36:814 GMT -4 SkyTeamBES Debug [$default.be.mt$.Thread.3] - [kernel.core] [inference-class] RTC Operations: [Object=be.gen.Concepts.Flight@id=9&v=0, RtcOps=101]
+2016 Sep 17 16:52:53:786 GMT -4 SkyTeamBES Info [CTRL-C] - [runtime.session] Shutting down service provider: SkyTeamBES
+2016 Sep 17 16:52:53:801 GMT -4 SkyTeamBES Info [CTRL-C] - [runtime.session] Deactivating channels ...
+2016 Sep 17 16:52:53:801 GMT -4 SkyTeamBES Info [CTRL-C] - [driver.as] Resume the destination: /Channels/OutboundAS/flightOutbound
+2016 Sep 17 16:52:53:801 GMT -4 SkyTeamBES Info [CTRL-C] - [driver.as] Resume the destination: /Channels/OutboundAS/baggageOutbound
+2016 Sep 17 16:52:53:801 GMT -4 SkyTeamBES Info [CTRL-C] - [runtime.channel] Stopping channel: /Channels/OutboundAS
+2016 Sep 17 16:52:53:801 GMT -4 SkyTeamBES Info [CTRL-C] - [driver.as] ******** ASChannel:stop[/Channels/OutboundAS] ********
+2016 Sep 17 16:52:53:801 GMT -4 SkyTeamBES Info [CTRL-C] - [driver.as] Stop the destination: /Channels/OutboundAS/flightOutbound
+2016 Sep 17 16:52:53:801 GMT -4 SkyTeamBES Info [CTRL-C] - [driver.as] Stop the destination: /Channels/OutboundAS/baggageOutbound
+2016 Sep 17 16:52:53:801 GMT -4 SkyTeamBES Info [CTRL-C] - [runtime.channel] Stopping channel: /Channels/InboundJMS
+2016 Sep 17 16:52:53:801 GMT -4 SkyTeamBES Info [CTRL-C] - [runtime.session] RuleServiceProvider SkyTeamBES is shutting down.
+2016 Sep 17 16:52:53:801 GMT -4 SkyTeamBES Info [CTRL-C] - [studio.core] Stopped Hot Deployer...
+2016 Sep 17 16:52:53:817 GMT -4 SkyTeamBES Debug [/Channels/InboundJMS/flightEventInbound-1] - [driver.jms] Destroying the message consumer for destination /Channels/InboundJMS/flightEventInbound
+2016 Sep 17 16:52:53:817 GMT -4 SkyTeamBES Info [/Channels/InboundJMS/flightEventInbound-1] - [driver.jms] Destination [/Channels/InboundJMS/flightEventInbound] listener STOPPED for RuleSession [inference-class] {2}
+2016 Sep 17 16:52:53:895 GMT -4 SkyTeamBES Debug [/Channels/InboundJMS/passengerEventInbound-1] - [driver.jms] Destroying the message consumer for destination /Channels/InboundJMS/passengerEventInbound
+2016 Sep 17 16:52:53:895 GMT -4 SkyTeamBES Info [/Channels/InboundJMS/passengerEventInbound-1] - [driver.jms] Destination [/Channels/InboundJMS/passengerEventInbound] listener STOPPED for RuleSession [inference-class] {2}
+2016 Sep 17 16:52:53:926 GMT -4 SkyTeamBES Debug [/Channels/InboundJMS/baggageEventInbound-1] - [driver.jms] Destroying the message consumer for destination /Channels/InboundJMS/baggageEventInbound
+2016 Sep 17 16:52:53:926 GMT -4 SkyTeamBES Info [/Channels/InboundJMS/baggageEventInbound-1] - [driver.jms] Destination [/Channels/InboundJMS/baggageEventInbound] listener STOPPED for RuleSession [inference-class] {2}
+2016 Sep 17 16:52:58:817 GMT -4 SkyTeamBES Info [CTRL-C] - [runtime.session] Rulesessions shutdown successfully
+2016 Sep 17 16:52:58:817 GMT -4 SkyTeamBES Info [CTRL-C] - [runtime.session] Shutting down ChannelManager ...
+2016 Sep 17 16:52:58:817 GMT -4 SkyTeamBES Info [CTRL-C] - [runtime.channel] Closing Channel: /Channels/OutboundAS
+2016 Sep 17 16:52:58:817 GMT -4 SkyTeamBES Info [CTRL-C] - [driver.as] flightOutbound closing Space 'Flight'
+2016 Sep 17 16:52:58:833 GMT -4 SkyTeamBES Info [CTRL-C] - [driver.as] Destination [/Channels/OutboundAS/flightOutbound] closed for RuleSession [{1}]
+2016 Sep 17 16:52:58:833 GMT -4 SkyTeamBES Info [CTRL-C] - [driver.as] baggageOutbound closing Space 'Baggage'
+2016 Sep 17 16:52:58:833 GMT -4 SkyTeamBES Info [CTRL-C] - [driver.as] Destination [/Channels/OutboundAS/baggageOutbound] closed for RuleSession [{1}]
+2016 Sep 17 16:52:59:489 GMT -4 SkyTeamBES Info [CTRL-C] - [runtime.channel] Closing Channel: /Channels/InboundJMS
+2016 Sep 17 16:52:59:489 GMT -4 SkyTeamBES Info [CTRL-C] - [runtime.session] Shutting down RuleAdministrator ...
+2016 Sep 17 16:52:59:489 GMT -4 SkyTeamBES Info [CTRL-C] - [runtime.session] Stopping modules ...
+2016 Sep 17 16:52:59:489 GMT -4 SkyTeamBES Info [CTRL-C] - [runtime.session] Stopping services ...
+2016 Sep 17 16:52:59:489 GMT -4 SkyTeamBES Info [CTRL-C] - [runtime.session] Stopped services.
+2016 Sep 17 16:52:59:489 GMT -4 SkyTeamBES Info [CTRL-C] - [runtime.session] Closing Logger...

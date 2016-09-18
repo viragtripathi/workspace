@@ -3,18 +3,22 @@ TIBCO ActiveSpaces Agent
 Enterprise Edition. Version: 2.2.0.017 20-May-2016 SVN Rev.29736
 Copyright(c) 2009-2016 TIBCO Software Inc. All rights reserved
 ****************************************************************
-[2016-09-17T16:07:01.432][5860][3000][WARNING][transport][TcpListenSocket.cpp:137][Core::TcpListenSocket::listen] loopback ip address chosen, this agent may not connect to remote agents
-[2016-09-17T16:07:01.432][5860][3000][INFO][transport] ip_address=127.0.0.1 port=8001
-[2016-09-17T16:07:01.432][5860][324][INFO][] discovery 127.0.0.1:8001 resolved to 127.0.0.1:8001
-[2016-09-17T16:07:01.432][5860][324][INFO][] discovery 127.0.0.1:8002 resolved to 127.0.0.1:8002
-[2016-09-17T16:07:16.449][5860][324][INFO][EnterpriseBagDataStoreMS.$gmp] -------------------------------
-[2016-09-17T16:07:16.449][5860][324][INFO][EnterpriseBagDataStoreMS.$gmp] configuring new manager
-[2016-09-17T16:07:16.449][5860][324][INFO][EnterpriseBagDataStoreMS.$gmp] manager = EBDS_ASAGENT_01 (7f000001-1f41-57dda265-1b0, 127.0.0.1:8001)
-[2016-09-17T16:07:16.449][5860][324][INFO][EnterpriseBagDataStoreMS.$gmp] self node = EBDS_ASAGENT_01 (7f000001-1f41-57dda265-1b0, 127.0.0.1:8001)
-[2016-09-17T16:07:16.449][5860][324][INFO][EnterpriseBagDataStoreMS.$gmp] local node is MANAGER now
-[2016-09-17T16:07:16.449][5860][324][INFO][EnterpriseBagDataStoreMS.$gmp] -------------------------------
-[2016-09-17T16:07:16.464][5860][6748][INFO][EnterpriseBagDataStoreMS.metaspace] using site definition: type=[local] site=[default] routed=[false] 
-[2016-09-17T16:07:16.480][5860][7820][INFO][EnterpriseBagDataStoreMS.$members] member joined: EBDS_ASAGENT_01 (7f000001-1f41-57dda265-1b0, 127.0.0.1:8001)
-[2016-09-17T16:07:16.480][5860][3000][INFO][EnterpriseBagDataStoreMS.metaspace] Connected metaspace : name=[EnterpriseBagDataStoreMS] listen=[tcp://127.0.0.1:8001] discovery=[tcp://127.0.0.1:8001;127.0.0.1:8002] autoJoinRole=[seeder] member_name=[EBDS_ASAGENT_01] version=[2.2.0.017] 
-[2016-09-17T16:07:34.906][5860][7820][INFO][EnterpriseBagDataStoreMS.$members] member joined: as-admin-ac10b3cb-c350 (ac10b3cb-c350-57dda27c-378, 172.16.179.203:50000)
-[2016-09-17T16:09:23.551][5860][7820][INFO][EnterpriseBagDataStoreMS.$members] member joined: EBDS_BEAS_01 (7f000001-1f42-57dda2f0-32f, 127.0.0.1:8002)
+[2016-09-18T07:49:28.570][7332][8180][WARNING][transport][TcpListenSocket.cpp:137][Core::TcpListenSocket::listen] loopback ip address chosen, this agent may not connect to remote agents
+[2016-09-18T07:49:28.570][7332][8180][INFO][transport] ip_address=127.0.0.1 port=8001
+[2016-09-18T07:49:28.570][7332][7196][INFO][] discovery 127.0.0.1:8001 resolved to 127.0.0.1:8001
+[2016-09-18T07:49:28.570][7332][7196][INFO][] discovery 127.0.0.1:8002 resolved to 127.0.0.1:8002
+[2016-09-18T07:49:43.590][7332][7196][INFO][EnterpriseBagDataStoreMS.$gmp] -------------------------------
+[2016-09-18T07:49:43.590][7332][7196][INFO][EnterpriseBagDataStoreMS.$gmp] configuring new manager
+[2016-09-18T07:49:43.590][7332][7196][INFO][EnterpriseBagDataStoreMS.$gmp] manager = EBDS_ASAGENT_01 (7f000001-1f41-57de7f48-23a, 127.0.0.1:8001)
+[2016-09-18T07:49:43.590][7332][7196][INFO][EnterpriseBagDataStoreMS.$gmp] self node = EBDS_ASAGENT_01 (7f000001-1f41-57de7f48-23a, 127.0.0.1:8001)
+[2016-09-18T07:49:43.590][7332][7196][INFO][EnterpriseBagDataStoreMS.$gmp] local node is MANAGER now
+[2016-09-18T07:49:43.590][7332][7196][INFO][EnterpriseBagDataStoreMS.$gmp] -------------------------------
+[2016-09-18T07:49:43.606][7332][7172][INFO][EnterpriseBagDataStoreMS.metaspace] using site definition: type=[local] site=[default] routed=[false] 
+[2016-09-18T07:49:43.606][7332][7552][INFO][EnterpriseBagDataStoreMS.$members] member joined: EBDS_ASAGENT_01 (7f000001-1f41-57de7f48-23a, 127.0.0.1:8001)
+[2016-09-18T07:49:43.606][7332][8180][INFO][EnterpriseBagDataStoreMS.metaspace] Connected metaspace : name=[EnterpriseBagDataStoreMS] listen=[tcp://127.0.0.1:8001] discovery=[tcp://127.0.0.1:8001;127.0.0.1:8002] autoJoinRole=[seeder] member_name=[EBDS_ASAGENT_01] version=[2.2.0.017] 
+[2016-09-18T07:49:48.659][7332][7552][INFO][EnterpriseBagDataStoreMS.$members] member joined: as-admin-ac10b3cf-c350 (ac10b3cf-c350-57de7f52-271, 172.16.179.207:50000)
+[2016-09-18T07:50:43.567][7332][7552][INFO][EnterpriseBagDataStoreMS.$members] member joined: EBDS_BEAS_01 (7f000001-1f42-57de7f8e-35c, 127.0.0.1:8002)
+[2016-09-18T07:53:20.924][7332][7196][INFO][] disconnected from EBDS_BEAS_01 (7f000001-1f42-57de7f8e-35c, 127.0.0.1:8002)
+[2016-09-18T07:53:20.924][7332][7196][INFO][] suspect member lost EBDS_BEAS_01 (7f000001-1f42-57de7f8e-35c, 127.0.0.1:8002)
+[2016-09-18T07:53:20.924][7332][7196][INFO][] hosts_impacted (1); <= cluster_suspend_threshold (-1).. waiting for 30000 milliseconds
+[2016-09-18T07:53:50.931][7332][7552][INFO][EnterpriseBagDataStoreMS.$members] member left: EBDS_BEAS_01 (7f000001-1f42-57de7f8e-35c, 127.0.0.1:8002)

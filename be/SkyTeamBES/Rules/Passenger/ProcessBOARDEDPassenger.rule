@@ -1,0 +1,21 @@
+/**
+ * @description 
+ * @author vtripath-win7vm
+ */
+rule Rules.Passenger.ProcessBOARDEDPassenger {
+	attribute {
+		priority = 5;
+		forwardChain = true;
+	}
+	declare {
+		
+		Concepts.Passenger passenger
+;
+	}
+	when {
+		passenger.EventType == Scorecards.PassengerEventTypes.BOARDED;
+	}
+	then {
+		System.debugOut("Passenger BOARDED event received");
+	}
+}

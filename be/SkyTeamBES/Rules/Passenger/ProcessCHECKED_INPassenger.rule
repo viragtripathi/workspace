@@ -1,0 +1,21 @@
+/**
+ * @description 
+ * @author vtripath-win7vm
+ */
+rule Rules.Passenger.ProcessCHECKED_INPassenger {
+	attribute {
+		priority = 5;
+		forwardChain = true;
+	}
+	declare {
+		
+		Concepts.Passenger passenger
+;
+	}
+	when {
+		passenger.EventType == Scorecards.PassengerEventTypes.CHECKED_IN;
+	}
+	then {
+		System.debugOut("Passenger CHECKED_IN event received");
+	}
+}

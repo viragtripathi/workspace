@@ -1,0 +1,27 @@
+/**
+ * @description 
+ * @author vtripath-win7vm
+ */
+rule Rules.Persistence.PersistPassenger {
+	attribute {
+		priority = 9;
+		forwardChain = true;
+	}
+	declare {
+		
+		Concepts.Passenger passenger;
+	}
+	when {
+		
+	}
+	then {
+		String logContext = "SkyTeamBES.Rules.Persistence.PersistPassengerRule";
+		Object logger =  Log.getLogger(logContext);
+		Log.log(logger,"info", "Before persisting passenger " + passenger.FlightKey);
+		Events.ASChannel.Passenger passengerEvent = RuleFunctions.Mappers.MapPassengerConceptToPassengerEvent(passenger);
+		AS.putEvent("/Channels/OutboundAS/passengerOutbound",passengerEvent);
+		Log.log(logger,"info", "After persisting passenger " + passenger.FlightKey);
+		Event.consumeEvent(passengerEvent);
+	
+	}
+}

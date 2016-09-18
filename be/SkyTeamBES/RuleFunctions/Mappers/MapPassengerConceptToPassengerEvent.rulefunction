@@ -1,0 +1,21 @@
+/**
+ * @description 
+ */
+Events.ASChannel.Passenger rulefunction RuleFunctions.Mappers.MapPassengerConceptToPassengerEvent {
+	attribute {
+		validity = ACTION;
+	}
+	scope {
+		
+		Concepts.Passenger passenger;
+	}
+	body {
+		String flightSegments = XPath.evalAsString("xpath://<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<xpath>\n    <expr>string-join($passenger/FlightSegments, \", \")</expr>\n    <namespaces>\n        <namespace URI=\"http://www.w3.org/2001/XMLSchema\" pfx=\"xsd\"/>\n    </namespaces>\n    <variables>\n        <variable>passenger</variable>\n    </variables>\n</xpath>");
+		String bagTags = XPath.evalAsString("xpath://<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<xpath>\n    <expr>string-join($passenger/BagTags, \", \")</expr>\n    <namespaces>\n        <namespace URI=\"http://www.w3.org/2001/XMLSchema\" pfx=\"xsd\"/>\n    </namespaces>\n    <variables>\n        <variable>passenger</variable>\n    </variables>\n</xpath>");
+		String bagKey = XPath.evalAsString("xpath://<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<xpath>\n    <expr>string-join($passenger/BagKey, \", \")</expr>\n    <namespaces>\n        <namespace URI=\"http://www.w3.org/2001/XMLSchema\" pfx=\"xsd\"/>\n    </namespaces>\n    <variables>\n        <variable>passenger</variable>\n    </variables>\n</xpath>");
+		
+		
+		Events.ASChannel.Passenger passengerEvent = Event.createEvent("xslt://{{/Events/ASChannel/Passenger}}<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<xsl:stylesheet xmlns:xsl=\"http://www.w3.org/1999/XSL/Transform\" version=\"2.0\"><xsl:param name=\"passenger\"/><xsl:param name=\"flightSegments\"/><xsl:param name=\"bagTags\"/><xsl:param name=\"bagKey\"/><xsl:template name=\"Function\" match=\"/\"><createEvent><event><xsl:if test=\"$passenger/EventType\"><EventType><xsl:value-of select=\"$passenger/EventType\"/></EventType></xsl:if><xsl:if test=\"$passenger/FlightKey\"><FlightKey><xsl:value-of select=\"$passenger/FlightKey\"/></FlightKey></xsl:if><xsl:if test=\"$passenger/AirlineCode\"><AirlineCode><xsl:value-of select=\"$passenger/AirlineCode\"/></AirlineCode></xsl:if><FlightSegments><xsl:value-of select=\"$flightSegments\"/></FlightSegments><BagTags><xsl:value-of select=\"$bagTags\"/></BagTags><xsl:if test=\"$passenger/FlightNumber\"><FlightNumber><xsl:value-of select=\"$passenger/FlightNumber\"/></FlightNumber></xsl:if><xsl:if test=\"$passenger/RecordLocator\"><RecordLocator><xsl:value-of select=\"$passenger/RecordLocator\"/></RecordLocator></xsl:if><xsl:if test=\"$passenger/CutomerId\"><CutomerId><xsl:value-of select=\"$passenger/CutomerId\"/></CutomerId></xsl:if><xsl:if test=\"$passenger/BookingId\"><BookingId><xsl:value-of select=\"$passenger/BookingId\"/></BookingId></xsl:if><xsl:if test=\"$passenger/FirstName\"><FirstName><xsl:value-of select=\"$passenger/FirstName\"/></FirstName></xsl:if><xsl:if test=\"$passenger/LastName\"><LastName><xsl:value-of select=\"$passenger/LastName\"/></LastName></xsl:if><xsl:if test=\"$passenger/SeatNo\"><SeatNo><xsl:value-of select=\"$passenger/SeatNo\"/></SeatNo></xsl:if><xsl:if test=\"$passenger/FrequentFlyerStaus\"><FrequentFlyerStaus><xsl:value-of select=\"$passenger/FrequentFlyerStaus\"/></FrequentFlyerStaus></xsl:if><xsl:if test=\"$passenger/OriginLocalDate\"><OriginLocalDate><xsl:value-of select=\"$passenger/OriginLocalDate\"/></OriginLocalDate></xsl:if><xsl:if test=\"$passenger/OriginStnCode\"><OriginStnCode><xsl:value-of select=\"$passenger/OriginStnCode\"/></OriginStnCode></xsl:if><xsl:if test=\"$passenger/DestStnCode\"><DestStnCode><xsl:value-of select=\"$passenger/DestStnCode\"/></DestStnCode></xsl:if><BagKey><xsl:value-of select=\"$bagKey\"/></BagKey></event></createEvent></xsl:template></xsl:stylesheet>");
+		return passengerEvent;
+	}
+}
