@@ -11,6 +11,7 @@
   <properties name="OriginStnCode" ownerProjectName="SkyTeamBES" ownerPath="/Events/ASChannel/Baggage"/>
   <properties name="DestStnCode" ownerProjectName="SkyTeamBES" ownerPath="/Events/ASChannel/Baggage"/>
   <properties name="BagLocation" ownerProjectName="SkyTeamBES" ownerPath="/Events/ASChannel/Baggage"/>
+  <properties name="OriginalFlightLeg" ownerProjectName="SkyTeamBES" ownerPath="/Events/ASChannel/Baggage"/>
   <expiryAction name="Baggage_expiryAction" ownerProjectName="SkyTeamBES" actionText="" conditionText="">
     <symbols>
       <symbolList idName="baggage" type="/Events/ASChannel/Baggage"/>

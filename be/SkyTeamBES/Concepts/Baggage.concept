@@ -2,7 +2,7 @@
 <element:Concept xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:element="http:///com/tibco/cep/designtime/core/model/element" namespace="/Concepts/" folder="/Concepts/" name="Baggage" description="" GUID="33B197D4-E9C5-5DE3-F7D3-8A42E5E7A1D1" ownerProjectName="SkyTeamBES" superConceptPath="" autoStartStateMachine="true">
   <extendedProperties/>
   <properties name="EventType" ownerProjectName="SkyTeamBES" ownerPath="/Concepts/Baggage"/>
-  <properties name="OriginalFlightKey" ownerProjectName="SkyTeamBES" array="true" ownerPath="/Concepts/Baggage"/>
+  <properties name="OriginalFlightKey" ownerProjectName="SkyTeamBES" ownerPath="/Concepts/Baggage"/>
   <properties name="BagTagId" ownerProjectName="SkyTeamBES" ownerPath="/Concepts/Baggage"/>
   <properties name="AirlineCode" ownerProjectName="SkyTeamBES" ownerPath="/Concepts/Baggage"/>
   <properties name="FlightNumber" ownerProjectName="SkyTeamBES" ownerPath="/Concepts/Baggage"/>
@@ -12,4 +12,5 @@
   <properties name="OriginStnCode" ownerProjectName="SkyTeamBES" ownerPath="/Concepts/Baggage"/>
   <properties name="DestStnCode" ownerProjectName="SkyTeamBES" ownerPath="/Concepts/Baggage"/>
   <properties name="BagLocation" ownerProjectName="SkyTeamBES" ownerPath="/Concepts/Baggage"/>
+  <properties name="OriginalFlightLeg" ownerProjectName="SkyTeamBES" array="true" ownerPath="/Concepts/Baggage"/>
 </element:Concept>

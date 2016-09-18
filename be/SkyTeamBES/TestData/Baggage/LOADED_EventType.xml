@@ -2,6 +2,7 @@
 <bg:Baggage xmlns:bg="http://www.schemas.skyteam.com/2016/09/enterprise/Baggage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.schemas.skyteam.com/2016/09/enterprise/Baggage BaggageSchema.xsd ">
   <bg:EventType>LOADED</bg:EventType>
   <bg:OriginalFlightKey>DL0001ATLDXB20160916</bg:OriginalFlightKey>
+  <bg:OriginalFlightLeg>DL000120060916DXBATL</bg:OriginalFlightLeg>  
   <bg:BagTagId>168616</bg:BagTagId>
   <bg:AirlineCode>DL</bg:AirlineCode>
   <bg:FlightNumber>0001</bg:FlightNumber>

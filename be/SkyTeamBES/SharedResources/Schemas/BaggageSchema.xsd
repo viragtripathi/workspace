@@ -7,7 +7,8 @@
 		</xsd:annotation>		
 		<xsd:sequence>
 			<xsd:element name="EventType" type="xsd:string" />
-			<xsd:element name="OriginalFlightKey" type="xsd:string" minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="OriginalFlightKey" type="xsd:string" />			
+			<xsd:element name="OriginalFlightLeg" type="xsd:string" minOccurs="0" maxOccurs="unbounded">
 				<xsd:annotation>
 					<xsd:documentation>An array of Flights (with leg info)</xsd:documentation>
 				</xsd:annotation>

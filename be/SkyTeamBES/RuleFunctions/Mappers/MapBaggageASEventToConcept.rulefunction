@@ -1,0 +1,16 @@
+/**
+ * @description 
+ */
+Concepts.Baggage rulefunction RuleFunctions.Mappers.MapBaggageASEventToConcept {
+	attribute {
+		validity = ACTION;
+	}
+	scope {
+		
+		Events.ASChannel.Baggage baggageEvent;
+	}
+	body {
+		Concepts.Baggage baggageConcept = Instance.createInstance("xslt://{{/Concepts/Baggage}}<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<xsl:stylesheet xmlns:xsl=\"http://www.w3.org/1999/XSL/Transform\" version=\"2.0\"><xsl:param name=\"baggageEvent\"/><xsl:template name=\"Function\" match=\"/\"><createObject><object><xsl:if test=\"$baggageEvent/EventType\"><EventType><xsl:value-of select=\"$baggageEvent/EventType\"/></EventType></xsl:if><xsl:if test=\"$baggageEvent/OriginalFlightKey\"><OriginalFlightKey><xsl:value-of select=\"$baggageEvent/OriginalFlightKey\"/></OriginalFlightKey></xsl:if><xsl:if test=\"$baggageEvent/BagTagId\"><BagTagId><xsl:value-of select=\"$baggageEvent/BagTagId\"/></BagTagId></xsl:if><xsl:if test=\"$baggageEvent/AirlineCode\"><AirlineCode><xsl:value-of select=\"$baggageEvent/AirlineCode\"/></AirlineCode></xsl:if><xsl:if test=\"$baggageEvent/FlightNumber\"><FlightNumber><xsl:value-of select=\"$baggageEvent/FlightNumber\"/></FlightNumber></xsl:if><xsl:if test=\"$baggageEvent/RecordLocator\"><RecordLocator><xsl:value-of select=\"$baggageEvent/RecordLocator\"/></RecordLocator></xsl:if><xsl:if test=\"$baggageEvent/PassengerName\"><PassengerName><xsl:value-of select=\"$baggageEvent/PassengerName\"/></PassengerName></xsl:if><xsl:if test=\"$baggageEvent/OriginLocalDate\"><OriginLocalDate><xsl:value-of select=\"$baggageEvent/OriginLocalDate\"/></OriginLocalDate></xsl:if><xsl:if test=\"$baggageEvent/OriginStnCode\"><OriginStnCode><xsl:value-of select=\"$baggageEvent/OriginStnCode\"/></OriginStnCode></xsl:if><xsl:if test=\"$baggageEvent/DestStnCode\"><DestStnCode><xsl:value-of select=\"$baggageEvent/DestStnCode\"/></DestStnCode></xsl:if><xsl:if test=\"$baggageEvent/BagLocation\"><BagLocation><xsl:value-of select=\"$baggageEvent/BagLocation\"/></BagLocation></xsl:if><xsl:if test=\"$baggageEvent/OriginalFlightLeg\"><OriginalFlightLeg><xsl:value-of select=\"$baggageEvent/OriginalFlightLeg\"/></OriginalFlightLeg></xsl:if></object></createObject></xsl:template></xsl:stylesheet>");
+		return baggageConcept;
+	}
+}

@@ -16,9 +16,14 @@ rule Rules.Baggage.ProcessLOADEDBaggage {
 	}
 	then {
 		System.debugOut("Baggage LOADED event received");
-		
+		String flightKey = baggage.OriginalFlightKey;
 		//need to load the flight concept
+		System.debugOut("Rules.Baggage.ProcessLOADEDBaggage: flightKey = " + flightKey);
+		
+		RuleFunctions.Loaders.LoadFlightFromAS(flightKey);
+		System.debugOut("Rules.Baggage.ProcessLOADEDBaggage: baggage:flight loaded for flightKey = " + flightKey);
 		
 		// then need to increment the counter for loaded bags
+		
 	}
 }

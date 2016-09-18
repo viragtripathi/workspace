@@ -1,0 +1,37 @@
+/**
+ * @description Load existing concepts from AS
+ */
+Concepts.Baggage rulefunction RuleFunctions.Loaders.LoadBaggageFromAS {
+	attribute {
+		validity = ACTION;
+	}
+	scope {
+		
+		String originalFlightKey;
+		String bagTagId;
+	}
+	body {
+		String logContext = "SkyTeamBES.RuleFunctions.Loaders.LoadBaggageFromAS";
+		String bagKey = originalFlightKey + "-" + bagTagId;
+		Object logger = Log.getLogger(logContext);
+		Concepts.Baggage baggage;
+		
+		try {
+			Log.log(logger,"info", "bagKey " + bagKey);
+			baggage = Cluster.DataGrid.CacheLoadConceptByExtIdByUri(bagKey, false, "/Concepts/Baggage");
+			Log.log(logger,"info", "baggage concept loaded for bagKey : " + bagKey);
+			
+			if (baggage == null) {
+				Events.ASChannel.Baggage baggageEvent = RuleFunctions.Mappers.MapBaggageConceptToBaggageEvent(baggage);
+				AS.getEvent("/Channels/OutboundAS/baggageOutbound",baggageEvent);
+				Log.log(logger,"info", "baggage concept created for bagKey : " + bagKey);		
+				}
+		}
+		catch (Exception ex) {
+			Log.log(logger, "error", "Exception occured while loading baggage from AS for: %s", baggage.OriginalFlightKey);
+			System.debugOut(ex@stackTrace);
+		}
+	return baggage;
+	
+	}
+}

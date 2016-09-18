@@ -1,0 +1,36 @@
+/**
+ * @description Load existing concepts from AS
+ */
+Concepts.Flight rulefunction RuleFunctions.Loaders.LoadFlightFromAS {
+	attribute {
+		validity = ACTION;
+	}
+	scope {
+		
+		String flightKey;
+	}
+	body {
+		String logContext = "SkyTeamBES.RuleFunctions.Loaders.LoadFlightFromAS";
+		//String bagKey = flightKey;
+		Object logger = Log.getLogger(logContext);
+		Concepts.Flight flight;
+		
+		try {
+			Log.log(logger,"info", "flightKey " + flightKey);
+			flight = Cluster.DataGrid.CacheLoadConceptByExtIdByUri(flightKey, false, "/Concepts/Flight");
+			Log.log(logger,"info", "flight concept loaded for flightKey : " + flightKey);
+			
+			if (flight == null) {
+				Events.ASChannel.Flight flightEvent = RuleFunctions.Mappers.MapFlightConceptToFlightEvent(flight);
+				AS.getEvent("/Channels/OutboundAS/flightOutbound",flightEvent);
+				Log.log(logger,"info", "flight concept created for bagKey : " + flightKey);		
+				}
+		}
+		catch (Exception ex) {
+			Log.log(logger, "error", "Exception occured while loading flight from AS for: %s", flight.FlightKey);
+			System.debugOut(ex@stackTrace);
+		}
+	return flight;
+	
+	}
+}
