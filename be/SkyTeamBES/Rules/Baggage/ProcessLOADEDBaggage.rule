@@ -9,8 +9,7 @@ rule Rules.Baggage.ProcessLOADEDBaggage {
 	}
 	declare {
 		
-		Concepts.Baggage baggage
-;
+		Concepts.Baggage baggage;
 	}
 	when {
 		baggage.EventType == Scorecards.BagggageEventTypes.LOADED;

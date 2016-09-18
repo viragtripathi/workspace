@@ -9,8 +9,7 @@ rule Rules.Baggage.ProcessSCREENING_FAILEDBaggage {
 	}
 	declare {
 		
-		Concepts.Baggage baggage
-;
+		Concepts.Baggage baggage;
 	}
 	when {
 		baggage.EventType == Scorecards.BagggageEventTypes.SCREENING_FAILED;

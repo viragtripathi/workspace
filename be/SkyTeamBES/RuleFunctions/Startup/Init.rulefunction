@@ -9,9 +9,9 @@ void rulefunction RuleFunctions.Startup.Init {
 		
 	}
 	body {
-		Object logger =  Log.getLogger("RuleFunctions.Init.Startup");
+		Object logger =  Log.getLogger("RuleFunctions.Startup.Init");
 		Log.log(logger,"info", "Engine Startup");
-		
+		// initialize all the flight score cards
 		Scorecards.FlightEventTypes.SCHEDULED = "SCHEDULED";
 		Scorecards.FlightEventTypes.ONTIME = "ONTIME";
 		Scorecards.FlightEventTypes.BOARDING = "BOARDING";
@@ -19,12 +19,19 @@ void rulefunction RuleFunctions.Startup.Init {
 		Scorecards.FlightEventTypes.INFLIGHT = "INFLIGHT";
 		Scorecards.FlightEventTypes.ARRIVED = "ARRIVED";
 		
-		//need to initialize all the bag score cards
-		Scorecards.BagggageEventTypes.CHECKED_IN= "CHECKED_IN";
+		// initialize all the baggage score cards
+		Scorecards.BagggageEventTypes.CHECKED_IN = "CHECKED_IN";
+		Scorecards.BagggageEventTypes.EXPECTED = "EXPECTED";
+		Scorecards.BagggageEventTypes.LOADED = "LOADED";
+		Scorecards.BagggageEventTypes.OFFLOADED = "OFFLOADED";
+		Scorecards.BagggageEventTypes.REROUTED = "REROUTED";
+		Scorecards.BagggageEventTypes.SCREENED = "SCREENED";
+		Scorecards.BagggageEventTypes.SCREENING_FAILED = "SCREENING_FAILED";
+		Scorecards.BagggageEventTypes.SORTED = "SORTED";
 		
-		// need to initlize the pax scorecards
-		
-		
+		// initlize all the passenger scorecards
+		Scorecards.PassengerEventTypes.CHECKED_IN = "CHECKED_IN";
+		Scorecards.PassengerEventTypes.BOARDED = "BOARDED";
 
 	}
 }
