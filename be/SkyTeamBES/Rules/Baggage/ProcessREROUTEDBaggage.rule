@@ -17,8 +17,13 @@ rule Rules.Baggage.ProcessREROUTEDBaggage {
 	then {
 		System.debugOut("Baggage REROUTED event received");
 		
-		//load the flight concept
-		
-		// increment the rerouted counter for that flight
+		String flightKey = baggage.OriginalFlightKey;
+		//need to load the flight concept
+		System.debugOut("Rules.Baggage.ProcessREROUTEDBaggage: flightKey = " + flightKey);
+			
+		// need to load the Flight Concept
+		RuleFunctions.Loaders.LoadFlightFromAS(flightKey);
+		System.debugOut("Rules.Baggage.ProcessREROUTEDBaggage: baggage:flight loaded for flightKey = " + flightKey);		
+		// send a notification to the passenger email/phone
 	}
 }

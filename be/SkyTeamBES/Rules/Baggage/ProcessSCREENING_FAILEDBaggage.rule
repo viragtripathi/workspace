@@ -18,7 +18,12 @@ rule Rules.Baggage.ProcessSCREENING_FAILEDBaggage {
 		System.debugOut("Baggage SCREENING_FAILED event received");
 		
 		// load the passenger concept
-		
+		String flightKey = baggage.OriginalFlightKey;
+		String recordLocator = baggage.RecordLocator;
+		//need to load the flight concept
+		System.debugOut("Rules.Baggage.ProcessSCREENING_FAILEDBaggage: flightKey = " + flightKey);
+		RuleFunctions.Loaders.LoadPassengerFromAS(flightKey, recordLocator);
+		System.debugOut("Rules.Baggage.ProcessSCREENEDBaggage: passenger:flight loaded for flightKey = " + flightKey + "-" + recordLocator);			
 		// send a notification to the passenger email/phone
 	}
 }

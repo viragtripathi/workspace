@@ -17,5 +17,14 @@ rule Rules.Baggage.ProcessSCREENEDBaggage {
 	}
 	then {
 		System.debugOut("Baggage SCREENED event received");
+		
+		String flightKey = baggage.OriginalFlightKey;
+		//need to load the flight concept
+		System.debugOut("Rules.Baggage.ProcessSCREENEDBaggage: flightKey = " + flightKey);
+			
+		// need to load the Flight Concept
+		RuleFunctions.Loaders.LoadFlightFromAS(flightKey);
+		System.debugOut("Rules.Baggage.ProcessSCREENEDBaggage: baggage:flight loaded for flightKey = " + flightKey);		
+		// then increment the counter for the totalbags checked in		
 	}
 }

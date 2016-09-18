@@ -4,8 +4,8 @@
   <properties name="EventType" ownerProjectName="SkyTeamBES" ownerPath="/Concepts/Passenger"/>
   <properties name="FlightKey" ownerProjectName="SkyTeamBES" ownerPath="/Concepts/Passenger"/>
   <properties name="AirlineCode" ownerProjectName="SkyTeamBES" ownerPath="/Concepts/Passenger"/>
-  <properties name="FlightSegments" ownerProjectName="SkyTeamBES" array="true" ownerPath="/Concepts/Passenger"/>
-  <properties name="BagTags" ownerProjectName="SkyTeamBES" array="true" ownerPath="/Concepts/Passenger"/>
+  <properties name="FlightSegments" ownerProjectName="SkyTeamBES" ownerPath="/Concepts/Passenger"/>
+  <properties name="BagTags" ownerProjectName="SkyTeamBES" ownerPath="/Concepts/Passenger"/>
   <properties name="FlightNumber" ownerProjectName="SkyTeamBES" ownerPath="/Concepts/Passenger"/>
   <properties name="RecordLocator" ownerProjectName="SkyTeamBES" ownerPath="/Concepts/Passenger"/>
   <properties name="CutomerId" ownerProjectName="SkyTeamBES" ownerPath="/Concepts/Passenger"/>

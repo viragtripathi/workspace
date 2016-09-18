@@ -17,5 +17,13 @@ rule Rules.Baggage.ProcessOFFLOADEDBaggage {
 	}
 	then {
 		System.debugOut("Baggage OFFLOADED event received");
-	}
+		String flightKey = baggage.OriginalFlightKey;
+		//need to load the flight concept
+		System.debugOut("Rules.Baggage.ProcessOFFLOADEDBaggage: flightKey = " + flightKey);
+			
+		// need to load the Flight Concept
+		RuleFunctions.Loaders.LoadFlightFromAS(flightKey);
+		System.debugOut("Rules.Baggage.ProcessOFFLOADEDBaggage: baggage:flight loaded for flightKey = " + flightKey);		
+		// then increment the counter for the totalbags checked in	
+		}
 }

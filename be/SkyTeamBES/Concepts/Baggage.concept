@@ -12,5 +12,5 @@
   <properties name="OriginStnCode" ownerProjectName="SkyTeamBES" ownerPath="/Concepts/Baggage"/>
   <properties name="DestStnCode" ownerProjectName="SkyTeamBES" ownerPath="/Concepts/Baggage"/>
   <properties name="BagLocation" ownerProjectName="SkyTeamBES" ownerPath="/Concepts/Baggage"/>
-  <properties name="OriginalFlightLeg" ownerProjectName="SkyTeamBES" array="true" ownerPath="/Concepts/Baggage"/>
+  <properties name="OriginalFlightLeg" ownerProjectName="SkyTeamBES" ownerPath="/Concepts/Baggage"/>
 </element:Concept>

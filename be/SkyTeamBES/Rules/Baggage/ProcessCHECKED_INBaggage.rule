@@ -16,11 +16,13 @@ rule Rules.Baggage.ProcessCHECKED_INBaggage {
 	}
 	then {
 		System.debugOut("Baggage CHECKED_IN event received");
-		String originalFlightKey = baggage.OriginalFlightKey;
-		String bagTagId = baggage.BagTagId;
-		String bagKey = originalFlightKey+bagTagId;		
+		String flightKey = baggage.OriginalFlightKey;
+		//need to load the flight concept
+		System.debugOut("Rules.Baggage.ProcessCHECKED_INBaggage: flightKey = " + flightKey);
+			
 		// need to load the Flight Concept
-		System.debugOut("Rules.Baggage.ProcessCHECKED_INBaggage: bagKey = " + bagKey);
+		RuleFunctions.Loaders.LoadFlightFromAS(flightKey);
+		System.debugOut("Rules.Baggage.ProcessCHECKED_INBaggage: baggage:flight loaded for flightKey = " + flightKey);		
 		// then increment the counter for the totalbags checked in
 		
 	}

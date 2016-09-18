@@ -9,12 +9,12 @@
 			<xsd:element name="EventType" type="xsd:string" />
 			<xsd:element name="FlightKey" type="xsd:string" />
 			<xsd:element name="AirlineCode" type="xsd:string" />
-			<xsd:element name="FlightSegments" type="xsd:string" minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="FlightSegments" type="xsd:string" >
 				<xsd:annotation>
 					<xsd:documentation>An array of Flights (with leg info)</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="BagTags" type="xsd:string" minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="BagTags" type="xsd:string" >
 				<xsd:annotation>
 					<xsd:documentation>An Array of BagTag information</xsd:documentation>
 				</xsd:annotation>

@@ -31,6 +31,21 @@
         <properties xsi:type="designtime:SimpleProperty" name="Prefetch" value="-1"/>
       </properties>
     </destinations>
+    <destinations name="passengerOutbound" description="" GUID="7E69F145-B9AA-725A-83B6-8AB03E3FE78F" ownerProjectName="SkyTeamBES" eventURI="/Events/ASChannel/Passenger" serializerDeserializerClass="com.tibco.cep.driver.as.serializers.ActiveSpacesSerializer" driverConfig="//@driver">
+      <properties>
+        <properties xsi:type="designtime:SimpleProperty" name="SpaceName" value="Passenger"/>
+        <properties xsi:type="designtime:SimpleProperty" name="DistributionRole" value="LEECH"/>
+        <properties xsi:type="designtime:SimpleProperty" name="Filter" value=""/>
+        <properties xsi:type="designtime:SimpleProperty" name="ConsumptionMode" value="EntryBrowser"/>
+        <properties xsi:type="designtime:SimpleProperty" name="BrowserType" value="GET"/>
+        <properties xsi:type="designtime:SimpleProperty" name="DistributionScope" value="ALL"/>
+        <properties xsi:type="designtime:SimpleProperty" name="TimeScope" value="ALL"/>
+        <properties xsi:type="designtime:SimpleProperty" name="PutEvent" value="true"/>
+        <properties xsi:type="designtime:SimpleProperty" name="TakeEvent" value="false"/>
+        <properties xsi:type="designtime:SimpleProperty" name="ExpireEvent" value="false"/>
+        <properties xsi:type="designtime:SimpleProperty" name="Prefetch" value="-1"/>
+      </properties>
+    </destinations>
     <driverType xsi:type="channel:DriverTypeInfo" driverTypeName="ActiveSpaces"/>
   </driver>
 </channel:Channel>

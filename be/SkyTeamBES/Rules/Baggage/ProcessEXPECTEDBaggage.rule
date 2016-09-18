@@ -16,6 +16,14 @@ rule Rules.Baggage.ProcessEXPECTEDBaggage {
 		baggage.EventType == Scorecards.BagggageEventTypes.EXPECTED;
 	}
 	then {
-		System.debugOut("Baggage EXPECTED event received");
-	}
+		System.debugOut("Baggage CHECKED_IN event received");
+		String flightKey = baggage.OriginalFlightKey;
+		//need to load the flight concept
+		System.debugOut("Rules.Baggage.ProcessEXPECTEDBaggage: flightKey = " + flightKey);
+			
+		// need to load the Flight Concept
+		RuleFunctions.Loaders.LoadFlightFromAS(flightKey);
+		System.debugOut("Rules.Baggage.ProcessEXPECTEDBaggage: baggage:flight loaded for flightKey = " + flightKey);		
+		// then increment the counter for the totalbags checked in
+		}
 }

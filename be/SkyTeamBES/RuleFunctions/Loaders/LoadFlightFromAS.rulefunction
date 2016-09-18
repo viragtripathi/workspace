@@ -13,24 +13,25 @@ Concepts.Flight rulefunction RuleFunctions.Loaders.LoadFlightFromAS {
 		String logContext = "SkyTeamBES.RuleFunctions.Loaders.LoadFlightFromAS";
 		//String bagKey = flightKey;
 		Object logger = Log.getLogger(logContext);
-		Concepts.Flight flight;
+		Concepts.Flight flightConcept;
 		
 		try {
 			Log.log(logger,"info", "flightKey " + flightKey);
-			flight = Cluster.DataGrid.CacheLoadConceptByExtIdByUri(flightKey, false, "/Concepts/Flight");
+			
+			Events.ASChannel.Flight flightEvent = Event.createEvent("xslt://{{/Events/ASChannel/Flight}}<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<xsl:stylesheet xmlns:xsl=\"http://www.w3.org/1999/XSL/Transform\" version=\"2.0\"><xsl:param name=\"flightKey\"/><xsl:template name=\"Function\" match=\"/\"><createEvent><event><FlightKey><xsl:value-of select=\"$flightKey\"/></FlightKey></event></createEvent></xsl:template></xsl:stylesheet>");
+			flightEvent = AS.getEvent("/Channels/OutboundAS/flightOutbound",flightEvent);
 			Log.log(logger,"info", "flight concept loaded for flightKey : " + flightKey);
 			
-			if (flight == null) {
-				Events.ASChannel.Flight flightEvent = RuleFunctions.Mappers.MapFlightConceptToFlightEvent(flight);
-				AS.getEvent("/Channels/OutboundAS/flightOutbound",flightEvent);
-				Log.log(logger,"info", "flight concept created for bagKey : " + flightKey);		
-				}
+			if (flightEvent != null) {
+			flightConcept = RuleFunctions.Mappers.MapFlightASEventToConcept(flightEvent);
+			Log.log(logger,"info", "flight concept created for flightKey : " + flightKey);
+			}	
 		}
 		catch (Exception ex) {
-			Log.log(logger, "error", "Exception occured while loading flight from AS for: %s", flight.FlightKey);
+			Log.log(logger, "error", "Exception occured while loading flight from AS for: %s", flightConcept.FlightKey);
 			System.debugOut(ex@stackTrace);
 		}
-	return flight;
+	return flightConcept;
 	
 	}
 }

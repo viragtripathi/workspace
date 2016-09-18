@@ -1,0 +1,16 @@
+/**
+ * @description 
+ */
+Concepts.Passenger rulefunction RuleFunctions.Mappers.MapPassengerASEventToConcept {
+	attribute {
+		validity = ACTION;
+	}
+	scope {
+		
+		Events.ASChannel.Passenger passengerEvent;
+	}
+	body {
+		Concepts.Passenger passengerConcept = Instance.createInstance("xslt://{{/Concepts/Passenger}}<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<xsl:stylesheet xmlns:xsl=\"http://www.w3.org/1999/XSL/Transform\" version=\"2.0\"><xsl:param name=\"passengerEvent\"/><xsl:template name=\"Function\" match=\"/\"><createObject><object><xsl:if test=\"$passengerEvent/EventType\"><EventType><xsl:value-of select=\"$passengerEvent/EventType\"/></EventType></xsl:if><xsl:if test=\"$passengerEvent/FlightKey\"><FlightKey><xsl:value-of select=\"$passengerEvent/FlightKey\"/></FlightKey></xsl:if><xsl:if test=\"$passengerEvent/AirlineCode\"><AirlineCode><xsl:value-of select=\"$passengerEvent/AirlineCode\"/></AirlineCode></xsl:if><xsl:if test=\"$passengerEvent/FlightSegments\"><FlightSegments><xsl:value-of select=\"$passengerEvent/FlightSegments\"/></FlightSegments></xsl:if><xsl:if test=\"$passengerEvent/BagTags\"><BagTags><xsl:value-of select=\"$passengerEvent/BagTags\"/></BagTags></xsl:if><xsl:if test=\"$passengerEvent/FlightNumber\"><FlightNumber><xsl:value-of select=\"$passengerEvent/FlightNumber\"/></FlightNumber></xsl:if><xsl:if test=\"$passengerEvent/RecordLocator\"><RecordLocator><xsl:value-of select=\"$passengerEvent/RecordLocator\"/></RecordLocator></xsl:if><xsl:if test=\"$passengerEvent/CutomerId\"><CutomerId><xsl:value-of select=\"$passengerEvent/CutomerId\"/></CutomerId></xsl:if><xsl:if test=\"$passengerEvent/BookingId\"><BookingId><xsl:value-of select=\"$passengerEvent/BookingId\"/></BookingId></xsl:if><xsl:if test=\"$passengerEvent/FirstName\"><FirstName><xsl:value-of select=\"$passengerEvent/FirstName\"/></FirstName></xsl:if><xsl:if test=\"$passengerEvent/LastName\"><LastName><xsl:value-of select=\"$passengerEvent/LastName\"/></LastName></xsl:if><xsl:if test=\"$passengerEvent/SeatNo\"><SeatNo><xsl:value-of select=\"$passengerEvent/SeatNo\"/></SeatNo></xsl:if><xsl:if test=\"$passengerEvent/FrequentFlyerStaus\"><FrequentFlyerStaus><xsl:value-of select=\"$passengerEvent/FrequentFlyerStaus\"/></FrequentFlyerStaus></xsl:if><xsl:if test=\"$passengerEvent/OriginLocalDate\"><OriginLocalDate><xsl:value-of select=\"$passengerEvent/OriginLocalDate\"/></OriginLocalDate></xsl:if><xsl:if test=\"$passengerEvent/OriginStnCode\"><OriginStnCode><xsl:value-of select=\"$passengerEvent/OriginStnCode\"/></OriginStnCode></xsl:if><xsl:if test=\"$passengerEvent/DestStnCode\"><DestStnCode><xsl:value-of select=\"$passengerEvent/DestStnCode\"/></DestStnCode></xsl:if></object></createObject></xsl:template></xsl:stylesheet>");
+		return passengerConcept;
+	}
+}

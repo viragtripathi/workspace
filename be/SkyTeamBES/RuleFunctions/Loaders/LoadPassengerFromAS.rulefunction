@@ -1,0 +1,37 @@
+/**
+ * @description Load existing concepts from AS
+ */
+Concepts.Passenger rulefunction RuleFunctions.Loaders.LoadPassengerFromAS {
+	attribute {
+		validity = ACTION;
+	}
+	scope {
+		
+		String flightKey;
+		String recordLocator;
+	}
+	body {
+		String logContext = "SkyTeamBES.RuleFunctions.Loaders.LoadPassengerFromAS";
+		String fltKey = flightKey + "-" + recordLocator;
+		Object logger = Log.getLogger(logContext);
+		Concepts.Passenger passengerConcept;
+		
+		try {
+			Log.log(logger,"info", "flightKey " + fltKey);
+			Events.ASChannel.Passenger passengerEvent = Event.createEvent("xslt://{{/Events/ASChannel/Passenger}}<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<xsl:stylesheet xmlns:xsl=\"http://www.w3.org/1999/XSL/Transform\" version=\"2.0\"><xsl:param name=\"flightKey\"/><xsl:param name=\"recordLocator\"/><xsl:template name=\"Function\" match=\"/\"><createEvent><event><FlightKey><xsl:value-of select=\"$flightKey\"/></FlightKey><RecordLocator><xsl:value-of select=\"$recordLocator\"/></RecordLocator></event></createEvent></xsl:template></xsl:stylesheet>");
+			passengerEvent = AS.getEvent("/Channels/OutboundAS/passengerOutbound",passengerEvent);
+			Log.log(logger,"info", "passenger concept loaded for flightKey : " + fltKey);
+			
+			if (passengerEvent != null) {
+			passengerConcept = RuleFunctions.Mappers.MapPassengerASEventToConcept(passengerEvent);
+			Log.log(logger,"info", "passenger concept created for flightKey : " + fltKey);
+			}
+		}
+		catch (Exception ex) {
+			Log.log(logger, "error", "Exception occured while loading passenger from AS for: %s", passengerConcept.FlightKey);
+			System.debugOut(ex@stackTrace);
+		}
+	return passengerConcept;
+	
+	}
+}

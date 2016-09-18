@@ -14,24 +14,24 @@ Concepts.Baggage rulefunction RuleFunctions.Loaders.LoadBaggageFromAS {
 		String logContext = "SkyTeamBES.RuleFunctions.Loaders.LoadBaggageFromAS";
 		String bagKey = originalFlightKey + "-" + bagTagId;
 		Object logger = Log.getLogger(logContext);
-		Concepts.Baggage baggage;
+		Concepts.Baggage baggageConcept;
 		
 		try {
 			Log.log(logger,"info", "bagKey " + bagKey);
-			baggage = Cluster.DataGrid.CacheLoadConceptByExtIdByUri(bagKey, false, "/Concepts/Baggage");
+			Events.ASChannel.Baggage baggageEvent = Event.createEvent("xslt://{{/Events/ASChannel/Baggage}}<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<xsl:stylesheet xmlns:xsl=\"http://www.w3.org/1999/XSL/Transform\" version=\"2.0\"><xsl:param name=\"originalFlightKey\"/><xsl:param name=\"bagTagId\"/><xsl:template name=\"Function\" match=\"/\"><createEvent><event><OriginalFlightKey><xsl:value-of select=\"$originalFlightKey\"/></OriginalFlightKey><BagTagId><xsl:value-of select=\"$bagTagId\"/></BagTagId></event></createEvent></xsl:template></xsl:stylesheet>");
+			baggageEvent = AS.getEvent("/Channels/OutboundAS/baggageOutbound",baggageEvent);
 			Log.log(logger,"info", "baggage concept loaded for bagKey : " + bagKey);
 			
-			if (baggage == null) {
-				Events.ASChannel.Baggage baggageEvent = RuleFunctions.Mappers.MapBaggageConceptToBaggageEvent(baggage);
-				AS.getEvent("/Channels/OutboundAS/baggageOutbound",baggageEvent);
-				Log.log(logger,"info", "baggage concept created for bagKey : " + bagKey);		
-				}
+			if (baggageEvent != null) {
+			baggageConcept = RuleFunctions.Mappers.MapBaggageASEventToConcept(baggageEvent);
+			Log.log(logger,"info", "baggage concept created for bagKey : " + bagKey);
+			}
 		}
 		catch (Exception ex) {
-			Log.log(logger, "error", "Exception occured while loading baggage from AS for: %s", baggage.OriginalFlightKey);
+			Log.log(logger, "error", "Exception occured while loading baggage from AS for: %s", baggageConcept.OriginalFlightKey);
 			System.debugOut(ex@stackTrace);
 		}
-	return baggage;
+	return baggageConcept;
 	
 	}
 }
