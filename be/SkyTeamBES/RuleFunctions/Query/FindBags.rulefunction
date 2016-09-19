@@ -1,0 +1,50 @@
+/**
+ * @description 
+ */
+String[] rulefunction RuleFunctions.Query.FindBags {
+	attribute {
+		validity = ACTION;
+	}
+	scope {
+		
+		String queryString;
+	}
+	body {
+		//Logging Setup
+		Object logger = Log.getLogger("RuleFunctions.Query.FindBags");
+			
+		try{
+			Log.log(logger, "info","- Query FindBags RuleFunction Firing!!!");
+					
+			//Assemble the Query String
+			Log.log(logger, "info", "Query string to be evaluated: [%s]", queryString);
+			
+			// not set event template because there's not a bound event in the destination OutspaceOutbound,
+			// so the type of return value is Object[M][N][2].
+			// query
+			Object[] result = AS.query("/Channels/OutboundAS/baggageOutbound", null, "get", "all", "all", 0, 1000, queryString);
+			if (result != null) {
+				for (int i=0; i<result@length; i++) {
+					Object[] tuple = result[i];
+					for (int j=0; j<tuple@length; j++) {
+						Object[] keyValue = tuple[j];
+						System.debugOut("Take Tuple From Outspace: ResultX "+i+","+j+" is "+keyValue[0]);
+						System.debugOut("Take Tuple From Outspace: ResultX "+i+","+j+" is "+keyValue[1]);
+						}
+					}
+				}
+				
+				//Return results
+				//return result;
+				else {
+				Log.log(logger,"error","- No Bags Retrieved from cache for timestamp");
+				return null;
+				}
+				} catch(Exception ex) {
+			
+			Log.logException(logger, "error","!!!!!Exception: ",ex);	
+			//Return results
+			return null;
+		}
+	}
+}
