@@ -17,5 +17,9 @@ rule Rules.Baggage.ProcessLOADEDBaggage {
 	}
 	then {
 		System.debugOut("Baggage LOADED event received");
+		
+		//need to load the flight concept
+		
+		// then need to increment the counter for loaded bags
 	}
 }

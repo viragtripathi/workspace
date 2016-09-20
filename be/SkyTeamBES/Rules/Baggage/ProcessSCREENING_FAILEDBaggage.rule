@@ -17,5 +17,9 @@ rule Rules.Baggage.ProcessSCREENING_FAILEDBaggage {
 	}
 	then {
 		System.debugOut("Baggage SCREENING_FAILED event received");
+		
+		// load the passenger concept
+		
+		// send a notification to the passenger email/phone
 	}
 }

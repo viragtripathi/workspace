@@ -18,4 +18,7 @@
   <properties name="EstimatedArrivalTime" ownerProjectName="SkyTeamBES" type="DateTime" ownerPath="/Concepts/Flight"/>
   <properties name="DepartureGate" ownerProjectName="SkyTeamBES" ownerPath="/Concepts/Flight"/>
   <properties name="ArrivalGate" ownerProjectName="SkyTeamBES" ownerPath="/Concepts/Flight"/>
+  <properties name="TotalBagsCheckedIn" ownerProjectName="SkyTeamBES" type="int" ownerPath="/Concepts/Flight"/>
+  <properties name="TotalBagsLoaded" ownerProjectName="SkyTeamBES" type="int" ownerPath="/Concepts/Flight"/>
+  <properties name="TotalBagsRerouted" ownerProjectName="SkyTeamBES" type="int" ownerPath="/Concepts/Flight"/>
 </element:Concept>

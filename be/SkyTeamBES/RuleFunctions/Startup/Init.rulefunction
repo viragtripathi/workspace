@@ -19,6 +19,12 @@ void rulefunction RuleFunctions.Startup.Init {
 		Scorecards.FlightEventTypes.INFLIGHT = "INFLIGHT";
 		Scorecards.FlightEventTypes.ARRIVED = "ARRIVED";
 		
+		//need to initialize all the bag score cards
+		Scorecards.BagggageEventTypes.CHECKED_IN= "CHECKED_IN";
+		
+		// need to initlize the pax scorecards
+		
+		
 
 	}
 }

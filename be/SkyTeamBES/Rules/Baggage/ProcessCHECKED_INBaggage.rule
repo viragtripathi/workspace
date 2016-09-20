@@ -17,5 +17,10 @@ rule Rules.Baggage.ProcessCHECKED_INBaggage {
 	}
 	then {
 		System.debugOut("Baggage CHECKED_IN event received");
+		
+		// need to load the Flight Concept
+		
+		// then increment the counter for the totalbags checked in
+		
 	}
 }

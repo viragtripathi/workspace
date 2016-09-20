@@ -16,5 +16,9 @@ rule Rules.Flight.ProcessCLOSEDFlight {
 	}
 	then {
 		System.debugOut("Flight CLOSED event received");
+		
+		// Will need to get all the bags that have a status != loaded
+		
+		//send an outbound flight event with mishandled details
 	}
 }
