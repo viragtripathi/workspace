@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pnr:Passenger xmlns:pnr="http://www.schemas.skyteam.com/2016/09/enterprise/Passenger" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.schemas.skyteam.com/2016/09/enterprise/Passenger ../SharedResources/Schemas/PassengerSchema.xsd ">
+  <pnr:EventType>CHECKED_IN</pnr:EventType>
+  <pnr:FlightKey>pnr:FlightKey</pnr:FlightKey>
+  <pnr:AirlineCode>DL</pnr:AirlineCode>
+  <pnr:FlightSegments>1</pnr:FlightSegments>
+  <pnr:BagTags>168616</pnr:BagTags>
+  <pnr:FlightNumber>0001</pnr:FlightNumber>
+  <pnr:RecordLocator>ZTJE26</pnr:RecordLocator>
+  <pnr:CutomerId>123</pnr:CutomerId>
+  <pnr:BookingId>456</pnr:BookingId>
+  <pnr:FirstName>Tim</pnr:FirstName>
+  <pnr:LastName>Cook</pnr:LastName>
+  <pnr:SeatNo>6A</pnr:SeatNo>
+  <pnr:FrequentFlyerStaus>GM</pnr:FrequentFlyerStaus>
+  <pnr:OriginLocalDate>2001-12-31T12:00:00</pnr:OriginLocalDate>
+  <pnr:OriginStnCode>ATL</pnr:OriginStnCode>
+  <pnr:DestStnCode>DXB</pnr:DestStnCode>
+</pnr:Passenger>
