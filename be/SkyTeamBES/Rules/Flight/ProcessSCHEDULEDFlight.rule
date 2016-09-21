@@ -13,6 +13,7 @@ rule Rules.Flight.ProcessSCHEDULEDFlight {
 	}
 	when {
 		flight.EventType == Scorecards.FlightEventTypes.SCHEDULED;
+		flight.isModified==true;
 	}
 	then {
 		Object logger =  Log.getLogger("Rules.Flight.ProcessSCHEDULEDFlight");

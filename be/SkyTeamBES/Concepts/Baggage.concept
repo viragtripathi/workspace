@@ -13,4 +13,5 @@
   <properties name="DestStnCode" ownerProjectName="SkyTeamBES" ownerPath="/Concepts/Baggage"/>
   <properties name="BagLocation" ownerProjectName="SkyTeamBES" ownerPath="/Concepts/Baggage"/>
   <properties name="OriginalFlightLeg" ownerProjectName="SkyTeamBES" ownerPath="/Concepts/Baggage"/>
+  <properties name="isModified" ownerProjectName="SkyTeamBES" type="boolean" ownerPath="/Concepts/Baggage"/>
 </element:Concept>

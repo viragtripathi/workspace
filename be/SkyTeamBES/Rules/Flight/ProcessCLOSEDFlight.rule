@@ -13,6 +13,7 @@ rule Rules.Flight.ProcessCLOSEDFlight {
 	}
 	when {
 		flight.EventType == Scorecards.FlightEventTypes.CLOSED;
+				flight.isModified==true;
 	}
 	then {
 		System.debugOut("Flight CLOSED event received");

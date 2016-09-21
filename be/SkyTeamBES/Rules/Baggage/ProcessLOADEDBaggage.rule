@@ -13,6 +13,7 @@ rule Rules.Baggage.ProcessLOADEDBaggage {
 	}
 	when {
 		baggage.EventType == Scorecards.BagggageEventTypes.LOADED;
+			baggage.isModified==true;
 	}
 	then {
 		System.debugOut("Baggage LOADED event received");

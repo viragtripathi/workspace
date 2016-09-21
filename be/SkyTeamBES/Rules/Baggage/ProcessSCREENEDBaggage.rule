@@ -14,6 +14,7 @@ rule Rules.Baggage.ProcessSCREENEDBaggage {
 	}
 	when {
 		baggage.EventType == Scorecards.BagggageEventTypes.SCREENED;
+			baggage.isModified==true;
 	}
 	then {
 		System.debugOut("Baggage SCREENED event received");

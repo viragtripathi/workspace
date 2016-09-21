@@ -13,6 +13,8 @@ rule Rules.Flight.ProcessONTIMEFlight {
 	}
 	when {
 		flight.EventType == Scorecards.FlightEventTypes.ONTIME;
+				flight.isModified==true;
+		
 	}
 	then {
 		System.debugOut("Flight ONTIME event received");

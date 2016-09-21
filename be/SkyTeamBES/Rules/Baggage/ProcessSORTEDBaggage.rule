@@ -14,6 +14,7 @@ rule Rules.Baggage.ProcessSORTEDBaggage {
 	}
 	when {
 		baggage.EventType == Scorecards.BagggageEventTypes.SORTED;
+			baggage.isModified==true;
 	}
 	then {
 		System.debugOut("Baggage SORTED event received");

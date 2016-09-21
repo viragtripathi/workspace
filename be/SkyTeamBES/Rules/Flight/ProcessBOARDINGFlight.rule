@@ -13,6 +13,8 @@ rule Rules.Flight.ProcessBOARDINGFlight {
 	}
 	when {
 		flight.EventType == Scorecards.FlightEventTypes.BOARDING;
+				flight.isModified==true;
+		
 	}
 	then {
 		System.debugOut("Flight BOARDING event received");

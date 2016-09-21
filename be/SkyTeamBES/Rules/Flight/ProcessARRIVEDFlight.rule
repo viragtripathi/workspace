@@ -13,6 +13,8 @@ rule Rules.Flight.ProcessARRIVEDFlight {
 	}
 	when {
 		flight.EventType == Scorecards.FlightEventTypes.ARRIVED;
+				flight.isModified==true;
+		
 	}
 	then {
 		System.debugOut("Flight ARRIVED event received");

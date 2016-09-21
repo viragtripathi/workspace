@@ -13,6 +13,7 @@ rule Rules.Baggage.ProcessCHECKED_INBaggage {
 	}
 	when {
 		baggage.EventType == Scorecards.BagggageEventTypes.CHECKED_IN;
+	baggage.isModified==true;
 	}
 	then {
 		System.debugOut("Baggage CHECKED_IN event received");
@@ -26,6 +27,7 @@ rule Rules.Baggage.ProcessCHECKED_INBaggage {
 		// then increment the counter for the totalbags checked in
 		if (flight !=null){
 			flight.TotalBagsCheckedIn=flight.TotalBagsCheckedIn+1;
+			flight.isModified=true;
 			System.debugOut("Total bags checked in for "+flight.FlightKey + " are " + flight.TotalBagsCheckedIn);
 		}else{
 			System.debugOut(" Could not retrieve flight from cache for " + flightKey);

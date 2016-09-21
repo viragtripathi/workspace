@@ -13,7 +13,7 @@ String[] rulefunction RuleFunctions.Query.FindBags {
 		//Logging Setup
 		Object logger = Log.getLogger("RuleFunctions.Query.FindBags");
 			
-		try{
+/*		try{
 			Log.log(logger, "info","- Query FindBags RuleFunction Firing!!!");
 					
 			//Assemble the Query String
@@ -46,5 +46,7 @@ String[] rulefunction RuleFunctions.Query.FindBags {
 			//Return results
 			return null;
 		}
+		*/
+	return null;
 	}
 }
