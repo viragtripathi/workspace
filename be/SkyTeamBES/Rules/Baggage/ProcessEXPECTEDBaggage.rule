@@ -17,14 +17,23 @@ rule Rules.Baggage.ProcessEXPECTEDBaggage {
 			baggage.isModified==true;
 	}
 	then {
-		System.debugOut("Baggage CHECKED_IN event received");
+		System.debugOut("Baggage EXPECTED event received");
 		String flightKey = baggage.OriginalFlightKey;
 		//need to load the flight concept
 		System.debugOut("Rules.Baggage.ProcessEXPECTEDBaggage: flightKey = " + flightKey);
 			
 		// need to load the Flight Concept
-		RuleFunctions.Loaders.LoadFlightFromAS(flightKey);
+		Concepts.Flight flight = RuleFunctions.Loaders.LoadFlightFromAS(flightKey);
 		System.debugOut("Rules.Baggage.ProcessEXPECTEDBaggage: baggage:flight loaded for flightKey = " + flightKey);		
-		// then increment the counter for the totalbags checked in
+		// then increment the counter for the totalbags delivered
+		
+		if (flight !=null){
+			flight.TotalBagsDelivered=flight.TotalBagsDelivered+1;
+			flight.isModified=true;
+			System.debugOut("Total bags delievered in for "+flight.FlightKey + " are " + flight.TotalBagsDelivered);
+		}else{
+			System.debugOut(" Could not retrieve flight from cache for " + flightKey);
+		}
+	
 		}
 }

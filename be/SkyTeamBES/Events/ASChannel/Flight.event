@@ -20,6 +20,7 @@
   <properties name="TotalBagsCheckedIn" ownerProjectName="SkyTeamBES" type="int" ownerPath="/Events/ASChannel/Flight"/>
   <properties name="TotalBagsLoaded" ownerProjectName="SkyTeamBES" type="int" ownerPath="/Events/ASChannel/Flight"/>
   <properties name="TotalBagsRerouted" ownerProjectName="SkyTeamBES" type="int" ownerPath="/Events/ASChannel/Flight"/>
+  <properties name="TotalBagsDelivered" ownerProjectName="SkyTeamBES" type="int" ownerPath="/Events/ASChannel/Flight"/>
   <expiryAction folder="/Events/ASChannel/Flight" name="Baggage_expiryAction" ownerProjectName="SkyTeamBES" actionText="" conditionText="">
     <symbols>
       <symbolList idName="baggage" type="/Events/ASChannel/Flight"/>

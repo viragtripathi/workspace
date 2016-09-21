@@ -22,4 +22,5 @@
   <properties name="TotalBagsLoaded" ownerProjectName="SkyTeamBES" type="int" ownerPath="/Concepts/Flight"/>
   <properties name="TotalBagsRerouted" ownerProjectName="SkyTeamBES" type="int" ownerPath="/Concepts/Flight"/>
   <properties name="isModified" ownerProjectName="SkyTeamBES" type="boolean" ownerPath="/Concepts/Flight"/>
+  <properties name="TotalBagsDelivered" ownerProjectName="SkyTeamBES" type="int" ownerPath="/Concepts/Flight"/>
 </element:Concept>
