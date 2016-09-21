@@ -22,8 +22,14 @@ rule Rules.Baggage.ProcessSCREENING_FAILEDBaggage {
 		String recordLocator = baggage.RecordLocator;
 		//need to load the flight concept
 		System.debugOut("Rules.Baggage.ProcessSCREENING_FAILEDBaggage: flightKey = " + flightKey);
-		RuleFunctions.Loaders.LoadPassengerFromAS(flightKey, recordLocator);
-		System.debugOut("Rules.Baggage.ProcessSCREENEDBaggage: passenger:flight loaded for flightKey = " + flightKey + "-" + recordLocator);			
-		// send a notification to the passenger email/phone
+		Concepts.Passenger pax =RuleFunctions.Loaders.LoadPassengerFromAS(flightKey, recordLocator);
+		
+		if (pax != null){
+			System.debugOut("Rules.Baggage.ProcessSCREENEDBaggage: passenger:flight loaded for flightKey = " + flightKey + "-" + recordLocator);			
+			// send a notification to the passenger email/phone to check at the gate for details
+			
+		}else{
+			System.debugOut("Could not retriev passenger for flight" + flightKey + " record locator " + recordLocator);
+		}
 	}
 }

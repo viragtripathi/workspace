@@ -13,7 +13,7 @@ rule Rules.Passenger.ProcessCHECKED_INPassenger {
 ;
 	}
 	when {
-		passenger.EventType == Scorecards.PassengerEventTypes.CHECKED_IN;
+		passenger.EventType == Scorecards.PassengerEventTypes.CHECKED_IN;	
 	}
 	then {
 		System.debugOut("Passenger CHECKED_IN event received");

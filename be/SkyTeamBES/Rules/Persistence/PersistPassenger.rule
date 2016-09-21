@@ -12,6 +12,7 @@ rule Rules.Persistence.PersistPassenger {
 		Concepts.Passenger passenger;
 	}
 	when {
+	passenger.IsModified==true;
 		
 	}
 	then {

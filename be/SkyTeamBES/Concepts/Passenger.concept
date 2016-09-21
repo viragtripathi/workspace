@@ -18,4 +18,5 @@
   <properties name="OriginStnCode" ownerProjectName="SkyTeamBES" ownerPath="/Concepts/Passenger"/>
   <properties name="DestStnCode" ownerProjectName="SkyTeamBES" ownerPath="/Concepts/Passenger"/>
   <properties name="BagKey" ownerProjectName="SkyTeamBES" array="true" ownerPath="/Concepts/Passenger"/>
+  <properties name="IsModified" ownerProjectName="SkyTeamBES" type="boolean" ownerPath="/Concepts/Passenger"/>
 </element:Concept>

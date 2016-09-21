@@ -31,5 +31,8 @@ rule Rules.Baggage.ProcessCHECKED_INBaggage {
 			System.debugOut(" Could not retrieve flight from cache for " + flightKey);
 		}
 		
+		
+		// at this point an outbound event could be sent if a realtime client is interested in real time bag related flight data
+		
 	}
 }
