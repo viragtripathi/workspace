@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pnr:Passenger xmlns:pnr="http://www.schemas.skyteam.com/2016/09/enterprise/Passenger" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.schemas.skyteam.com/2016/09/enterprise/Passenger ../SharedResources/Schemas/PassengerSchema.xsd ">
   <pnr:EventType>CHECKED_IN</pnr:EventType>
-  <pnr:FlightKey>pnr:FlightKey</pnr:FlightKey>
+  <pnr:FlightKey>DL0001ATLDXB20160916</pnr:FlightKey>
   <pnr:AirlineCode>DL</pnr:AirlineCode>
   <pnr:FlightSegments>1</pnr:FlightSegments>
   <pnr:BagTags>168616</pnr:BagTags>
