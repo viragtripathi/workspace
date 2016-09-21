@@ -21,9 +21,15 @@ rule Rules.Baggage.ProcessCHECKED_INBaggage {
 		System.debugOut("Rules.Baggage.ProcessCHECKED_INBaggage: flightKey = " + flightKey);
 			
 		// need to load the Flight Concept
-		RuleFunctions.Loaders.LoadFlightFromAS(flightKey);
+		Concepts.Flight flight = RuleFunctions.Loaders.LoadFlightFromAS(flightKey);
 		System.debugOut("Rules.Baggage.ProcessCHECKED_INBaggage: baggage:flight loaded for flightKey = " + flightKey);		
 		// then increment the counter for the totalbags checked in
+		if (flight !=null){
+			flight.TotalBagsCheckedIn=flight.TotalBagsCheckedIn+1;
+			System.debugOut("Total bags checked in for "+flight.FlightKey + " are " + flight.TotalBagsCheckedIn);
+		}else{
+			System.debugOut(" Could not retrieve flight from cache for " + flightKey);
+		}
 		
 	}
 }
