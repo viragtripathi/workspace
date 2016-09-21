@@ -1,0 +1,65 @@
+/**
+ * @description 
+ */
+Concepts.Baggage rulefunction RuleFunctions.Query.QueryAllBags {
+	attribute {
+		validity = ACTION;
+	}
+	scope {
+		
+		String filter;
+		
+	}
+	body {
+		//Logging Setup
+		Object logger = Log.getLogger("RuleFunctions.Query.FindBags");
+		Concepts.Baggage baggageConcept;
+			
+		try{
+			Log.log(logger, "info","- Query FindBags RuleFunction Firing!!!");
+			
+			Events.ASChannel.Baggage baggageEvent;
+					
+			//Assemble the Query String
+			Log.log(logger, "info", "Query string to be evaluated: [%s]", filter);
+			
+			// not set event template because there's not a bound event in the destination OutspaceOutbound,
+			// so the type of return value is Object[M][N][2].
+			// query
+			Object[] result = AS.query("/Channels/OutboundAS/baggageOutbound", null, "get", "all", "all", 0, 1000, filter);
+			if (result != null) {
+				for (int i=0; i<result@length; i++) {
+					Object[] tuple = result[i];
+					for (int j=0; j<tuple@length; j++) {
+						Object[] keyValue = tuple[j];
+						System.debugOut("Take Tuple From Outspace: ResultX "+i+","+j+" is "+keyValue[0]);
+						System.debugOut("Take Tuple From Outspace: ResultX "+i+","+j+" is "+keyValue[1]);
+						baggageEvent = result[i];
+						}
+					}
+				}
+				
+			// set event template, so the type of return value is SimpleEvent, which can be cast to OutputEvent
+			baggageEvent = Event.createEvent("xslt://{{/Events/ASChannel/Baggage}}<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<xsl:stylesheet xmlns:xsl=\"http://www.w3.org/1999/XSL/Transform\" version=\"2.0\"><xsl:param name=\"filter\"/><xsl:template name=\"Function\" match=\"/\"><createEvent><event><EventType><xsl:value-of select=\"$filter\"/></EventType></event></createEvent></xsl:template></xsl:stylesheet>");
+			baggageEvent = AS.getEvent("/Channels/OutboundAS/baggageOutbound",baggageEvent);
+			
+			// begin transaction
+			AS.beginTransaction("/Channels/OutboundAS");			
+				
+			if (baggageEvent != null) {
+				baggageConcept = RuleFunctions.Mappers.MapBaggageASEventToConcept(baggageEvent);
+				}
+				else {
+				Log.log(logger,"error","- No Bags Retrieved from cache for timestamp");
+				}
+			} catch(Exception ex) {
+			Log.logException(logger, "error","!!!!!Exception: ",ex);	
+		}
+		// release transaction
+		Object tid = AS.releaseTransaction("/Channels/OutboundAS");
+		System.debugOut("OUT-TAKE: New Output Event 2: TransactionID = " + tid);
+		
+	//Return results
+	return baggageConcept;
+	}
+}
