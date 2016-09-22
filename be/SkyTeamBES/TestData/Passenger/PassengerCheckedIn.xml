@@ -11,6 +11,8 @@
   <pnr:BookingId>456</pnr:BookingId>
   <pnr:FirstName>Tim</pnr:FirstName>
   <pnr:LastName>Cook</pnr:LastName>
+  <pnr:EMailAddress>vtripath@tibco.com</pnr:EMailAddress>
+  <pnr:PhoneNumber>+14045122656</pnr:PhoneNumber>  
   <pnr:SeatNo>6A</pnr:SeatNo>
   <pnr:FrequentFlyerStaus>GM</pnr:FrequentFlyerStaus>
   <pnr:OriginLocalDate>2001-12-31T12:00:00</pnr:OriginLocalDate>
