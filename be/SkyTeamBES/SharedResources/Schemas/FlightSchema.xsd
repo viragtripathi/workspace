@@ -23,6 +23,10 @@
 			<xsd:element name="EstimatedArrivalTime" type="xsd:dateTime" />
 			<xsd:element name="DepartureGate" type="xsd:string" />
 			<xsd:element name="ArrivalGate" type="xsd:string" />
+			<xsd:element name="TotalBagsCheckedIn" type="xsd:integer" />
+			<xsd:element name="TotalBagsLoaded" type="xsd:integer" />
+			<xsd:element name="TotalBagsRerouted" type="xsd:integer" />
+
 		</xsd:sequence>
 
 	</xsd:complexType>
