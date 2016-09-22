@@ -28,6 +28,8 @@ Concepts.Baggage[] rulefunction RuleFunctions.Query.QueryAllBags {
 				baggageArray[i] = RuleFunctions.Mappers.MapBaggageASEventToConcept(result[i]);
 			}
 			System.debugOut("Length of resultSet = " + result@length);
+		} else {
+			baggageArray = Concepts.Baggage[]{};
 		}
 	//Return results
 	return baggageArray;
