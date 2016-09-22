@@ -25,7 +25,7 @@
 			<xsd:element name="BookingId" type="xsd:string" />
 			<xsd:element name="FirstName" type="xsd:string" />
 			<xsd:element name="LastName" type="xsd:string" />
-			<xsd:element name="EMailAddress" type="xsd:string" />
+			<xsd:element name="EmailAddress" type="xsd:string" />
 			<xsd:element name="PhoneNumber" type="xsd:string" />
 			<xsd:element name="SeatNo" type="xsd:string" />
 			<xsd:element name="FrequentFlyerStaus" type="xsd:string" />
