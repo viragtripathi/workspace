@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fl:Flight xmlns:fl="http://www.schemas.skyteam.com/2016/09/enterprise/Flight" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.schemas.skyteam.com/2016/09/enterprise/Flight FlightSchema.xsd ">
+  <fl:EventType>CLOSED</fl:EventType>
+  <fl:FlightKey>DL0001ATLDXB20160916</fl:FlightKey>
+  <fl:FlightSegmentNumber>1</fl:FlightSegmentNumber>
+  <fl:AirlineCode>DL</fl:AirlineCode>
+  <fl:FlightNumber>0001</fl:FlightNumber>
+  <fl:FlightDate>2001-12-31T12:00:00</fl:FlightDate>
+  <fl:OriginStnCode>ATL</fl:OriginStnCode>
+  <fl:DestStnCode>DXB</fl:DestStnCode>
+  <fl:SegmentStatus>Scheduled</fl:SegmentStatus>
+  <fl:InternationalDomesticFlag>true</fl:InternationalDomesticFlag>
+  <fl:EquipmentType>777</fl:EquipmentType>
+  <fl:ScheduledDepartureTime>2001-12-31T12:00:00</fl:ScheduledDepartureTime>
+  <fl:ScheduledArrivalTime>2001-12-31T12:00:00</fl:ScheduledArrivalTime>
+  <fl:EstimatedDepartureTime>2001-12-31T12:00:00</fl:EstimatedDepartureTime>
+  <fl:EstimatedArrivalTime>2001-12-31T12:00:00</fl:EstimatedArrivalTime>
+  <fl:DepartureGate>E16</fl:DepartureGate>
+  <fl:ArrivalGate>D12</fl:ArrivalGate>
+</fl:Flight>
