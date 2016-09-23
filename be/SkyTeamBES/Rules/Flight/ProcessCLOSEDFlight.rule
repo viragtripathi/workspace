@@ -19,9 +19,10 @@ rule Rules.Flight.ProcessCLOSEDFlight {
 		System.debugOut("Flight CLOSED event received");
 		
 		// Will need to get all the bags that have a status != loaded
-		Concepts.Baggage[] bags = RuleFunctions.Query.QueryAllBags("EventType != 'LOADED'");
+		Concepts.Baggage[] bags = RuleFunctions.Query.QueryAllBags("EventType != 'LOADED'AND OriginalFlightKey='"+flight.FlightKey+"'");
 		//store these bag tags in an array
-		Object arr = Collections.List.createArrayListWithId("BagsNotLoaded");
+		Object arr = Collections.List.createArrayList();
+		Object arrbagsloaded = Collections.List.createArrayList();
 		
 		for (int i=0; i <bags@length;i++){
 		
@@ -47,12 +48,43 @@ rule Rules.Flight.ProcessCLOSEDFlight {
 				break;
 			}
 		}
+		//do we need to get all the passengers that are not on board but the bags are on board?
+				// Will need to get all the pax that have a status != ONBOARD
+		Concepts.Passenger[] paxs = RuleFunctions.Query.QueryAllPassengers("EventType != 'ONBOARD' AND FlightKey='"+flight.FlightKey+"'");
+		System.debugOut("Flight " + flight.FlightKey + " has total of " +paxs@length + " Passengers Not Onboard");
+		
+		for (int j=0; j < paxs@length; j++){
+			Concepts.Passenger pax = paxs[j];
+			if (pax != null){
+				String flightKey = pax.FlightKey;
+				String recordLocator = pax.RecordLocator;
+				
+				//need to get the bags for this record locator
+				String filter = "RecordLocator = '"+ recordLocator+"'";
+				Concepts.Baggage[] paxbags = RuleFunctions.Query.QueryAllBags(filter);
+				System.debugOut("Total Bags for recordLocator " + recordLocator + " = "+paxbags@length);	
+				
+				int counter =0;
+				for (int k=0 ;k < paxbags@length; k++){
+					if(paxbags[k].EventType=="LOADED"){
+						//since the pax is not onboard, we need to get the list of bags that are not loaded
+						Collections.List.add(arrbagsloaded,counter,paxbags[k].BagTagId); 
+						System.debugOut("Bag Loaded "  +paxbags[k].BagTagId); 
+						counter++;						
+					}
+					else
+						System.debugOut("Bag Not Loaded "  +paxbags[k].BagTagId); 
+				}			
+			}
+		}
+		
 		//need to send the flight information out
 		System.debugOut("Flight: " + flight.FlightKey + " has TotalBagsCheckedIn" + flight.TotalBagsCheckedIn);
 		Object [] bagsNotOn = Collections.toArray(arr);
+		Object [] bagOnPaxNotOn = Collections.toArray(arrbagsloaded);
 		
 		//send an outbound flight event with mishandled details
-		Events.FlightEventInbound fltEvent = Event.createEvent("xslt://{{/Events/FlightEventInbound}}<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<xsl:stylesheet xmlns:xsl=\"http://www.w3.org/1999/XSL/Transform\" xmlns:fl=\"http://www.schemas.skyteam.com/2016/09/enterprise/Flight\" version=\"2.0\"><xsl:param name=\"flight\"/><xsl:param name=\"bagsNotOn\"/><xsl:template name=\"Function\" match=\"/\"><createEvent><event><payload><fl:Flight><fl:EventType><xsl:value-of select=\"$flight/EventType\"/></fl:EventType><fl:FlightKey><xsl:value-of select=\"$flight/FlightKey\"/></fl:FlightKey><fl:FlightSegmentNumber><xsl:value-of select=\"$flight/FlightSegmentNumber\"/></fl:FlightSegmentNumber><fl:AirlineCode><xsl:value-of select=\"$flight/AirlineCode\"/></fl:AirlineCode><fl:FlightNumber><xsl:value-of select=\"$flight/FlightNumber\"/></fl:FlightNumber><fl:FlightDate><xsl:value-of select=\"$flight/FlightDate\"/></fl:FlightDate><fl:OriginStnCode><xsl:value-of select=\"$flight/OriginStnCode\"/></fl:OriginStnCode><fl:DestStnCode><xsl:value-of select=\"$flight/DestStnCode\"/></fl:DestStnCode><fl:SegmentStatus><xsl:value-of select=\"$flight/SegmentStatus\"/></fl:SegmentStatus><fl:InternationalDomesticFlag><xsl:value-of select=\"$flight/InternationalDomesticFlag\"/></fl:InternationalDomesticFlag><fl:EquipmentType><xsl:value-of select=\"$flight/EquipmentType\"/></fl:EquipmentType><fl:ScheduledDepartureTime><xsl:value-of select=\"$flight/ScheduledDepartureTime\"/></fl:ScheduledDepartureTime><fl:ScheduledArrivalTime><xsl:value-of select=\"$flight/ScheduledArrivalTime\"/></fl:ScheduledArrivalTime><fl:EstimatedDepartureTime><xsl:value-of select=\"$flight/EstimatedDepartureTime\"/></fl:EstimatedDepartureTime><fl:EstimatedArrivalTime><xsl:value-of select=\"$flight/EstimatedArrivalTime\"/></fl:EstimatedArrivalTime><fl:DepartureGate><xsl:value-of select=\"$flight/DepartureGate\"/></fl:DepartureGate><fl:ArrivalGate><xsl:value-of select=\"$flight/ArrivalGate\"/></fl:ArrivalGate><fl:TotalBagsCheckedIn><xsl:value-of select=\"$flight/TotalBagsCheckedIn\"/></fl:TotalBagsCheckedIn><fl:TotalBagsLoaded><xsl:value-of select=\"$flight/TotalBagsLoaded\"/></fl:TotalBagsLoaded><fl:TotalBagsRerouted><xsl:value-of select=\"$flight/TotalBagsRerouted\"/></fl:TotalBagsRerouted><fl:TotalBagsDelivered><xsl:value-of select=\"$flight/TotalBagsDelivered\"/></fl:TotalBagsDelivered><fl:BagsNotLoaded><xsl:for-each select=\"$bagsNotOn/elements\"><fl:BagTagID><xsl:value-of select=\".\"/></fl:BagTagID></xsl:for-each></fl:BagsNotLoaded></fl:Flight></payload></event></createEvent></xsl:template></xsl:stylesheet>");
+		Events.FlightEventInbound fltEvent = Event.createEvent("xslt://{{/Events/FlightEventInbound}}<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<xsl:stylesheet xmlns:xsl=\"http://www.w3.org/1999/XSL/Transform\" xmlns:fl=\"http://www.schemas.skyteam.com/2016/09/enterprise/Flight\" version=\"2.0\"><xsl:param name=\"flight\"/><xsl:param name=\"bagsNotOn\"/><xsl:param name=\"bagOnPaxNotOn\"/><xsl:template name=\"Function\" match=\"/\"><createEvent><event><payload><fl:Flight><fl:EventType><xsl:value-of select=\"$flight/EventType\"/></fl:EventType><fl:FlightKey><xsl:value-of select=\"$flight/FlightKey\"/></fl:FlightKey><fl:FlightSegmentNumber><xsl:value-of select=\"$flight/FlightSegmentNumber\"/></fl:FlightSegmentNumber><fl:AirlineCode><xsl:value-of select=\"$flight/AirlineCode\"/></fl:AirlineCode><fl:FlightNumber><xsl:value-of select=\"$flight/FlightNumber\"/></fl:FlightNumber><fl:FlightDate><xsl:value-of select=\"$flight/FlightDate\"/></fl:FlightDate><fl:OriginStnCode><xsl:value-of select=\"$flight/OriginStnCode\"/></fl:OriginStnCode><fl:DestStnCode><xsl:value-of select=\"$flight/DestStnCode\"/></fl:DestStnCode><fl:SegmentStatus><xsl:value-of select=\"$flight/SegmentStatus\"/></fl:SegmentStatus><fl:InternationalDomesticFlag><xsl:value-of select=\"$flight/InternationalDomesticFlag\"/></fl:InternationalDomesticFlag><fl:EquipmentType><xsl:value-of select=\"$flight/EquipmentType\"/></fl:EquipmentType><fl:ScheduledDepartureTime><xsl:value-of select=\"$flight/ScheduledDepartureTime\"/></fl:ScheduledDepartureTime><fl:ScheduledArrivalTime><xsl:value-of select=\"$flight/ScheduledArrivalTime\"/></fl:ScheduledArrivalTime><fl:EstimatedDepartureTime><xsl:value-of select=\"$flight/EstimatedDepartureTime\"/></fl:EstimatedDepartureTime><fl:EstimatedArrivalTime><xsl:value-of select=\"$flight/EstimatedArrivalTime\"/></fl:EstimatedArrivalTime><fl:DepartureGate><xsl:value-of select=\"$flight/DepartureGate\"/></fl:DepartureGate><fl:ArrivalGate><xsl:value-of select=\"$flight/ArrivalGate\"/></fl:ArrivalGate><fl:TotalBagsCheckedIn><xsl:value-of select=\"$flight/TotalBagsCheckedIn\"/></fl:TotalBagsCheckedIn><fl:TotalBagsLoaded><xsl:value-of select=\"$flight/TotalBagsLoaded\"/></fl:TotalBagsLoaded><fl:TotalBagsRerouted><xsl:value-of select=\"$flight/TotalBagsRerouted\"/></fl:TotalBagsRerouted><fl:TotalBagsDelivered><xsl:value-of select=\"$flight/TotalBagsDelivered\"/></fl:TotalBagsDelivered><fl:BagsNotLoaded><xsl:for-each select=\"$bagsNotOn/elements\"><fl:BagTagID><xsl:value-of select=\".\"/></fl:BagTagID></xsl:for-each></fl:BagsNotLoaded><fl:PaxNotOnBagLoaded><xsl:for-each select=\"$bagOnPaxNotOn/elements\"><fl:BagTagIDLoaded><xsl:value-of select=\".\"/></fl:BagTagIDLoaded></xsl:for-each></fl:PaxNotOnBagLoaded></fl:Flight></payload></event></createEvent></xsl:template></xsl:stylesheet>");
 		Event.routeTo(fltEvent,"/Channels/OutboundJMS/flightEventOutbound",null);
 		
 		
