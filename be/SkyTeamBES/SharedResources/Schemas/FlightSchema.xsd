@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema targetNamespace="http://www.schemas.skyteam.com/2016/09/enterprise/Flight" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:fl="http://www.schemas.skyteam.com/2016/09/enterprise/Flight">
 
+	<xsd:complexType name="BagsNotLoadedType">
+		<xsd:sequence>
+			<xsd:element name="BagTagID" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
 	<xsd:complexType name="FlightType">
 		<xsd:annotation>
 			<xsd:documentation>Flight Events Details</xsd:documentation>
@@ -26,7 +32,8 @@
 			<xsd:element name="TotalBagsCheckedIn" type="xsd:integer" />
 			<xsd:element name="TotalBagsLoaded" type="xsd:integer" />
 			<xsd:element name="TotalBagsRerouted" type="xsd:integer" />
-
+			<xsd:element name="TotalBagsDelivered" type="xsd:integer" />
+			<xsd:element name="BagsNotLoaded" type="fl:BagsNotLoadedType" minOccurs="0"/>
 		</xsd:sequence>
 
 	</xsd:complexType>
