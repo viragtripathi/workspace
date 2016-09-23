@@ -1,0 +1,37 @@
+/**
+ * @description 
+ */
+Concepts.Passenger[] rulefunction RuleFunctions.Query.QueryAllPassengers {
+	attribute {
+		validity = ACTION;
+	}
+	scope {
+		
+		String filter;
+		
+	}
+	body {
+		//Logging Setup
+		Object logger = Log.getLogger("RuleFunctions.Query.QueryAllPassengers");
+		Concepts.Passenger[] passengerArray;
+		Log.log(logger, "info","- Query QueryAllPassengers RuleFunction Firing!!!");	
+					
+		//Assemble the Query String
+		Log.log(logger, "info", "Passenger Query string to be evaluated: [%s]", filter);
+			
+		// query
+		Object[] result = AS.query("/Channels/OutboundAS/passengerOutbound", null, "get", "all", "all", 0, 1000, filter);
+		Log.log(logger, "info", "Passenger Query returned: [%s]", result);		
+		if (result != null) {
+			passengerArray = Concepts.Passenger[result@length]{};
+			for (int i=0; i<result@length; i++) {
+				passengerArray[i] = RuleFunctions.Mappers.MapPassengerASEventToConcept(result[i]);
+			}
+			System.debugOut("Passenger Length of resultSet = " + result@length);
+		} else {
+			passengerArray = Concepts.Passenger[]{};
+		}
+	//Return results
+	return passengerArray;
+	}
+}
