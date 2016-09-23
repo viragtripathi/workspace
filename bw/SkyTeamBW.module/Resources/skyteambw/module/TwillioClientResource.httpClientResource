@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:http="http://xsd.tns.tibco.com/bw/models/sharedresource/httpclient" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_E7w6wYG3EeaHyq9XBz-5jQ" name="skyteambw.module.TwillioClientResource" type="http:HttpClientConfiguration">
-  <jndi:configuration xsi:type="http:HttpClientConfiguration" xmi:id="_E7xh0IG3EeaHyq9XBz-5jQ" httpClientVersion="httpcomponents">
-    <tcpDetails xmi:id="_E7xh0YG3EeaHyq9XBz-5jQ" host="api.twilio.com" port="443"/>
-  </jndi:configuration>
-</jndi:namedResource>
