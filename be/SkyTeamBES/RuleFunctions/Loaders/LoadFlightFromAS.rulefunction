@@ -20,11 +20,11 @@ Concepts.Flight rulefunction RuleFunctions.Loaders.LoadFlightFromAS {
 			
 			Events.ASChannel.Flight flightEvent = Event.createEvent("xslt://{{/Events/ASChannel/Flight}}<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<xsl:stylesheet xmlns:xsl=\"http://www.w3.org/1999/XSL/Transform\" version=\"2.0\"><xsl:param name=\"flightKey\"/><xsl:template name=\"Function\" match=\"/\"><createEvent><event><FlightKey><xsl:value-of select=\"$flightKey\"/></FlightKey></event></createEvent></xsl:template></xsl:stylesheet>");
 			flightEvent = AS.getEvent("/Channels/OutboundAS/flightOutbound",flightEvent);
-			Log.log(logger,"info", "flight concept loaded for flightKey : " + flightKey);
+			Log.log(logger,"info", "flight event  created from Tuple for flightKey : " + flightKey);
 			
 			if (flightEvent != null) {
 			flightConcept = RuleFunctions.Mappers.MapFlightASEventToConcept(flightEvent);
-			Log.log(logger,"info", "flight concept created for flightKey : " + flightKey);
+			Log.log(logger,"info", "flight concept created from event for flightKey : " + flightKey);
 			}	
 		}
 		catch (Exception ex) {

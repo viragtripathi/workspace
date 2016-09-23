@@ -21,10 +21,15 @@ rule Rules.Baggage.ProcessLOADEDBaggage {
 		//need to load the flight concept
 		System.debugOut("Rules.Baggage.ProcessLOADEDBaggage: flightKey = " + flightKey);
 		
-		RuleFunctions.Loaders.LoadFlightFromAS(flightKey);
-		System.debugOut("Rules.Baggage.ProcessLOADEDBaggage: baggage:flight loaded for flightKey = " + flightKey);
+		Concepts.Flight  flight = RuleFunctions.Loaders.LoadFlightFromAS(flightKey);
+		if (flight != null){
+			System.debugOut("Rules.Baggage.ProcessLOADEDBaggage: baggage:flight loaded for flightKey = " + flightKey);
 		
-		// then need to increment the counter for loaded bags
+			// then need to increment the counter for loaded bags
+			flight.TotalBagsLoaded=flight.TotalBagsLoaded+1;
+			flight.isModified=true;
+		}else
+			System.debugOut("Rules.Baggage.ProcessLOADEDBaggage: baggage:flight NOT loaded for flightKey = " + flightKey);
 		
 	}
 }

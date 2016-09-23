@@ -27,7 +27,7 @@ rule Rules.Baggage.ProcessREROUTEDBaggage {
 		Concepts.Passenger pax =RuleFunctions.Loaders.LoadPassengerFromAS(flightKey, recordLocator);
 		
 		if (pax != null){
-			System.debugOut("Rules.Baggage.ProcessSCREENEDBaggage: passenger:flight loaded for flightKey = " + flightKey + "-" + recordLocator);			
+			System.debugOut("Rules.Baggage.ProcessREROUTEDBaggage: passenger:flight loaded for flightKey = " + flightKey + "-" + recordLocator);			
 			// send a notification to the passenger email/phone to check at the gate for details
 			pax.IsModified=false;
 			String EventType = Scorecards.PassengerEventTypes.BAGREROUTED;
@@ -39,5 +39,16 @@ rule Rules.Baggage.ProcessREROUTEDBaggage {
 			System.debugOut("Could not retriev passenger for flight" + flightKey + " record locator " + recordLocator);
 		}
 		
+		//update the flight concept
+				Concepts.Flight  flight = RuleFunctions.Loaders.LoadFlightFromAS(flightKey);
+		if (flight != null){
+			System.debugOut("Rules.Baggage.ProcessREROUTEDBaggage: baggage:flight loaded for flightKey = " + flightKey);
+		
+			// then need to increment the counter for loaded bags
+			flight.TotalBagsRerouted=flight.TotalBagsRerouted+1;
+			flight.isModified=true;
+		}else
+			System.debugOut("Rules.Baggage.ProcessREROUTEDBaggage: baggage:flight NOT loaded for flightKey = " + flightKey);
+	
 	}
 }
