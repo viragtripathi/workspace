@@ -60,7 +60,7 @@ rule Rules.Flight.ProcessCLOSEDFlight {
 				String recordLocator = pax.RecordLocator;
 				
 				//need to get the bags for this record locator
-				String filter = "RecordLocator = '"+ recordLocator+"'";
+				String filter = "RecordLocator = '"+ recordLocator+"' AND OriginalFlightKey ='"+flightKey+"'";
 				Concepts.Baggage[] paxbags = RuleFunctions.Query.QueryAllBags(filter);
 				System.debugOut("Total Bags for recordLocator " + recordLocator + " = "+paxbags@length);	
 				
